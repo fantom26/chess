@@ -1,0 +1,28 @@
+.home {
+  .chess-board {
+    margin-left: auto;
+    margin-right: auto;
+    border: 0.1rem solid var(--clr-black);
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    max-width: 80rem;
+    max-height: 80rem;
+
+    .tile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 10rem;
+      height: 10rem;
+
+      &--black {
+        background-color: var(--clr-board-b);
+      }
+
+      &--white {
+        background-color: var(--clr-board-w);
+      }
+    }
+  }
+}

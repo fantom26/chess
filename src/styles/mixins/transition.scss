@@ -1,0 +1,14 @@
+/*
+  usage: @include transition(150ms, width, background-color, etc);
+*/
+@mixin transition($time, $properties...) {
+  $transition: ();
+  @each $property in $properties {
+    $transition: append($transition, ($property $time linear), $separator: comma);
+  }
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
