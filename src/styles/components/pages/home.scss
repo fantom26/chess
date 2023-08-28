@@ -17,12 +17,40 @@
       height: 10rem;
 
       &--black {
-        background-color: var(--clr-board-b);
+        background-color: var(--clr-board-classic-b);
       }
 
       &--white {
-        background-color: var(--clr-board-w);
+        background-color: var(--clr-board-classic-w);
       }
+    }
+  }
+
+  .piece[data-color="black"] {
+    .white {
+      fill: var(--clr-white);
+      stroke: var(--clr-white);
+      stop-color: var(--clr-white);
+    }
+
+    .black {
+      fill: var(--clr-black);
+      stroke: var(--clr-black);
+      stop-color: var(--clr-black);
+    }
+  }
+
+  .piece[data-color="white"] {
+    .white {
+      fill: var(--clr-black);
+      stroke: var(--clr-black);
+      stop-color: var(--clr-black);
+    }
+
+    .black {
+      fill: var(--clr-white);
+      stroke: var(--clr-white);
+      stop-color: var(--clr-white);
     }
   }
 }
