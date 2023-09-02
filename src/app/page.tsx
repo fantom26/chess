@@ -1,15 +1,18 @@
+"use client";
+import { useChessContext } from "@/hooks";
 import "@/styles/globals.scss";
-import { COLLECTIONS } from "@/utils/enums";
 import { renderBoard } from "@/utils/helpers";
-// import { useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
-  // const [collection, setCollection] = useState(COLLECTIONS.STONE);
+  const { chessStore } = useChessContext();
+
+  const [collection, setCollection] = useState(chessStore.peaceTheme);
 
   return (
     <div className="home">
       <div className="container">
-        <ul className="chess-board">{renderBoard(COLLECTIONS.STONE)}</ul>
+        <ul className="chess-board">{renderBoard(collection)}</ul>
       </div>
     </div>
   );
