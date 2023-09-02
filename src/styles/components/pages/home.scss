@@ -1,27 +1,44 @@
 .home {
-  .chess-board {
-    margin-left: auto;
-    margin-right: auto;
-    border: 0.1rem solid var(--clr-black);
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    max-width: 80rem;
-    max-height: 80rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
 
-    .tile {
+  .chess {
+    &-wrapper {
       display: flex;
-      align-items: center;
       justify-content: center;
-      width: 10rem;
-      height: 10rem;
+      gap: 0.5rem;
+    }
 
-      &--black {
-        background-color: var(--clr-board-classic-b);
-      }
+    &-settings {
+      display: flex;
+      max-width: 1.6rem;
+      max-height: 1.6rem;
+    }
 
-      &--white {
-        background-color: var(--clr-board-classic-w);
+    &-board {
+      border: 0.1rem solid var(--clr-black);
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+      max-width: 80rem;
+      max-height: 80rem;
+
+      .tile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10rem;
+        height: 10rem;
+
+        &--black {
+          background-color: var(--clr-board-classic-b);
+        }
+
+        &--white {
+          background-color: var(--clr-board-classic-w);
+        }
       }
     }
   }

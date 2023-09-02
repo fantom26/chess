@@ -6,9 +6,12 @@
   --container-offset: 1.5rem;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --transition: 0.3s;
+  --font-weight: 400;
+  --radius: 0.5rem;
 
   --clr-black: #000000;
   --clr-white: #ffffff;
+  --clr-bg: #f2f0eb;
 
   --clr-board-classic-b: #b58863;
   --clr-board-classic-w: #f0d9b5;
@@ -27,7 +30,7 @@
 }
 
 body {
-  @include font-source(Nunito, 1.6rem, var(--clr-black), 400, false);
+  @include font-source(Nunito, 1.6rem, var(--clr-black), var(--font-weight), false);
   background-color: var(--clr-bg);
 }
 

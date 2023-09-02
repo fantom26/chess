@@ -21,6 +21,7 @@ export const renderBoard = (collection: TCollection) => {
 
       board.push(
         <Tile
+          key={`x=${i}-y=${j}`}
           collection={collection}
           figureColor={color}
           figure={figure}

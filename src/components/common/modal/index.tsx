@@ -26,7 +26,6 @@ export const Modal: FC<ModalProps> = (props) => {
   } = props;
   const { lockScroll, unlockScroll } = useScrollLock();
 
-  // **Local state
   const [isBrowser, setIsBrowser] = useState<boolean>(false);
 
   const styles: Record<string, string> = {
@@ -34,12 +33,7 @@ export const Modal: FC<ModalProps> = (props) => {
     "--width": `${width}rem`,
   };
 
-  // **Ref
   const modalRef = useRef<HTMLDivElement | null>(null);
-
-  const handleClose = (): void => {
-    onClose();
-  };
 
   useEffect(() => {
     setIsBrowser(true);
@@ -73,7 +67,7 @@ export const Modal: FC<ModalProps> = (props) => {
         <div
           style={styles}
           className={`modal ${state}`}
-          onClick={handleClose}
+          onClick={onClose}
           role="dialog"
           aria-modal="true"
           ref={modalRef}
@@ -92,7 +86,7 @@ export const Modal: FC<ModalProps> = (props) => {
               <button
                 className="modal__close"
                 aria-label="Закрыть модальное окно"
-                onClick={handleClose}
+                onClick={onClose}
               ></button>
             </div>
           </div>
