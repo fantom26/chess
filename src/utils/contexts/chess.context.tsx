@@ -8,10 +8,10 @@ import {
   useState,
 } from "react";
 import { COLLECTIONS } from "../enums";
-import { TCollection } from "../types";
+import { TSelectOption } from "../validation";
 
 interface IStore {
-  peaceTheme: TCollection;
+  peaceTheme: TSelectOption;
 }
 
 interface ChessProviderProps {
@@ -25,7 +25,10 @@ export interface ChessContextProps {
 
 const initialState: ChessContextProps = {
   chessStore: {
-    peaceTheme: COLLECTIONS.STONE,
+    peaceTheme: {
+      label: COLLECTIONS.STONE,
+      value: COLLECTIONS.STONE,
+    },
   },
   // eslint-disable-next-line no-empty-function
   setChessStore: () => {},

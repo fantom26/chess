@@ -5,20 +5,20 @@ import "@/styles/globals.scss";
 import { ICONS } from "@/utils/constants";
 import { MODALS } from "@/utils/enums";
 import { renderBoard } from "@/utils/helpers";
-import { useState } from "react";
+import { TCollection } from "@/utils/types";
 
 export default function Home() {
   const { chessStore } = useChessContext();
   const { generateModalHandlers } = useModalContext();
-
-  const [collection, setCollection] = useState(chessStore.peaceTheme);
 
   return (
     <>
       <div className="home">
         <div className="container">
           <div className="chess-wrapper">
-            <ul className="chess-board">{renderBoard(collection)}</ul>
+            <ul className="chess-board">
+              {renderBoard(chessStore.peaceTheme.value as TCollection)}
+            </ul>
             <button
               className="chess-settings"
               type="button"
@@ -29,9 +29,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <ChessSettingsModal>
-        <h2>test</h2>
-      </ChessSettingsModal>
+      <ChessSettingsModal />
     </>
   );
 }

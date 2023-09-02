@@ -28,7 +28,7 @@ export interface ModalContextProps {
 
 const initialState: ModalContextProps = {
   modalStore: {
-    [MODALS.CHESS_SETTINGS]: true,
+    [MODALS.CHESS_SETTINGS]: false,
   },
   generateModalHandlers: (name: TModals) => ({
     open: () => {},
