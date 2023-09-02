@@ -510,7 +510,7 @@ export const PIECE_ICONS = {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_303_1320)">
+        <g clipPath="url(#clip0_303_1320)">
           <mask
             id="mask0_303_1320"
             maskUnits="userSpaceOnUse"
@@ -648,14 +648,14 @@ export const PIECE_ICONS = {
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M40.3884 9.38203C40.4822 6.38281 42.9406 4 45.9413 4H54.2747C57.2754 4 59.7338 6.38281 59.8274 9.38203L59.8763 10.9444H62.608C65.6762 10.9444 68.1636 13.4317 68.1636 16.5V19.8696C74.2194 18.4992 80.7556 19.4144 86.3034 24.0376C97.8287 33.6421 96.7683 53.7751 83.0902 64.7874C79.7894 67.4449 77.1962 69.6479 75.4105 71.9181C75.0031 72.436 74.6541 72.9371 74.3604 73.4275L79.9908 74.189C82.7462 74.5617 84.8018 76.914 84.8018 79.6944V90.1111C84.8018 93.1793 82.3144 95.6667 79.2462 95.6667H20.9698C17.9016 95.6667 15.4143 93.1793 15.4143 90.1111V79.6944C15.4143 76.914 17.4698 74.5617 20.2252 74.189L25.8556 73.4275C25.5619 72.9371 25.2129 72.436 24.8055 71.9181C23.0198 69.6479 20.4266 67.4449 17.1258 64.7874C3.44776 53.7751 2.3873 33.6421 13.9126 24.0376C19.4604 19.4144 25.9966 18.4992 32.0524 19.8696V16.5C32.0524 13.4317 34.5398 10.9444 37.608 10.9444H40.3397L40.3884 9.38203Z"
           className={PIECE_COLORS.BLACK}
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M45.941 9.55554H54.2743L54.4912 16.5H62.6076V24.8333H54.7517L55.1333 34.268C55.2857 34.0886 55.4425 33.9128 55.604 33.741C63.1918 25.6765 74.4419 21.385 82.7465 28.3055C91.0799 35.25 91.0799 51.2222 79.6058 60.46C73.1063 65.6928 67.2844 70.7374 67.5714 78.1155L79.2458 79.6944V90.1111H20.9694V79.6944L32.6439 78.1155C32.9308 70.7374 27.109 65.6928 20.6094 60.46C9.13542 51.2222 9.13542 35.25 17.4688 28.3055C25.7733 21.385 37.0235 25.6765 44.6112 33.741C44.7728 33.9128 44.9296 34.0886 45.0819 34.268L45.4635 24.8333H37.6076V16.5H45.7239L45.941 9.55554ZM38.091 41.4626C43.1836 49.8043 43.8576 59.5555 43.8576 63.7961C41.305 63.8007 31.6824 59.5674 26.5876 52.6175C22.9199 47.6142 21.9635 40.191 25.1076 37.309C28.2518 34.4271 34.9081 36.2492 38.091 41.4626ZM62.1243 41.4626C57.0317 49.8043 56.3576 59.5555 56.3576 63.7961C58.9103 63.8007 68.5329 59.5674 73.6276 52.6175C77.2954 47.6142 78.2518 40.191 75.1076 37.309C71.9635 34.4271 65.3071 36.2492 62.1243 41.4626Z"
           className={PIECE_COLORS.WHITE}
         />
@@ -674,8 +674,8 @@ export const PIECE_ICONS = {
           className={PIECE_COLORS.BLACK}
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M58.0588 25.1898L45.5117 10.5555C43.6955 14.0036 41.9348 20.0892 44.4663 24.4822C43.2375 24.5917 42.0632 24.7995 41.155 25.1641C35.3605 27.4895 29.0023 33.4974 25.8773 45.9974C24.9724 49.6168 23.3438 51.3502 21.4081 53.4102C19.5823 55.3535 17.4831 57.5874 15.4606 61.9696C11.2939 70.9974 22.5388 80.0252 30.7384 71.8256C35.3482 67.2157 39.3778 65.3125 42.7609 63.7149C47.63 61.4152 51.1602 59.7479 53.1541 51.5529C54.1028 55.3756 53.7234 64.397 44.6159 69.9016C35.5084 75.4061 33.611 87.0014 33.8007 90.4417H85.5995C85.5995 57.7796 81.2752 29.5596 58.0588 25.1898Z"
           className={PIECE_COLORS.WHITE}
         />
@@ -757,7 +757,7 @@ export const PIECE_ICONS = {
           d="M54.3884 15.418C54.3884 17.788 52.4592 19.7154 50.072 19.7154C47.6848 19.7154 45.7556 17.788 45.7556 15.418C45.7556 13.0479 47.6848 11.1205 50.072 11.1205C52.4592 11.1205 54.3884 13.0479 54.3884 15.418Z"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="45.6526"
@@ -767,17 +767,17 @@ export const PIECE_ICONS = {
           rx="0.307881"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="0.615763"
+          strokeWidth="0.615763"
         />
         <path
           d="M37.2124 71.6647V71.1168C40.6131 67.1296 42.6664 61.9618 42.6664 56.3179C42.6664 52.0629 41.4992 48.0775 39.4666 44.6648H60.5336C58.5011 48.0775 57.3338 52.0629 57.3338 56.3179C57.3338 61.9618 59.3871 67.1296 62.7878 71.1168V71.6647H37.2124Z"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M50 19.839H47.3544L36.291 35.6881C35.3235 37.3369 34.6836 41.2405 39.8641 43.6649H50H60.1359C65.3164 41.2405 64.6765 37.3369 63.709 35.6881L52.6456 19.839H50Z"
           className={PIECE_COLORS.WHITE}
         />
@@ -793,7 +793,7 @@ export const PIECE_ICONS = {
           rx="0.998293"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="1.99659"
+          strokeWidth="1.99659"
         />
         <rect
           x="33.2598"
@@ -802,7 +802,7 @@ export const PIECE_ICONS = {
           height="3.32367"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="28.6057"
@@ -811,7 +811,7 @@ export const PIECE_ICONS = {
           height="3.58968"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="25.6389"
@@ -820,7 +820,7 @@ export const PIECE_ICONS = {
           height="3.58966"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
       </svg>
     ),
@@ -836,13 +836,13 @@ export const PIECE_ICONS = {
           d="M66.8566 32.2329C66.8566 35.013 65.0508 38.6717 61.9324 41.6773C58.8402 44.6577 54.613 46.8396 49.9995 46.8396C45.386 46.8396 41.1588 44.6577 38.0665 41.6773C34.9482 38.6717 33.1423 35.013 33.1423 32.2329C33.1423 29.5438 34.8514 26.9677 37.9107 25.0147C40.9585 23.0689 45.2298 21.8328 49.9995 21.8328C54.7692 21.8328 59.0405 23.0689 62.0883 25.0147C65.1476 26.9677 66.8566 29.5438 66.8566 32.2329Z"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <path
           d="M49.6356 15.1545V11.5023H50.1296V15.1545V16.1545H51.1296H54.7819V16.6485H51.1296H50.1296V17.6485V21.3008H49.6356V17.6485V16.6485H48.6356H44.9834V16.1545H48.6356H49.6356V15.1545Z"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="35.2673"
@@ -852,13 +852,13 @@ export const PIECE_ICONS = {
           rx="0.479199"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="0.958399"
+          strokeWidth="0.958399"
         />
         <path
           d="M37.095 71.9357V71.3799C40.496 67.3788 42.549 62.1932 42.549 56.5305C42.549 52.2588 41.3806 48.2578 39.346 44.8322H60.4194C58.3848 48.2578 57.2164 52.2588 57.2164 56.5305C57.2164 62.1932 59.2694 67.3788 62.6704 71.3799V71.9357H37.095Z"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="35.7881"
@@ -868,7 +868,7 @@ export const PIECE_ICONS = {
           rx="1.00372"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="33.1423"
@@ -877,7 +877,7 @@ export const PIECE_ICONS = {
           height="3.34268"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="28.4883"
@@ -886,7 +886,7 @@ export const PIECE_ICONS = {
           height="3.60963"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="25.5215"
@@ -895,7 +895,7 @@ export const PIECE_ICONS = {
           height="3.60963"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <circle
           cx="49.9856"
@@ -903,7 +903,7 @@ export const PIECE_ICONS = {
           r="1.76196"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
       </svg>
     ),
@@ -919,7 +919,7 @@ export const PIECE_ICONS = {
           d="M45.484 12.6976C43.0688 12.6976 43.6212 17.6223 44.1993 20.0846C43.5469 21.9428 41.381 22.7649 40.1225 23.7184C38.8639 24.6719 39.9699 26.083 37.7197 27.1891C35.4695 28.2951 33.0668 30.3165 28.7571 33.749C24.4474 37.1815 21.8539 38.4019 19.1079 38.7452C16.9111 39.0198 17.023 40.6902 17.3535 41.4912L23.9134 48.8138H26.8501C27.0408 47.746 28.3375 45.7627 31.3124 45.3432C34.2872 44.9237 41.0759 46.4874 45.2331 44.3516C48.5588 42.643 50.7632 39.1901 51.4497 37.6773L50.3636 40.8515C47.6178 48.4024 35.9911 52.2923 30.5209 53.2934C28.5474 57.3692 33.6633 65.6272 36.4679 69.2467V70.5287H65.4609V69.3525C69.5205 65.2928 71.8318 56.6526 72.4799 52.84C72.6268 56.6087 70.0016 64.2129 68.6707 67.5439L77.7253 70.5704C83.1139 62.3437 85.5283 48.5431 78.4118 34.6704C72.7034 23.5426 61.107 20.0606 56.0223 19.7106L55.7615 21.1766C51.7533 14.2393 47.2397 12.6334 45.484 12.6976Z"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="33.6882"
@@ -928,7 +928,7 @@ export const PIECE_ICONS = {
           height="3.34268"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="29.0342"
@@ -937,7 +937,7 @@ export const PIECE_ICONS = {
           height="3.60963"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="26.0674"
@@ -946,7 +946,7 @@ export const PIECE_ICONS = {
           height="3.60963"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
       </svg>
     ),
@@ -962,13 +962,13 @@ export const PIECE_ICONS = {
           d="M59.6243 28.9924C59.6243 33.5836 55.4237 37.4909 50.0002 37.4909C44.5766 37.4909 40.376 33.5836 40.376 28.9924C40.376 24.4012 44.5766 20.4939 50.0002 20.4939C55.4237 20.4939 59.6243 24.4012 59.6243 28.9924Z"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <path
           d="M37.2124 62.587V62.0313C40.6134 58.0302 42.6664 52.8446 42.6664 47.1818C42.6664 42.9102 41.498 38.9092 39.4634 35.4835H60.5368C58.5022 38.9092 57.3338 42.9102 57.3338 47.1818C57.3338 52.8446 59.3869 58.0302 62.7878 62.0313V62.587H37.2124Z"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="35.9058"
@@ -978,7 +978,7 @@ export const PIECE_ICONS = {
           rx="1.00372"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="33.2598"
@@ -987,7 +987,7 @@ export const PIECE_ICONS = {
           height="3.34269"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="28.6057"
@@ -996,7 +996,7 @@ export const PIECE_ICONS = {
           height="3.60963"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="25.6389"
@@ -1005,7 +1005,7 @@ export const PIECE_ICONS = {
           height="3.60963"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
       </svg>
     ),
@@ -1025,13 +1025,13 @@ export const PIECE_ICONS = {
           rx="0.479199"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="0.958399"
+          strokeWidth="0.958399"
         />
         <path
           d="M37.2124 68.8351V68.2793C40.6134 64.2782 42.6664 59.0926 42.6664 53.4299C42.6664 49.1582 41.498 45.1572 39.4634 41.7316H60.5368C58.5022 45.1572 57.3338 49.1582 57.3338 53.4299C57.3338 59.0926 59.3869 64.2782 62.7878 68.2793V68.8351H37.2124Z"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="35.9058"
@@ -1041,7 +1041,7 @@ export const PIECE_ICONS = {
           rx="1.00372"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="33.2598"
@@ -1050,7 +1050,7 @@ export const PIECE_ICONS = {
           height="3.34268"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="28.6057"
@@ -1059,7 +1059,7 @@ export const PIECE_ICONS = {
           height="3.60963"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="25.6389"
@@ -1068,18 +1068,18 @@ export const PIECE_ICONS = {
           height="3.60963"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <mask id="path-7-inside-1_2_2193" className={PIECE_COLORS.WHITE}>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M53.3896 21.375C54.2309 20.5333 54.7511 19.3708 54.7511 18.0867C54.7511 15.5175 52.6684 13.4348 50.0992 13.4348C47.5301 13.4348 45.4474 15.5175 45.4474 18.0867C45.4474 19.3708 45.9676 20.5333 46.8088 21.375L42.2876 26.7322L50.0992 31.779L57.9109 26.7322L53.3896 21.375Z"
           />
         </mask>
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M53.3896 21.375C54.2309 20.5333 54.7511 19.3708 54.7511 18.0867C54.7511 15.5175 52.6684 13.4348 50.0992 13.4348C47.5301 13.4348 45.4474 15.5175 45.4474 18.0867C45.4474 19.3708 45.9676 20.5333 46.8088 21.375L42.2876 26.7322L50.0992 31.779L57.9109 26.7322L53.3896 21.375Z"
           className={PIECE_COLORS.WHITE}
         />
@@ -1092,7 +1092,7 @@ export const PIECE_ICONS = {
           d="M37.5079 39.8701C36.6384 37.479 34.0457 31.9853 30.631 29.1397C27.2162 26.294 30.1172 25.6221 31.9945 25.6419C32.9801 25.849 35.3996 26.5507 37.1937 27.7014C38.3358 28.4339 38.2698 27.3732 38.1898 26.0876C38.1128 24.8488 38.0227 23.4012 38.9877 23.1472C40.9377 22.6341 42.4806 23.9866 45.2309 26.3975L45.3014 26.4593C46.7411 27.7213 47.1088 26.5374 47.5574 25.0929C47.9796 23.7335 48.4735 22.1432 50.0001 22.1432C51.5267 22.1432 52.0206 23.7335 52.4428 25.0929C52.8915 26.5374 53.2592 27.7213 54.6989 26.4593L54.7694 26.3975C57.5197 23.9866 59.0626 22.6341 61.0125 23.1472C61.9775 23.4012 61.8875 24.8488 61.8104 26.0876C61.7304 27.3732 61.6645 28.4339 62.8066 27.7014C64.6006 26.5507 67.0202 25.849 68.0057 25.6419C69.8831 25.6221 72.784 26.294 69.3693 29.1397C65.9545 31.9853 63.3618 37.479 62.4923 39.8701H37.5079Z"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
       </svg>
     ),
@@ -1108,7 +1108,7 @@ export const PIECE_ICONS = {
           d="M35.8492 36.908C36.3008 37.0977 37.204 37.6193 37.204 38.1885C37.204 38.7576 35.0363 54.835 33.9524 62.8026C33.7717 63.3243 33.2479 64.4104 32.5975 64.5811C31.9472 64.7518 43.8879 64.6522 49.9396 64.5811C55.9912 64.6522 67.9319 64.7518 67.2816 64.5811C66.6313 64.4104 66.1074 63.3243 65.9268 62.8026C64.8429 54.835 62.6751 38.7576 62.6751 38.1885C62.6751 37.6193 63.5784 37.0977 64.03 36.908H49.9396H35.8492Z"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="31.2266"
@@ -1118,7 +1118,7 @@ export const PIECE_ICONS = {
           rx="1.00372"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="33.1992"
@@ -1127,7 +1127,7 @@ export const PIECE_ICONS = {
           height="3.34268"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="28.5452"
@@ -1136,7 +1136,7 @@ export const PIECE_ICONS = {
           height="3.60963"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="25.5784"
@@ -1145,7 +1145,7 @@ export const PIECE_ICONS = {
           height="3.60963"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <path
           d="M69.2632 20.9076L68.3598 33.4343L63.2848 33.0303H31.795L30.0049 20.9877H39.1182L39.6064 30.1282H45.5193V20.9877H54.1986V30.1282H63.2848L63.2006 21.0052L69.2632 20.9076Z"
@@ -1155,7 +1155,7 @@ export const PIECE_ICONS = {
           d="M67.4506 28.1325L67.8831 21.0048H69.1991L68.7289 28.1325H68.7382L68.6041 30.0257L68.5411 30.9798H68.5364L68.3602 33.4663H31.5061L29.9482 21.0351H36.8306L37.3898 28.1325H41.4331L40.8309 21.0351H50.2941V28.1325H56.101V21.0351H64.5749V28.1325H67.4506Z"
           className={PIECE_COLORS.WHITE}
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
       </svg>
     ),

@@ -1,0 +1,146 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 110;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(67, 90, 73, 0.6);
+
+  &.entering {
+    animation: showModal var(--duration) forwards;
+
+    .modal-content {
+      animation: showModalContent var(--duration) forwards;
+    }
+  }
+
+  &.entered {
+    opacity: 1;
+    visibility: visible;
+
+    .modal-content {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &.exiting {
+    animation: showModal var(--duration) reverse;
+
+    .modal-content {
+      animation: showModalContent var(--duration) reverse;
+    }
+  }
+
+  &.exited {
+    opacity: 0;
+    visibility: hidden;
+
+    .modal-content {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+
+  &__top {
+    border-bottom: 0.1rem solid var(--clr-default-200);
+    padding: 3rem 2.5rem;
+  }
+
+  &-wrapper {
+    @include flex-all-center;
+    padding: 4rem 1.5rem;
+    min-height: 100%;
+  }
+
+  &-content {
+    position: relative;
+    border-radius: var(--radius);
+    width: 100%;
+    max-width: var(--width);
+    background-color: var(--clr-bg);
+
+    &::after {
+      @include pseudo;
+      right: -12rem;
+      bottom: -11rem;
+      width: 100%;
+      height: 36.8rem;
+      max-width: 51rem;
+      background-image: url("/media/modals/decor.png");
+      pointer-events: none;
+
+      @media (max-width: em(992)) {
+        display: none;
+      }
+    }
+
+    &__body {
+      position: relative;
+      padding: 3.5rem 2.5rem;
+
+      @media (max-width: em(767)) {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: -2.4rem;
+    top: -2.4rem;
+    border-radius: 50%;
+    width: 4.8rem;
+    height: 4.8rem;
+    background-color: var(--clr-light);
+
+    @media (max-width: em(767)) {
+      right: -1rem;
+    }
+
+    &::after,
+    &::before {
+      @include pseudo;
+      left: 50%;
+      top: 50%;
+      width: 1.7rem;
+      height: 0.2rem;
+      background-color: var(--clr-dark);
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
+
+@keyframes showModal {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes showModalContent {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
