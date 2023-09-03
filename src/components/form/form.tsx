@@ -9,8 +9,7 @@ interface FormProps {
 }
 
 export const Form = (props: FormProps) => {
-  const { children, onSubmit } = props;
-  const methods = useForm();
+  const { children, methods, onSubmit } = props;
 
   return (
     <FormProvider {...methods}>

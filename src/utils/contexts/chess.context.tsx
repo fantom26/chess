@@ -45,6 +45,8 @@ export const ChessProvider: FC<ChessProviderProps> = (props) => {
     setChessStore,
   };
 
+  console.log("chessStore", chessStore);
+
   return (
     <ChessContext.Provider value={value}>{children}</ChessContext.Provider>
   );

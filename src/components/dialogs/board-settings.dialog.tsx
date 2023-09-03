@@ -25,14 +25,11 @@ export const ChessSettingsModal: FC<BoardSettingsProps> = (props) => {
     },
   });
 
-  const { handleSubmit, getValues } = methods;
+  const { handleSubmit } = methods;
 
   const updateSettings = (data: SettingsStageSchema) => {
-    console.log("data", data);
-    setChessStore(data);
+    setChessStore((prev) => ({ ...prev, ...data }));
   };
-
-  console.log(getValues());
 
   return (
     <Modal
@@ -44,11 +41,7 @@ export const ChessSettingsModal: FC<BoardSettingsProps> = (props) => {
       }
     >
       <Form methods={methods} onSubmit={handleSubmit(updateSettings)}>
-        <Form.Select
-          name={FORM_FIELDS.PEACE_THEME}
-          options={MCollections}
-          defaultValue={chessStore[FORM_FIELDS.PEACE_THEME]}
-        />
+        <Form.Select name={FORM_FIELDS.PEACE_THEME} options={MCollections} />
         <button type="submit">Save</button>
       </Form>
     </Modal>
