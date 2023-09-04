@@ -16,31 +16,6 @@
       max-width: 1.6rem;
       max-height: 1.6rem;
     }
-
-    &-board {
-      display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(8, 1fr);
-      border: 0.1rem solid var(--clr-black);
-      max-width: 80rem;
-      max-height: 80rem;
-
-      .tile {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 10rem;
-        height: 10rem;
-
-        &--black {
-          background-color: var(--clr-board-classic-b);
-        }
-
-        &--white {
-          background-color: var(--clr-board-classic-w);
-        }
-      }
-    }
   }
 
   .piece[data-color="black"] {

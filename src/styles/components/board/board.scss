@@ -1,0 +1,63 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  border: 0.1rem solid var(--clr-black);
+  max-width: 80rem;
+  max-height: 80rem;
+
+  &--stone {
+    .tile {
+      &--black {
+        background-color: var(--clr-board-stone-d);
+      }
+      &--white {
+        background-color: var(--clr-board-stone-l);
+      }
+    }
+  }
+
+  &--classic {
+    .tile {
+      &--black {
+        background-color: var(--clr-board-classic-d);
+      }
+      &--white {
+        background-color: var(--clr-board-classic-l);
+      }
+    }
+  }
+
+  &--grey {
+    .tile {
+      &--black {
+        background-color: var(--clr-board-grey-d);
+      }
+      &--white {
+        background-color: var(--clr-board-grey-l);
+      }
+    }
+  }
+
+  &--walnut {
+    .tile {
+      &--black {
+        background-color: var(--clr-board-walnut-d);
+      }
+      &--white {
+        background-color: var(--clr-board-walnut-l);
+      }
+    }
+  }
+
+  &--metal {
+    .tile {
+      &--black {
+        background-color: var(--clr-board-metal-d);
+      }
+      &--white {
+        background-color: var(--clr-board-metal-l);
+      }
+    }
+  }
+}

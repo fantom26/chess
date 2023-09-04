@@ -8,6 +8,7 @@ import { Form } from "../form";
 import { MCollections } from "@/utils/mock/collections.mock";
 import { useChessContext } from "@/hooks";
 import { SettingsStageSchema, settingsResolver } from "@/utils/validation";
+import { MBoardColors } from "@/utils/mock/board-colors.mock";
 
 interface BoardSettingsProps {
   className?: string;
@@ -21,7 +22,8 @@ export const ChessSettingsModal: FC<BoardSettingsProps> = (props) => {
   const methods = useForm<SettingsStageSchema>({
     resolver: settingsResolver,
     defaultValues: {
-      [FORM_FIELDS.PEACE_THEME]: chessStore.peaceTheme
+      [FORM_FIELDS.PEACE_THEME]: chessStore[FORM_FIELDS.PEACE_THEME],
+      [FORM_FIELDS.BOARD_THEME]: chessStore[FORM_FIELDS.BOARD_THEME]
     }
   });
 
@@ -40,6 +42,7 @@ export const ChessSettingsModal: FC<BoardSettingsProps> = (props) => {
     >
       <Form methods={methods} onSubmit={handleSubmit(updateSettings)}>
         <Form.Select name={FORM_FIELDS.PEACE_THEME} options={MCollections} />
+        <Form.Select name={FORM_FIELDS.BOARD_THEME} options={MBoardColors} />
         <button type="submit">Save</button>
       </Form>
     </Modal>
