@@ -16,21 +16,14 @@ interface ModalProps {
 
 export const Modal: FC<ModalProps> = (props) => {
   // **Props
-  const {
-    visible,
-    width = 83,
-    animationDuration = 300,
-    bodyClassName,
-    children,
-    onClose,
-  } = props;
+  const { visible, width = 83, animationDuration = 300, bodyClassName, children, onClose } = props;
   const { lockScroll, unlockScroll } = useScrollLock();
 
   const [isBrowser, setIsBrowser] = useState<boolean>(false);
 
   const styles: Record<string, string> = {
     "--duration": `${animationDuration}ms`,
-    "--width": `${width}rem`,
+    "--width": `${width}rem`
   };
 
   const modalRef = useRef<HTMLDivElement | null>(null);
@@ -57,37 +50,13 @@ export const Modal: FC<ModalProps> = (props) => {
   }
 
   return createPortal(
-    <Transition
-      in={visible}
-      timeout={animationDuration}
-      mountOnEnter
-      unmountOnExit
-    >
+    <Transition in={visible} timeout={animationDuration} mountOnEnter unmountOnExit>
       {(state) => (
-        <div
-          style={styles}
-          className={`modal ${state}`}
-          onClick={onClose}
-          role="dialog"
-          aria-modal="true"
-          ref={modalRef}
-        >
+        <div style={styles} className={`modal ${state}`} onClick={onClose} role="dialog" aria-modal="true" ref={modalRef}>
           <div className="modal-wrapper">
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-              <div
-                className={
-                  bodyClassName
-                    ? `modal-content__body ${bodyClassName}`
-                    : "modal-content__body"
-                }
-              >
-                {children}
-              </div>
-              <button
-                className="modal__close"
-                aria-label="Закрыть модальное окно"
-                onClick={onClose}
-              ></button>
+              <div className={bodyClassName ? `modal-content__body ${bodyClassName}` : "modal-content__body"}>{children}</div>
+              <button className="modal__close" aria-label="Закрыть модальное окно" onClick={onClose}></button>
             </div>
           </div>
         </div>

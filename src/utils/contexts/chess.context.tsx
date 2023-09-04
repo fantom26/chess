@@ -1,12 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import {
-  Dispatch,
-  FC,
-  ReactNode,
-  SetStateAction,
-  createContext,
-  useState,
-} from "react";
+import { Dispatch, FC, ReactNode, SetStateAction, createContext, useState } from "react";
 import { COLLECTIONS } from "../enums";
 import { TSelectOption } from "../validation";
 
@@ -27,11 +20,11 @@ const initialState: ChessContextProps = {
   chessStore: {
     peaceTheme: {
       label: COLLECTIONS.STONE,
-      value: COLLECTIONS.STONE,
-    },
+      value: COLLECTIONS.STONE
+    }
   },
   // eslint-disable-next-line no-empty-function
-  setChessStore: () => {},
+  setChessStore: () => {}
 };
 
 export const ChessContext = createContext(initialState);
@@ -42,12 +35,8 @@ export const ChessProvider: FC<ChessProviderProps> = (props) => {
 
   const value = {
     chessStore,
-    setChessStore,
+    setChessStore
   };
 
-  console.log("chessStore", chessStore);
-
-  return (
-    <ChessContext.Provider value={value}>{children}</ChessContext.Provider>
-  );
+  return <ChessContext.Provider value={value}>{children}</ChessContext.Provider>;
 };

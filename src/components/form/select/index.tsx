@@ -19,14 +19,7 @@ export const ControlledSelect: FC<SelectProps> = (props) => {
       name={name}
       control={control}
       defaultValue={defaultValue}
-      render={({ field: { onChange, value } }) => (
-        <Select
-          value={value}
-          options={options}
-          defaultValue={defaultValue}
-          onChange={(value) => onChange(value)}
-        />
-      )}
+      render={({ field: { onChange, value } }) => <Select value={value} options={options} defaultValue={defaultValue} onChange={(value) => onChange(value)} />}
     />
   );
 };

@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 
 import { Modal } from "../common";
 import { useModalContext } from "@/hooks/use-modal-context";
@@ -21,8 +21,8 @@ export const ChessSettingsModal: FC<BoardSettingsProps> = (props) => {
   const methods = useForm<SettingsStageSchema>({
     resolver: settingsResolver,
     defaultValues: {
-      [FORM_FIELDS.PEACE_THEME]: chessStore.peaceTheme,
-    },
+      [FORM_FIELDS.PEACE_THEME]: chessStore.peaceTheme
+    }
   });
 
   const { handleSubmit } = methods;
@@ -36,9 +36,7 @@ export const ChessSettingsModal: FC<BoardSettingsProps> = (props) => {
       width={61}
       visible={modalStore[MODALS.CHESS_SETTINGS]}
       onClose={generateModalHandlers(MODALS.CHESS_SETTINGS).close}
-      bodyClassName={
-        className ? `modal-chess-settings ${className}` : "modal-chess-settings"
-      }
+      bodyClassName={className ? `modal-chess-settings ${className}` : "modal-chess-settings"}
     >
       <Form methods={methods} onSubmit={handleSubmit(updateSettings)}>
         <Form.Select name={FORM_FIELDS.PEACE_THEME} options={MCollections} />

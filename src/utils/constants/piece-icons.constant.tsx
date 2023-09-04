@@ -3,13 +3,7 @@ import { COLLECTIONS, PIECE, PIECE_COLORS } from "../enums";
 export const PIECE_ICONS = {
   [COLLECTIONS.CLASSIC]: {
     [PIECE.BISHOP]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M75.2104 93.8844H24.8291V79.548L29.3347 76.2712V72.9944C29.3347 72.9944 30.1883 72.06 31.4391 70.5368C34.3017 67.0512 39.2453 60.482 40.8036 54.9716C43.0432 47.0536 39.9845 32.4435 39.9845 32.4435H61.284C61.284 32.4435 57.806 44.596 59.6456 52.514C60.9832 58.2712 66.0052 66.4828 68.6472 70.5368C69.6388 72.0584 70.2952 72.9944 70.2952 72.9944V76.2712L75.2104 79.548V93.8844Z"
           className={PIECE_COLORS.WHITE}
@@ -29,25 +23,11 @@ export const PIECE_ICONS = {
           strokeWidth="0.723179"
         />
         <defs>
-          <linearGradient
-            id="paint0_linear_302_1219"
-            x1="50.02"
-            y1="32.4435"
-            x2="50.02"
-            y2="93.8844"
-            gradientUnits="userSpaceOnUse"
-          >
+          <linearGradient id="paint0_linear_302_1219" x1="50.02" y1="32.4435" x2="50.02" y2="93.8844" gradientUnits="userSpaceOnUse">
             <stop className={PIECE_COLORS.BLACK} />
             <stop offset="1" className={PIECE_COLORS.BLACK} />
           </linearGradient>
-          <linearGradient
-            id="paint1_linear_302_1219"
-            x1="49.9132"
-            y1="3.8396"
-            x2="49.9132"
-            y2="38.8749"
-            gradientUnits="userSpaceOnUse"
-          >
+          <linearGradient id="paint1_linear_302_1219" x1="49.9132" y1="3.8396" x2="49.9132" y2="38.8749" gradientUnits="userSpaceOnUse">
             <stop className={PIECE_COLORS.BLACK} />
             <stop offset="1" className={PIECE_COLORS.BLACK} />
           </linearGradient>
@@ -55,13 +35,7 @@ export const PIECE_ICONS = {
       </svg>
     ),
     [PIECE.KING]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M75.4516 97.6755H25.0701V86.1142L29.5757 83.4716V80.829C29.5757 80.829 30.4292 80.0755 31.6801 78.8468C34.5427 76.0358 39.4862 70.7381 41.0448 66.2945C43.284 59.909 40.2256 48.1265 40.2256 48.1265H61.5248C61.5248 48.1265 58.0468 57.9271 59.8864 64.3126C61.224 68.9552 66.2464 75.5778 68.888 78.8468C69.88 80.0742 70.5364 80.829 70.5364 80.829V83.4716L75.4516 86.1142V97.6755Z"
           className={PIECE_COLORS.WHITE}
@@ -81,25 +55,11 @@ export const PIECE_ICONS = {
           strokeWidth="0.723179"
         />
         <defs>
-          <linearGradient
-            id="paint0_linear_302_1227"
-            x1="50.2608"
-            y1="48.1265"
-            x2="50.2608"
-            y2="97.6755"
-            gradientUnits="userSpaceOnUse"
-          >
+          <linearGradient id="paint0_linear_302_1227" x1="50.2608" y1="48.1265" x2="50.2608" y2="97.6755" gradientUnits="userSpaceOnUse">
             <stop className={PIECE_COLORS.BLACK} />
             <stop offset="1" className={PIECE_COLORS.BLACK} />
           </linearGradient>
-          <linearGradient
-            id="paint1_linear_302_1227"
-            x1="50.8731"
-            y1="4.26001"
-            x2="50.8731"
-            y2="50.2041"
-            gradientUnits="userSpaceOnUse"
-          >
+          <linearGradient id="paint1_linear_302_1227" x1="50.8731" y1="4.26001" x2="50.8731" y2="50.2041" gradientUnits="userSpaceOnUse">
             <stop className={PIECE_COLORS.BLACK} />
             <stop offset="1" className={PIECE_COLORS.BLACK} />
           </linearGradient>
@@ -107,13 +67,7 @@ export const PIECE_ICONS = {
       </svg>
     ),
     [PIECE.KNIGHT]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M78.4697 95.2236H28.2339V80.5716L32.8388 76.8036L35.7692 70.5244C35.7692 70.5244 34.704 65.1928 36.3972 59.64C38.8711 51.5264 48.3281 36.6152 48.3281 36.6152C48.3281 36.6152 45.1885 41.22 38.281 39.5456C31.3736 37.8711 24.4662 42.8948 24.4662 42.8948L21.1172 32.8476L32.8388 25.7308C32.8388 25.7308 32.7447 21.7402 35.7692 19.4514C38.7937 17.1626 48.3281 14.0092 48.3281 14.0092V4.79932C48.3281 4.79932 68.7865 18.0942 73.4461 31.173C78.1053 44.252 72.1901 70.5244 72.1901 70.5244L73.8645 76.8036L78.4697 80.5716V95.2236Z"
           className={PIECE_COLORS.WHITE}
@@ -124,14 +78,7 @@ export const PIECE_ICONS = {
           strokeWidth="0.723179"
         />
         <defs>
-          <linearGradient
-            id="paint0_linear_302_1224"
-            x1="49.7933"
-            y1="4.79932"
-            x2="49.7933"
-            y2="95.2236"
-            gradientUnits="userSpaceOnUse"
-          >
+          <linearGradient id="paint0_linear_302_1224" x1="49.7933" y1="4.79932" x2="49.7933" y2="95.2236" gradientUnits="userSpaceOnUse">
             <stop className={PIECE_COLORS.BLACK} />
             <stop offset="1" className={PIECE_COLORS.BLACK} />
           </linearGradient>
@@ -139,13 +86,7 @@ export const PIECE_ICONS = {
       </svg>
     ),
     [PIECE.PAWN]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M75.1056 93.7527H24.7944V79.4367L29.2938 76.1643V72.8919C29.2938 72.8919 30.1461 71.9591 31.3952 70.438C34.2538 66.9571 39.1904 60.3971 40.7468 54.8947C42.9832 46.9875 39.9286 32.3978 39.9286 32.3978H61.1984C61.1984 32.3978 57.7252 44.5335 59.5624 52.4403C60.898 58.1891 65.9132 66.3895 68.5512 70.438C69.5416 71.9576 70.1972 72.8919 70.1972 72.8919V76.1643L75.1056 79.4367V93.7527Z"
           className={PIECE_COLORS.WHITE}
@@ -162,25 +103,11 @@ export const PIECE_ICONS = {
           strokeWidth="0.722168"
         />
         <defs>
-          <linearGradient
-            id="paint0_linear_302_1237"
-            x1="49.95"
-            y1="32.3978"
-            x2="49.95"
-            y2="93.7527"
-            gradientUnits="userSpaceOnUse"
-          >
+          <linearGradient id="paint0_linear_302_1237" x1="49.95" y1="32.3978" x2="49.95" y2="93.7527" gradientUnits="userSpaceOnUse">
             <stop className={PIECE_COLORS.BLACK} />
             <stop offset="1" className={PIECE_COLORS.BLACK} />
           </linearGradient>
-          <linearGradient
-            id="paint1_linear_302_1237"
-            x1="50.5636"
-            y1="6.62878"
-            x2="50.5636"
-            y2="36.8972"
-            gradientUnits="userSpaceOnUse"
-          >
+          <linearGradient id="paint1_linear_302_1237" x1="50.5636" y1="6.62878" x2="50.5636" y2="36.8972" gradientUnits="userSpaceOnUse">
             <stop className={PIECE_COLORS.BLACK} />
             <stop offset="1" className={PIECE_COLORS.BLACK} />
           </linearGradient>
@@ -188,13 +115,7 @@ export const PIECE_ICONS = {
       </svg>
     ),
     [PIECE.QUEEN]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M75.4517 97.1176H25.0703V82.7816L29.576 79.5048V76.228C29.576 76.228 30.4295 75.2936 31.6804 73.77C34.5429 70.2844 39.4865 63.7152 41.0449 58.2052C43.2845 50.2872 40.2257 35.6769 40.2257 35.6769H61.5253C61.5253 35.6769 58.0473 47.8296 59.8869 55.7476C61.2241 61.5044 66.2465 69.7164 68.8885 73.77C69.8801 75.292 70.5365 76.228 70.5365 76.228V79.5048L75.4517 82.7816V97.1176Z"
           className={PIECE_COLORS.WHITE}
@@ -214,25 +135,11 @@ export const PIECE_ICONS = {
           strokeWidth="0.723179"
         />
         <defs>
-          <linearGradient
-            id="paint0_linear_302_1232"
-            x1="50.2609"
-            y1="35.6769"
-            x2="50.2609"
-            y2="97.1176"
-            gradientUnits="userSpaceOnUse"
-          >
+          <linearGradient id="paint0_linear_302_1232" x1="50.2609" y1="35.6769" x2="50.2609" y2="97.1176" gradientUnits="userSpaceOnUse">
             <stop className={PIECE_COLORS.BLACK} />
             <stop offset="1" className={PIECE_COLORS.BLACK} />
           </linearGradient>
-          <linearGradient
-            id="paint1_linear_302_1232"
-            x1="50.696"
-            y1="4.33899"
-            x2="50.696"
-            y2="45.1708"
-            gradientUnits="userSpaceOnUse"
-          >
+          <linearGradient id="paint1_linear_302_1232" x1="50.696" y1="4.33899" x2="50.696" y2="45.1708" gradientUnits="userSpaceOnUse">
             <stop className={PIECE_COLORS.BLACK} />
             <stop offset="1" className={PIECE_COLORS.BLACK} />
           </linearGradient>
@@ -240,13 +147,7 @@ export const PIECE_ICONS = {
       </svg>
     ),
     [PIECE.ROOK]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M75.2108 93.884H24.8293V79.5476L29.335 76.2708V72.994C29.335 72.994 30.1885 72.0596 31.4394 70.5364C34.3019 67.0508 39.2455 60.4816 40.804 54.9712C43.0436 47.0532 39.9847 32.443 39.9847 32.443H61.2844C61.2844 32.443 57.8064 44.5956 59.646 52.5136C60.9832 58.2708 66.0056 66.4824 68.6476 70.5364C69.6392 72.058 70.2956 72.994 70.2956 72.994V76.2708L75.2108 79.5476V93.884Z"
           className={PIECE_COLORS.WHITE}
@@ -266,53 +167,23 @@ export const PIECE_ICONS = {
           strokeWidth="0.723179"
         />
         <defs>
-          <linearGradient
-            id="paint0_linear_302_1241"
-            x1="50.02"
-            y1="32.443"
-            x2="50.02"
-            y2="93.884"
-            gradientUnits="userSpaceOnUse"
-          >
+          <linearGradient id="paint0_linear_302_1241" x1="50.02" y1="32.443" x2="50.02" y2="93.884" gradientUnits="userSpaceOnUse">
             <stop className={PIECE_COLORS.BLACK} />
             <stop offset="1" className={PIECE_COLORS.BLACK} />
           </linearGradient>
-          <linearGradient
-            id="paint1_linear_302_1241"
-            x1="50.1044"
-            y1="4.82104"
-            x2="50.1044"
-            y2="37.123"
-            gradientUnits="userSpaceOnUse"
-          >
+          <linearGradient id="paint1_linear_302_1241" x1="50.1044" y1="4.82104" x2="50.1044" y2="37.123" gradientUnits="userSpaceOnUse">
             <stop className={PIECE_COLORS.BLACK} />
             <stop offset="1" className={PIECE_COLORS.BLACK} />
           </linearGradient>
         </defs>
       </svg>
-    ),
+    )
   },
   [COLLECTIONS.GREY]: {
     [PIECE.BISHOP]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <mask
-          id="mask0_310_141"
-          maskUnits="userSpaceOnUse"
-          x="20"
-          y="10"
-          width="61"
-          height="80"
-        >
-          <path
-            d="M19.9999 10H80.8333V89.1667H19.9999V10Z"
-            className={PIECE_COLORS.WHITE}
-          />
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <mask id="mask0_310_141" maskUnits="userSpaceOnUse" x="20" y="10" width="61" height="80">
+          <path d="M19.9999 10H80.8333V89.1667H19.9999V10Z" className={PIECE_COLORS.WHITE} />
         </mask>
         <g mask="url(#mask0_310_141)">
           <path
@@ -341,26 +212,11 @@ export const PIECE_ICONS = {
       </svg>
     ),
     [PIECE.KING]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
         <path d="M10 13H90V86.3333H10V13Z" fill="url(#pattern0)" />
         <defs>
-          <pattern
-            id="pattern0"
-            patternContentUnits="objectBoundingBox"
-            width="1"
-            height="1"
-          >
-            <use
-              xlinkHref="#image0_310_140"
-              transform="matrix(0.00261158 0 0 0.002849 -0.00543092 0)"
-            />
+          <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlinkHref="#image0_310_140" transform="matrix(0.00261158 0 0 0.002849 -0.00543092 0)" />
           </pattern>
           <image
             id="image0_310_140"
@@ -372,29 +228,13 @@ export const PIECE_ICONS = {
       </svg>
     ),
     [PIECE.KNIGHT]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M38.5653 88.3334H79.7678C80.3561 88.3334 80.8333 88.7895 80.8333 89.3523V92.3145C80.8333 92.8773 80.3561 93.3334 79.7678 93.3334H38.5653C37.9769 93.3334 37.5 92.8773 37.5 92.3145V89.3523C37.5 88.7895 37.9769 88.3334 38.5653 88.3334Z"
           className={PIECE_COLORS.WHITE}
         />
-        <mask
-          id="mask0_303_1344"
-          maskUnits="userSpaceOnUse"
-          x="19"
-          y="6"
-          width="62"
-          height="80"
-        >
-          <path
-            d="M19.1668 6.66663H80.8335V85.8333H19.1668V6.66663Z"
-            className={PIECE_COLORS.WHITE}
-          />
+        <mask id="mask0_303_1344" maskUnits="userSpaceOnUse" x="19" y="6" width="62" height="80">
+          <path d="M19.1668 6.66663H80.8335V85.8333H19.1668V6.66663Z" className={PIECE_COLORS.WHITE} />
         </mask>
         <g mask="url(#mask0_303_1344)">
           <path
@@ -444,29 +284,13 @@ export const PIECE_ICONS = {
       </svg>
     ),
     [PIECE.PAWN]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M33.2989 80H64.2011C64.6422 80 65 80.4561 65 81.0189V83.9811C65 84.5439 64.6422 85 64.2011 85H33.2989C32.8577 85 32.5 84.5439 32.5 83.9811V81.0189C32.5 80.4561 32.8577 80 33.2989 80Z"
           className={PIECE_COLORS.WHITE}
         />
-        <mask
-          id="mask0_303_1357"
-          maskUnits="userSpaceOnUse"
-          x="32"
-          y="15"
-          width="36"
-          height="65"
-        >
-          <path
-            d="M32.5 15.8334H67.5V79.1667H32.5V15.8334Z"
-            className={PIECE_COLORS.WHITE}
-          />
+        <mask id="mask0_303_1357" maskUnits="userSpaceOnUse" x="32" y="15" width="36" height="65">
+          <path d="M32.5 15.8334H67.5V79.1667H32.5V15.8334Z" className={PIECE_COLORS.WHITE} />
         </mask>
         <g mask="url(#mask0_303_1357)">
           <path
@@ -503,37 +327,14 @@ export const PIECE_ICONS = {
       </svg>
     ),
     [PIECE.QUEEN]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_303_1320)">
-          <mask
-            id="mask0_303_1320"
-            maskUnits="userSpaceOnUse"
-            x="0"
-            y="0"
-            width="100"
-            height="100"
-          >
+          <mask id="mask0_303_1320" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
             <path d="M100 0H0V100H100V0Z" className={PIECE_COLORS.WHITE} />
           </mask>
           <g mask="url(#mask0_303_1320)">
-            <mask
-              id="mask1_303_1320"
-              maskUnits="userSpaceOnUse"
-              x="-4"
-              y="17"
-              width="107"
-              height="65"
-            >
-              <path
-                d="M-3.33332 17.5H103V81.8917H-3.33332V17.5Z"
-                className={PIECE_COLORS.WHITE}
-              />
+            <mask id="mask1_303_1320" maskUnits="userSpaceOnUse" x="-4" y="17" width="107" height="65">
+              <path d="M-3.33332 17.5H103V81.8917H-3.33332V17.5Z" className={PIECE_COLORS.WHITE} />
             </mask>
             <g mask="url(#mask1_303_1320)">
               <path
@@ -563,25 +364,9 @@ export const PIECE_ICONS = {
       </svg>
     ),
     [PIECE.ROOK]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <mask
-          id="mask0_303_1307"
-          maskUnits="userSpaceOnUse"
-          x="26"
-          y="16"
-          width="49"
-          height="62"
-        >
-          <path
-            d="M26.6667 16.6666H74.1667V77.5H26.6667V16.6666Z"
-            className={PIECE_COLORS.WHITE}
-          />
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <mask id="mask0_303_1307" maskUnits="userSpaceOnUse" x="26" y="16" width="49" height="62">
+          <path d="M26.6667 16.6666H74.1667V77.5H26.6667V16.6666Z" className={PIECE_COLORS.WHITE} />
         </mask>
         <g mask="url(#mask0_303_1307)">
           <path
@@ -618,17 +403,11 @@ export const PIECE_ICONS = {
           className={PIECE_COLORS.WHITE}
         />
       </svg>
-    ),
+    )
   },
   [COLLECTIONS.STONE]: {
     [PIECE.BISHOP]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M36.4917 25.2832C35.9335 23.7496 35.6282 22.0942 35.6282 20.3697C35.6282 12.4335 42.0617 6 49.9979 6C57.934 6 64.3675 12.4335 64.3675 20.3697C64.3675 22.6943 63.8119 24.8979 62.8271 26.8465C64.2443 26.9446 65.6214 27.5831 66.6254 28.7306C72.0804 34.9649 76.8542 43.8539 76.8542 54.1571C76.8542 61.5231 74.3182 66.9814 70.8915 70.9143L77.3999 72.0557C80.0574 72.5218 81.9957 74.8297 81.9957 77.5278V87.9444C81.9957 89.4179 81.4104 90.831 80.3685 91.8728C79.3267 92.9147 77.9136 93.5 76.4401 93.5H23.5556C20.4874 93.5 18 91.0126 18 87.9444V77.5278C18 74.8329 19.934 72.5267 22.5878 72.0572L28.4588 71.0186C24.9853 67.0783 22.4071 61.5894 22.4071 54.1571C22.4071 46.1185 25.5222 39.1179 29.1758 33.7529C31.4724 30.3807 34.0724 27.5176 36.4917 25.2832Z"
           className={PIECE_COLORS.BLACK}
@@ -640,13 +419,7 @@ export const PIECE_ICONS = {
       </svg>
     ),
     [PIECE.KING]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -662,13 +435,7 @@ export const PIECE_ICONS = {
       </svg>
     ),
     [PIECE.KNIGHT]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M44.8911 5.03485C46.7197 4.82922 48.5317 5.54248 49.7294 6.93952L61.064 20.1596C74.0807 23.3763 81.6225 33.1777 85.7937 45.4135C90.0919 58.0217 91.1551 74.028 91.1551 90.4418C91.1551 93.51 88.6678 95.9974 85.5996 95.9974H33.8008C30.8515 95.9974 28.4161 93.6927 28.2537 90.7477C28.1087 88.1198 28.7135 83.5598 30.556 78.9021L30.5899 78.8168C25.3575 81.6255 19.5507 80.9527 15.24 77.8835C10.0013 74.1536 7.08849 66.8521 10.4165 59.6416C12.8163 54.4418 15.4028 51.6885 17.3595 49.606C19.1872 47.6609 19.9489 46.8053 20.4876 44.65C23.7547 31.582 30.4758 24.0539 37.6939 20.6184C37.5894 19.1296 37.6743 17.6953 37.8569 16.3931C38.3115 13.1517 39.4431 10.1563 40.5965 7.9665C41.4542 6.33832 43.0624 5.24048 44.8911 5.03485Z"
           className={PIECE_COLORS.BLACK}
@@ -686,13 +453,7 @@ export const PIECE_ICONS = {
       </svg>
     ),
     [PIECE.PAWN]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M32.4271 56.7875C31.7643 57.6924 30.9733 58.6346 30.0515 59.6039C26.7979 63.0247 22.8078 65.8393 20.2325 67.3108L19.7992 67.5585C18.0682 68.5475 17 70.3883 17 72.382V85.7778C17 88.846 19.4874 91.3333 22.5556 91.3333H76.7222C79.7904 91.3333 82.2778 88.846 82.2778 85.7778V72.382C82.2778 70.3883 81.2096 68.5476 79.4786 67.5585L79.0454 67.3108C76.4701 65.8393 72.4799 63.0247 69.2263 59.6039C68.3044 58.6346 67.5135 57.6924 66.8507 56.7875C69.2889 56.2001 71.1006 54.0047 71.1006 51.3862V42.3429C71.1006 40.5378 70.2235 38.8451 68.7488 37.8042L66.3892 36.1386C67.7507 33.4932 68.5211 30.4914 68.5211 27.3122C68.5211 16.6464 59.8749 8 49.209 8C38.5432 8 29.8968 16.6464 29.8968 27.3122C29.8968 30.6701 30.7561 33.8294 32.2632 36.58L30.529 37.8042C29.0543 38.8451 28.1772 40.5378 28.1772 42.3429V51.3862C28.1772 54.0047 29.9889 56.2001 32.4271 56.7875Z"
           className={PIECE_COLORS.BLACK}
@@ -704,13 +465,7 @@ export const PIECE_ICONS = {
       </svg>
     ),
     [PIECE.QUEEN]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M24.6111 17.5C24.6111 18.8713 24.8317 20.1907 25.2393 21.4247L22.4971 22.7111C20.2236 20.3546 17.0331 18.8889 13.5 18.8889C6.59644 18.8889 1 24.4853 1 31.3889C1 37.5428 5.44694 42.6581 11.3027 43.6964L17.8889 66.2778C18.0264 66.7492 18.2257 67.2003 18.4818 67.6192L22.2778 73.8308L22.2544 73.835C19.6007 74.3044 17.6667 76.6107 17.6667 79.3056V89.7222C17.6667 92.7904 20.154 95.2778 23.2222 95.2778H76.1068C77.5803 95.2778 78.9933 94.6925 80.0351 93.6506C81.0771 92.6088 81.6624 91.1957 81.6624 89.7222V79.3056C81.6624 76.6075 79.724 74.2996 77.0665 73.8335L76.9549 73.8139L80.7404 67.6192C80.9965 67.2003 81.1958 66.7492 81.3333 66.2778L87.9196 43.6964C93.7753 42.6581 98.2222 37.5428 98.2222 31.3889C98.2222 24.4853 92.6258 18.8889 85.7222 18.8889C82.1847 18.8889 78.9906 20.3583 76.7165 22.72L73.9792 21.436C74.3892 20.1988 74.6111 18.8754 74.6111 17.5C74.6111 10.5964 69.0147 5 62.1111 5C55.2075 5 49.6111 10.5964 49.6111 17.5C49.6111 10.5964 44.0147 5 37.1111 5C30.2075 5 24.6111 10.5964 24.6111 17.5Z"
           className={PIECE_COLORS.BLACK}
@@ -722,13 +477,7 @@ export const PIECE_ICONS = {
       </svg>
     ),
     [PIECE.ROOK]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M36.4444 8C37.4564 8 38.4051 8.27054 39.2222 8.74324C40.0393 8.27054 40.9881 8 42 8H57.2778C58.2897 8 59.2385 8.27054 60.0556 8.74324C60.8728 8.27054 61.8214 8 62.8333 8H76.7222C79.7904 8 82.2778 10.4873 82.2778 13.5556V26.0556C82.2778 27.8042 81.4545 29.4508 80.0556 30.5L71.4832 36.9293L73.9104 58.7754C74.5531 64.5592 77.2451 67.4935 81.1667 72.7222C81.8879 73.6839 82.2778 74.8535 82.2778 76.0555V87.1667C82.2778 90.2349 79.7904 92.7222 76.7222 92.7222H22.5556C19.4874 92.7222 17 90.2349 17 87.1667V76.0555C17 74.8535 17.3899 73.6839 18.1111 72.7222C22.0326 67.4935 24.7247 64.5592 25.3674 58.7754L27.7947 36.9293L19.2222 30.5C17.8233 29.4508 17 27.8042 17 26.0556V13.5556C17 10.4873 19.4874 8 22.5556 8H36.4444Z"
           className={PIECE_COLORS.BLACK}
@@ -737,38 +486,20 @@ export const PIECE_ICONS = {
           d="M22.5557 13.5555H36.4446V21.8889H42.0001V13.5555H57.2779V21.8889H62.8334V13.5555H76.7223V26.0555L65.6112 34.3889L68.389 59.3889H30.889L33.6668 34.3889L22.5557 26.0555V13.5555Z"
           className={PIECE_COLORS.WHITE}
         />
-        <path
-          d="M30.889 64.9445H68.389L76.7223 76.0556V87.1667H22.5557V76.0556L30.889 64.9445Z"
-          className={PIECE_COLORS.WHITE}
-        />
+        <path d="M30.889 64.9445H68.389L76.7223 76.0556V87.1667H22.5557V76.0556L30.889 64.9445Z" className={PIECE_COLORS.WHITE} />
       </svg>
-    ),
+    )
   },
   [COLLECTIONS.WALNUT]: {
     [PIECE.BISHOP]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M54.3884 15.418C54.3884 17.788 52.4592 19.7154 50.072 19.7154C47.6848 19.7154 45.7556 17.788 45.7556 15.418C45.7556 13.0479 47.6848 11.1205 50.072 11.1205C52.4592 11.1205 54.3884 13.0479 54.3884 15.418Z"
           className={PIECE_COLORS.WHITE}
           stroke="black"
           strokeWidth="2"
         />
-        <rect
-          x="45.6526"
-          y="19.531"
-          width="8.6947"
-          height="0.615763"
-          rx="0.307881"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="0.615763"
-        />
+        <rect x="45.6526" y="19.531" width="8.6947" height="0.615763" rx="0.307881" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="0.615763" />
         <path
           d="M37.2124 71.6647V71.1168C40.6131 67.1296 42.6664 61.9618 42.6664 56.3179C42.6664 52.0629 41.4992 48.0775 39.4666 44.6648H60.5336C58.5011 48.0775 57.3338 52.0629 57.3338 56.3179C57.3338 61.9618 59.3871 67.1296 62.7878 71.1168V71.6647H37.2124Z"
           className={PIECE_COLORS.WHITE}
@@ -785,53 +516,14 @@ export const PIECE_ICONS = {
           d="M47.3544 19.839V18.839H46.8329L46.5344 19.2666L47.3544 19.839ZM36.291 35.6881L35.471 35.1157L35.4485 35.148L35.4286 35.182L36.291 35.6881ZM39.8641 43.6649L39.4403 44.5706L39.6417 44.6649H39.8641V43.6649ZM60.1359 43.6649V44.6649H60.3583L60.5598 44.5706L60.1359 43.6649ZM63.709 35.6881L64.5715 35.182L64.5515 35.148L64.529 35.1157L63.709 35.6881ZM52.6456 19.839L53.4656 19.2666L53.1671 18.839H52.6456V19.839ZM47.3544 20.839H50V18.839H47.3544V20.839ZM37.111 36.2605L48.1744 20.4114L46.5344 19.2666L35.471 35.1157L37.111 36.2605ZM40.288 42.7592C37.9145 41.6484 37.0234 40.2819 36.7429 39.146C36.4503 37.9607 36.7753 36.8387 37.1535 36.1942L35.4286 35.182C34.8392 36.1863 34.3606 37.8405 34.8012 39.6254C35.2541 41.4595 36.6332 43.257 39.4403 44.5706L40.288 42.7592ZM50 42.6649H39.8641V44.6649H50V42.6649ZM50 44.6649H60.1359V42.6649H50V44.6649ZM60.5598 44.5706C63.3668 43.257 64.746 41.4595 65.1988 39.6254C65.6395 37.8405 65.1608 36.1863 64.5715 35.182L62.8465 36.1942C63.2247 36.8387 63.5498 37.9607 63.2571 39.146C62.9767 40.2819 62.0855 41.6484 59.712 42.7592L60.5598 44.5706ZM64.529 35.1157L53.4656 19.2666L51.8256 20.4114L62.889 36.2605L64.529 35.1157ZM52.6456 18.839H50V20.839H52.6456V18.839Z"
           className={PIECE_COLORS.BLACK}
         />
-        <rect
-          x="35.9041"
-          y="44.6631"
-          width="28.1922"
-          height="1.99659"
-          rx="0.998293"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="1.99659"
-        />
-        <rect
-          x="33.2598"
-          y="73.6648"
-          width="33.4804"
-          height="3.32367"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
-        <rect
-          x="28.6057"
-          y="78.9884"
-          width="42.7885"
-          height="3.58968"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
-        <rect
-          x="25.6389"
-          y="84.5781"
-          width="48.7222"
-          height="3.58966"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
+        <rect x="35.9041" y="44.6631" width="28.1922" height="1.99659" rx="0.998293" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="1.99659" />
+        <rect x="33.2598" y="73.6648" width="33.4804" height="3.32367" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
+        <rect x="28.6057" y="78.9884" width="42.7885" height="3.58968" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
+        <rect x="25.6389" y="84.5781" width="48.7222" height="3.58966" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
       </svg>
     ),
     [PIECE.KING]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M66.8566 32.2329C66.8566 35.013 65.0508 38.6717 61.9324 41.6773C58.8402 44.6577 54.613 46.8396 49.9995 46.8396C45.386 46.8396 41.1588 44.6577 38.0665 41.6773C34.9482 38.6717 33.1423 35.013 33.1423 32.2329C33.1423 29.5438 34.8514 26.9677 37.9107 25.0147C40.9585 23.0689 45.2298 21.8328 49.9995 21.8328C54.7692 21.8328 59.0405 23.0689 62.0883 25.0147C65.1476 26.9677 66.8566 29.5438 66.8566 32.2329Z"
           className={PIECE_COLORS.WHITE}
@@ -844,120 +536,35 @@ export const PIECE_ICONS = {
           stroke="black"
           strokeWidth="2"
         />
-        <rect
-          x="35.2673"
-          y="42.4914"
-          width="29.2304"
-          height="0.958399"
-          rx="0.479199"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="0.958399"
-        />
+        <rect x="35.2673" y="42.4914" width="29.2304" height="0.958399" rx="0.479199" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="0.958399" />
         <path
           d="M37.095 71.9357V71.3799C40.496 67.3788 42.549 62.1932 42.549 56.5305C42.549 52.2588 41.3806 48.2578 39.346 44.8322H60.4194C58.3848 48.2578 57.2164 52.2588 57.2164 56.5305C57.2164 62.1932 59.2694 67.3788 62.6704 71.3799V71.9357H37.095Z"
           className={PIECE_COLORS.WHITE}
           stroke="black"
           strokeWidth="2"
         />
-        <rect
-          x="35.7881"
-          y="44.8322"
-          width="28.1888"
-          height="2.00743"
-          rx="1.00372"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
-        <rect
-          x="33.1423"
-          y="73.9357"
-          width="33.4804"
-          height="3.34268"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
-        <rect
-          x="28.4883"
-          y="79.2783"
-          width="42.7885"
-          height="3.60963"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
-        <rect
-          x="25.5215"
-          y="84.8879"
-          width="48.7222"
-          height="3.60963"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
-        <circle
-          cx="49.9856"
-          cy="16.3544"
-          r="1.76196"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
+        <rect x="35.7881" y="44.8322" width="28.1888" height="2.00743" rx="1.00372" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
+        <rect x="33.1423" y="73.9357" width="33.4804" height="3.34268" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
+        <rect x="28.4883" y="79.2783" width="42.7885" height="3.60963" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
+        <rect x="25.5215" y="84.8879" width="48.7222" height="3.60963" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
+        <circle cx="49.9856" cy="16.3544" r="1.76196" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
       </svg>
     ),
     [PIECE.KNIGHT]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M45.484 12.6976C43.0688 12.6976 43.6212 17.6223 44.1993 20.0846C43.5469 21.9428 41.381 22.7649 40.1225 23.7184C38.8639 24.6719 39.9699 26.083 37.7197 27.1891C35.4695 28.2951 33.0668 30.3165 28.7571 33.749C24.4474 37.1815 21.8539 38.4019 19.1079 38.7452C16.9111 39.0198 17.023 40.6902 17.3535 41.4912L23.9134 48.8138H26.8501C27.0408 47.746 28.3375 45.7627 31.3124 45.3432C34.2872 44.9237 41.0759 46.4874 45.2331 44.3516C48.5588 42.643 50.7632 39.1901 51.4497 37.6773L50.3636 40.8515C47.6178 48.4024 35.9911 52.2923 30.5209 53.2934C28.5474 57.3692 33.6633 65.6272 36.4679 69.2467V70.5287H65.4609V69.3525C69.5205 65.2928 71.8318 56.6526 72.4799 52.84C72.6268 56.6087 70.0016 64.2129 68.6707 67.5439L77.7253 70.5704C83.1139 62.3437 85.5283 48.5431 78.4118 34.6704C72.7034 23.5426 61.107 20.0606 56.0223 19.7106L55.7615 21.1766C51.7533 14.2393 47.2397 12.6334 45.484 12.6976Z"
           className={PIECE_COLORS.WHITE}
           stroke="black"
           strokeWidth="2"
         />
-        <rect
-          x="33.6882"
-          y="71.3851"
-          width="33.4804"
-          height="3.34268"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
-        <rect
-          x="29.0342"
-          y="76.7278"
-          width="42.7885"
-          height="3.60963"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
-        <rect
-          x="26.0674"
-          y="82.3374"
-          width="48.7222"
-          height="3.60963"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
+        <rect x="33.6882" y="71.3851" width="33.4804" height="3.34268" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
+        <rect x="29.0342" y="76.7278" width="42.7885" height="3.60963" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
+        <rect x="26.0674" y="82.3374" width="48.7222" height="3.60963" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
       </svg>
     ),
     [PIECE.PAWN]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M59.6243 28.9924C59.6243 33.5836 55.4237 37.4909 50.0002 37.4909C44.5766 37.4909 40.376 33.5836 40.376 28.9924C40.376 24.4012 44.5766 20.4939 50.0002 20.4939C55.4237 20.4939 59.6243 24.4012 59.6243 28.9924Z"
           className={PIECE_COLORS.WHITE}
@@ -970,106 +577,25 @@ export const PIECE_ICONS = {
           stroke="black"
           strokeWidth="2"
         />
-        <rect
-          x="35.9058"
-          y="35.4835"
-          width="28.1888"
-          height="2.00743"
-          rx="1.00372"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
-        <rect
-          x="33.2598"
-          y="64.587"
-          width="33.4804"
-          height="3.34269"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
-        <rect
-          x="28.6057"
-          y="69.9297"
-          width="42.7885"
-          height="3.60963"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
-        <rect
-          x="25.6389"
-          y="75.5393"
-          width="48.7222"
-          height="3.60963"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
+        <rect x="35.9058" y="35.4835" width="28.1888" height="2.00743" rx="1.00372" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
+        <rect x="33.2598" y="64.587" width="33.4804" height="3.34269" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
+        <rect x="28.6057" y="69.9297" width="42.7885" height="3.60963" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
+        <rect x="25.6389" y="75.5393" width="48.7222" height="3.60963" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
       </svg>
     ),
     [PIECE.QUEEN]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          x="35.385"
-          y="39.3908"
-          width="29.2304"
-          height="0.958399"
-          rx="0.479199"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="0.958399"
-        />
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="35.385" y="39.3908" width="29.2304" height="0.958399" rx="0.479199" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="0.958399" />
         <path
           d="M37.2124 68.8351V68.2793C40.6134 64.2782 42.6664 59.0926 42.6664 53.4299C42.6664 49.1582 41.498 45.1572 39.4634 41.7316H60.5368C58.5022 45.1572 57.3338 49.1582 57.3338 53.4299C57.3338 59.0926 59.3869 64.2782 62.7878 68.2793V68.8351H37.2124Z"
           className={PIECE_COLORS.WHITE}
           stroke="black"
           strokeWidth="2"
         />
-        <rect
-          x="35.9058"
-          y="41.7316"
-          width="28.1888"
-          height="2.00743"
-          rx="1.00372"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
-        <rect
-          x="33.2598"
-          y="70.8351"
-          width="33.4804"
-          height="3.34268"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
-        <rect
-          x="28.6057"
-          y="76.1777"
-          width="42.7885"
-          height="3.60963"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
-        <rect
-          x="25.6389"
-          y="81.7874"
-          width="48.7222"
-          height="3.60963"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
+        <rect x="35.9058" y="41.7316" width="28.1888" height="2.00743" rx="1.00372" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
+        <rect x="33.2598" y="70.8351" width="33.4804" height="3.34268" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
+        <rect x="28.6057" y="76.1777" width="42.7885" height="3.60963" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
+        <rect x="25.6389" y="81.7874" width="48.7222" height="3.60963" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
         <mask id="path-7-inside-1_2_2193" className={PIECE_COLORS.WHITE}>
           <path
             fillRule="evenodd"
@@ -1097,56 +623,17 @@ export const PIECE_ICONS = {
       </svg>
     ),
     [PIECE.ROOK]: (
-      <svg
-        width="100"
-        height="100"
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M35.8492 36.908C36.3008 37.0977 37.204 37.6193 37.204 38.1885C37.204 38.7576 35.0363 54.835 33.9524 62.8026C33.7717 63.3243 33.2479 64.4104 32.5975 64.5811C31.9472 64.7518 43.8879 64.6522 49.9396 64.5811C55.9912 64.6522 67.9319 64.7518 67.2816 64.5811C66.6313 64.4104 66.1074 63.3243 65.9268 62.8026C64.8429 54.835 62.6751 38.7576 62.6751 38.1885C62.6751 37.6193 63.5784 37.0977 64.03 36.908H49.9396H35.8492Z"
           className={PIECE_COLORS.WHITE}
           stroke="black"
           strokeWidth="2"
         />
-        <rect
-          x="31.2266"
-          y="33.9005"
-          width="37.426"
-          height="2.00743"
-          rx="1.00372"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
-        <rect
-          x="33.1992"
-          y="63.004"
-          width="33.4804"
-          height="3.34268"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
-        <rect
-          x="28.5452"
-          y="68.3467"
-          width="42.7885"
-          height="3.60963"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
-        <rect
-          x="25.5784"
-          y="73.9563"
-          width="48.7222"
-          height="3.60963"
-          className={PIECE_COLORS.WHITE}
-          stroke="black"
-          strokeWidth="2"
-        />
+        <rect x="31.2266" y="33.9005" width="37.426" height="2.00743" rx="1.00372" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
+        <rect x="33.1992" y="63.004" width="33.4804" height="3.34268" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
+        <rect x="28.5452" y="68.3467" width="42.7885" height="3.60963" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
+        <rect x="25.5784" y="73.9563" width="48.7222" height="3.60963" className={PIECE_COLORS.WHITE} stroke="black" strokeWidth="2" />
         <path
           d="M69.2632 20.9076L68.3598 33.4343L63.2848 33.0303H31.795L30.0049 20.9877H39.1182L39.6064 30.1282H45.5193V20.9877H54.1986V30.1282H63.2848L63.2006 21.0052L69.2632 20.9076Z"
           fill="#F1F1F1"
@@ -1158,6 +645,6 @@ export const PIECE_ICONS = {
           strokeWidth="2"
         />
       </svg>
-    ),
-  },
+    )
+  }
 };

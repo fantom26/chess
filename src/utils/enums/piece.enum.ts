@@ -4,5 +4,5 @@ export enum PIECE {
   KING = "king",
   QUEEN = "queen",
   PAWN = "pawn",
-  BISHOP = "bishop",
+  BISHOP = "bishop"
 }

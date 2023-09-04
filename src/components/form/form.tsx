@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { FormProvider, UseFormReturn, useForm } from "react-hook-form";
+import { FormProvider, UseFormReturn } from "react-hook-form";
 import { ControlledSelect } from ".";
 
 interface FormProps {

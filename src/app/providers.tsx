@@ -2,10 +2,8 @@
 
 import { ChessProvider, ModalProvider } from "@/utils/contexts";
 
-export function Providers({ children }: { children: React.ReactNode }) {
-  return (
-    <ModalProvider>
-      <ChessProvider>{children}</ChessProvider>
-    </ModalProvider>
-  );
-}
+export const Providers = ({ children }: { children: React.ReactNode }) => (
+  <ModalProvider>
+    <ChessProvider>{children}</ChessProvider>
+  </ModalProvider>
+);

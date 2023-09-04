@@ -4,7 +4,7 @@ import { PIECES } from "./render-pieces.helper";
 import { TCollection, TFIgure, TPieceColor } from "../types";
 
 export const renderBoard = (collection: TCollection) => {
-  let board = [];
+  const board = [];
 
   for (let i = COUNT_SQUARE_IN_ROW; i > 0; i--) {
     for (let j = 0; j < LETTERS_IN_ARRAY.length; j++) {
@@ -19,15 +19,7 @@ export const renderBoard = (collection: TCollection) => {
         }
       });
 
-      board.push(
-        <Tile
-          key={`x=${i}-y=${j}`}
-          collection={collection}
-          figureColor={color}
-          figure={figure}
-          number={number}
-        />
-      );
+      board.push(<Tile key={`x=${i}-y=${j}`} collection={collection} figureColor={color} figure={figure} number={number} />);
     }
   }
 

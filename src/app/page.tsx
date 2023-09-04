@@ -16,14 +16,8 @@ export default function Home() {
       <div className="home">
         <div className="container">
           <div className="chess-wrapper">
-            <ul className="chess-board">
-              {renderBoard(chessStore.peaceTheme.value as TCollection)}
-            </ul>
-            <button
-              className="chess-settings"
-              type="button"
-              onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).open}
-            >
+            <ul className="chess-board">{renderBoard(chessStore.peaceTheme.value as TCollection)}</ul>
+            <button className="chess-settings" type="button" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).open}>
               {ICONS.settings}
             </button>
           </div>

@@ -1,8 +1,8 @@
 .home {
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
-  flex: 1;
 
   .chess {
     &-wrapper {
@@ -18,10 +18,10 @@
     }
 
     &-board {
-      border: 0.1rem solid var(--clr-black);
       display: grid;
       grid-template-columns: repeat(8, 1fr);
       grid-template-rows: repeat(8, 1fr);
+      border: 0.1rem solid var(--clr-black);
       max-width: 80rem;
       max-height: 80rem;
 

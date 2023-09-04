@@ -1,12 +1,5 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
-import {
-  Dispatch,
-  FC,
-  ReactNode,
-  SetStateAction,
-  createContext,
-  useState,
-} from "react";
+/* eslint-disable no-empty-function */
+import { FC, ReactNode, createContext, useState } from "react";
 import { MODALS } from "../enums";
 import { TModals } from "../types";
 
@@ -28,12 +21,12 @@ export interface ModalContextProps {
 
 const initialState: ModalContextProps = {
   modalStore: {
-    [MODALS.CHESS_SETTINGS]: false,
+    [MODALS.CHESS_SETTINGS]: false
   },
-  generateModalHandlers: (name: TModals) => ({
+  generateModalHandlers: () => ({
     open: () => {},
-    close: () => {},
-  }),
+    close: () => {}
+  })
 };
 
 export const ModalContext = createContext(initialState);
@@ -46,29 +39,27 @@ export const ModalProvider: FC<ModalProviderProps> = (props) => {
     const open = () => {
       setModalStore((prev) => ({
         ...prev,
-        [name]: true,
+        [name]: true
       }));
     };
 
     const close = () => {
       setModalStore((prev) => ({
         ...prev,
-        [name]: false,
+        [name]: false
       }));
     };
 
     return {
       open,
-      close,
+      close
     };
   };
 
   const value = {
     modalStore,
-    generateModalHandlers,
+    generateModalHandlers
   };
 
-  return (
-    <ModalContext.Provider value={value}>{children}</ModalContext.Provider>
-  );
+  return <ModalContext.Provider value={value}>{children}</ModalContext.Provider>;
 };
