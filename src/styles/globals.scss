@@ -1,6 +1,7 @@
 @import "./settings/index.scss";
 @import "./mixins/index.scss";
 
+// TODO make file with variables
 :root {
   --content-width: 117rem;
   --container-offset: 1.5rem;
@@ -13,8 +14,8 @@
   --clr-white: #ffffff;
   --clr-bg: #f2f0eb;
 
-  --clr-board-classic-b: #b58863;
-  --clr-board-classic-w: #f0d9b5;
+  --clr-board-classic-d: #b58863;
+  --clr-board-classic-l: #f0d9b5;
 
   --clr-board-grey-d: #8f8f8f;
   --clr-board-grey-l: #d9d9d9;
@@ -59,4 +60,5 @@ main {
 }
 
 @import "./components/pages/home.scss";
+@import "./components/board/index.scss";
 @import "./components/common/modal.scss";

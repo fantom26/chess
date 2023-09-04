@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { Dispatch, FC, ReactNode, SetStateAction, createContext, useState } from "react";
-import { COLLECTIONS } from "../enums";
+import { BOARD_COLORS, COLLECTIONS, FORM_FIELDS } from "../enums";
 import { TSelectOption } from "../validation";
 
 interface IStore {
-  peaceTheme: TSelectOption;
+  [FORM_FIELDS.PEACE_THEME]: TSelectOption;
+  [FORM_FIELDS.BOARD_THEME]: TSelectOption;
 }
 
 interface ChessProviderProps {
@@ -18,9 +19,13 @@ export interface ChessContextProps {
 
 const initialState: ChessContextProps = {
   chessStore: {
-    peaceTheme: {
-      label: COLLECTIONS.STONE,
-      value: COLLECTIONS.STONE
+    [FORM_FIELDS.PEACE_THEME]: {
+      label: COLLECTIONS.CLUB,
+      value: COLLECTIONS.CLUB
+    },
+    [FORM_FIELDS.BOARD_THEME]: {
+      label: BOARD_COLORS.CLASSIC,
+      value: BOARD_COLORS.CLASSIC
     }
   },
   // eslint-disable-next-line no-empty-function
