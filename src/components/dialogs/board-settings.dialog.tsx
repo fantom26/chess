@@ -35,7 +35,7 @@ export const ChessSettingsModal: FC<BoardSettingsProps> = (props) => {
 
   return (
     <Modal
-      width={61}
+      width={45}
       visible={modalStore[MODALS.CHESS_SETTINGS]}
       onClose={generateModalHandlers(MODALS.CHESS_SETTINGS).close}
       bodyClassName={className ? `modal-chess-settings ${className}` : "modal-chess-settings"}

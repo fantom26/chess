@@ -1,7 +1,6 @@
 @import "./settings/index.scss";
 @import "./mixins/index.scss";
 
-// TODO make file with variables
 :root {
   --content-width: 117rem;
   --container-offset: 1.5rem;
@@ -9,30 +8,13 @@
   --transition: 0.3s;
   --font-weight: 400;
   --radius: 0.5rem;
-
   --clr-black: #000000;
   --clr-white: #ffffff;
-  --clr-bg: #f2f0eb;
-
-  --clr-board-classic-d: #b58863;
-  --clr-board-classic-l: #f0d9b5;
-
-  --clr-board-grey-d: #8f8f8f;
-  --clr-board-grey-l: #d9d9d9;
-
-  --clr-board-stone-d: #444444;
-  --clr-board-stone-l: #4e4e4e;
-
-  --clr-board-walnut-d: #7b3812;
-  --clr-board-walnut-l: #ffe8de;
-
-  --clr-board-metal-d: #b7c0d8;
-  --clr-board-metal-l: #e8edf9;
+  --clr-bg: #111111;
 }
 
 body {
   @include font-source(Nunito, 1.6rem, var(--clr-black), var(--font-weight), false);
-  background-color: var(--clr-bg);
 }
 
 main {
