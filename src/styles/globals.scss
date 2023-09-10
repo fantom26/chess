@@ -1,6 +1,8 @@
 @import "./settings/index.scss";
 @import "./mixins/index.scss";
 
+$containerWidth: 120rem;
+
 :root {
   --content-width: 117rem;
   --container-offset: 1.5rem;
@@ -14,7 +16,8 @@
 }
 
 body {
-  @include font-source(Nunito, 1.6rem, var(--clr-black), var(--font-weight), false);
+  @include font-source(false, 1.6rem, var(--clr-black), var(--font-weight), false);
+  background-color: #302e2b;
 }
 
 main {
@@ -28,7 +31,7 @@ main {
   flex-direction: column;
   overflow: hidden;
   width: 100%;
-  min-width: 32rem;
+  min-width: 37.5rem;
   min-height: 100%;
 }
 
@@ -43,4 +46,6 @@ main {
 
 @import "./components/pages/home.scss";
 @import "./components/board/index.scss";
+@import "./components/ui/logo.scss";
+@import "./components/section/header.scss";
 @import "./components/common/modal.scss";

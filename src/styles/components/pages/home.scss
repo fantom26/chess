@@ -3,6 +3,7 @@
   flex: 1;
   flex-direction: column;
   justify-content: center;
+  padding-block: 1.5rem;
 
   .chess {
     &-wrapper {
@@ -13,36 +14,8 @@
 
     &-settings {
       display: flex;
+      width: 100%;
       max-width: 1.6rem;
-      max-height: 1.6rem;
-    }
-  }
-
-  .piece[data-color="black"] {
-    .white {
-      fill: var(--clr-white);
-      stroke: var(--clr-white);
-      stop-color: var(--clr-white);
-    }
-
-    .black {
-      fill: var(--clr-black);
-      stroke: var(--clr-black);
-      stop-color: var(--clr-black);
-    }
-  }
-
-  .piece[data-color="white"] {
-    .white {
-      fill: var(--clr-black);
-      stroke: var(--clr-black);
-      stop-color: var(--clr-black);
-    }
-
-    .black {
-      fill: var(--clr-white);
-      stroke: var(--clr-white);
-      stop-color: var(--clr-white);
     }
   }
 }
