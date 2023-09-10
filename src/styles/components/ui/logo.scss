@@ -1,0 +1,15 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-white);
+  gap: 0.5rem;
+
+  &-icon {
+    display: flex;
+  }
+
+  &-text {
+    font-size: fluid(5rem, 3rem);
+  }
+}
