@@ -15,6 +15,7 @@
 
 body {
   @include font-source(Nunito, 1.6rem, var(--clr-black), var(--font-weight), false);
+  background-color: #302e2b;
 }
 
 main {

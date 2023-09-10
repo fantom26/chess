@@ -1,0 +1,31 @@
+.piece {
+  display: flex;
+
+  &[data-color="black"] {
+    .white {
+      fill: var(--clr-white);
+      stroke: var(--clr-white);
+      stop-color: var(--clr-white);
+    }
+
+    .black {
+      fill: var(--clr-black);
+      stroke: var(--clr-black);
+      stop-color: var(--clr-black);
+    }
+  }
+
+  &[data-color="white"] {
+    .white {
+      fill: var(--clr-black);
+      stroke: var(--clr-black);
+      stop-color: var(--clr-black);
+    }
+
+    .black {
+      fill: var(--clr-white);
+      stroke: var(--clr-white);
+      stop-color: var(--clr-white);
+    }
+  }
+}
