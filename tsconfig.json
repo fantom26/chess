@@ -1,28 +1,63 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
+    "moduleResolution": "node",
     "isolatedModules": true,
     "jsx": "preserve",
+    "forceConsistentCasingInFileNames": false,
+    "strictPropertyInitialization": false,
+    "allowSyntheticDefaultImports": true,
+    "useDefineForClassFields": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictBindCallApply": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "removeComments": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "sourceMap": true,
+    "strict": true,
     "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@assets/*": ["assets/*"],
+      "@layouts": ["layouts/index"],
+      "@layouts/*": ["layouts/*"],
+      "@components/*": ["components/*", "components/*/index"],
+      "@hooks": ["hooks/index"],
+      "@hooks/*": ["hooks/*"],
+      "@pages": ["app/pages/index"],
+      "@pages/*": ["app/pages/*"],
+      "@services": ["services/index"],
+      "@services/*": ["services/*"],
+      "@store": ["store/index"],
+      "@store/*": ["store/*"],
+      "@styles": ["styles/index"],
+      "@styles/*": ["styles/*"],
+      "@constants": ["constants/index"],
+      "@constants/*": ["constants/*"],
+      "@contexts": ["utils/contexts/index"],
+      "@contexts/*": ["utils/contexts/*"],
+      "@declarations": ["utils/declarations/index"],
+      "@declarations/*": ["utils/declarations/*"],
+      "@helpers": ["utils/helpers/index"],
+      "@helpers/*": ["utils/helpers/*"],
+      "@utils": ["utils/index"],
+      "@utils/*": ["utils/*"],
+      "@*": ["*"]
+    },
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/common/index.ts", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
