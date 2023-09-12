@@ -2,12 +2,12 @@
 import "@/styles/globals.scss";
 import { ChessSettingsModal, Game } from "@components/home";
 import { Header, Container } from "@components/shared";
-import { useChessContext, useModalContext } from "hooks";
+import { useModalContext } from "hooks";
 import { ICONS } from "@constants";
 import { MODALS } from "utils/enums";
 
 export default function Home() {
-  const { chessStore } = useChessContext();
+  // const { chessStore } = useChessContext();
   const { generateModalHandlers } = useModalContext();
 
   return (
