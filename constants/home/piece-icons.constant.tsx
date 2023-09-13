@@ -177,7 +177,8 @@ export const PIECE_ICONS = {
           </linearGradient>
         </defs>
       </svg>
-    )
+    ),
+    [PIECE.EMPTY]: <></>
   },
   [COLLECTIONS.CASES]: {
     [PIECE.BISHOP]: (
@@ -403,7 +404,8 @@ export const PIECE_ICONS = {
           className={PIECE_COLORS.WHITE}
         />
       </svg>
-    )
+    ),
+    [PIECE.EMPTY]: <></>
   },
   [COLLECTIONS.CLUB]: {
     [PIECE.BISHOP]: (
@@ -488,7 +490,8 @@ export const PIECE_ICONS = {
         />
         <path d="M30.889 64.9445H68.389L76.7223 76.0556V87.1667H22.5557V76.0556L30.889 64.9445Z" className={PIECE_COLORS.WHITE} />
       </svg>
-    )
+    ),
+    [PIECE.EMPTY]: <></>
   },
   [COLLECTIONS.NEWSPAPER]: {
     [PIECE.BISHOP]: (
@@ -645,6 +648,7 @@ export const PIECE_ICONS = {
           strokeWidth="2"
         />
       </svg>
-    )
+    ),
+    [PIECE.EMPTY]: <></>
   }
 };

@@ -1,9 +1,12 @@
-class Cell {
+import { PIECE } from "@utils/enums";
+import { ICell, TFIgure } from "@utils/types";
+
+class Cell implements ICell {
   pos: string;
 
-  piece: string;
+  piece: TFIgure;
 
-  constructor(pos: string, piece: string) {
+  constructor(pos: string, piece: TFIgure) {
     this.pos = pos;
     this.piece = piece;
   }
@@ -16,15 +19,15 @@ export const createBoard = (fenString: string) => {
 
   const fenPieces = [...fen.replaceAll("/", "")]; //rnbqkbnrpppppppp8888PPPPPPPPRNBQKBNR
 
-  let pieces = fenPieces;
+  const pieces: TFIgure[] = [];
 
-  //Save individual pieces for each of the 64 cells
-  fenPieces.forEach((item, index) => {
+  fenPieces.forEach((item) => {
     if (isFinite(+item)) {
-      pieces.splice(index, 1, Array(+item).fill("").join());
+      pieces.push(...Array(+item).fill(PIECE.EMPTY));
+    } else {
+      pieces.push(item as TFIgure);
     }
   });
-  pieces = pieces.flat();
 
   const rows = range(8)
     .map((n) => n.toString())

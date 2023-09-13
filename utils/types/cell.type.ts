@@ -1,4 +1,6 @@
+import { TFIgure } from "./figure.type";
+
 export interface ICell {
-  piece: string;
+  piece: TFIgure;
   pos: string;
 }

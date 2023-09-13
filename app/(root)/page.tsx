@@ -7,7 +7,6 @@ import { ICONS } from "@constants";
 import { MODALS } from "utils/enums";
 
 export default function Home() {
-  // const { chessStore } = useChessContext();
   const { generateModalHandlers } = useModalContext();
 
   return (
@@ -17,7 +16,6 @@ export default function Home() {
         <div className="home">
           <Container>
             <div className="chess-wrapper">
-              {/* <ul className={`board board--${chessStore.boardTheme.value}`}>{renderBoard(chessStore.peaceTheme.value as TCollection)}</ul> */}
               <Game />
               <button className="chess-settings" type="button" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).open}>
                 {ICONS.settings}
