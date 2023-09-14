@@ -1,8 +1,7 @@
 .board {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  border: 0.1rem solid var(--clr-black);
+  grid-template-columns: repeat(8, minmax(10rem, 1fr));
+  grid-template-rows: repeat(8, minmax(10rem, 1fr));
   border-radius: var(--radius);
   max-width: 80rem;
   max-height: 80rem;
