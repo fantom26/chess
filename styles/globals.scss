@@ -44,6 +44,7 @@ main {
   max-width: var(--container-width);
 }
 
+@import "./libs/index.scss";
 @import "./components/pages/home.scss";
 @import "./components/board/index.scss";
 @import "./components/ui/logo.scss";
