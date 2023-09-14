@@ -1,3 +1,4 @@
+import { Slide, ToastContainer } from "react-toastify";
 import { Providers } from "./providers";
 
 import { Quicksand } from "next/font/google";
@@ -13,6 +14,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Providers>
           <div className="wrapper">{children}</div>
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop
+            closeOnClick
+            rtl={false}
+            transition={Slide}
+            pauseOnFocusLoss
+            draggable={false}
+            pauseOnHover
+            theme="light"
+          />
         </Providers>
       </body>
     </html>
