@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             pauseOnFocusLoss
             draggable={false}
             pauseOnHover
-            theme="light"
+            theme="dark"
           />
         </Providers>
       </body>
