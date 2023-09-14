@@ -12,7 +12,7 @@ interface PieceProps {
 export const Piece: FC<PieceProps> = ({ cell, setFromPos }) => {
   const { chessStore } = useChessContext();
   const element = useRef<HTMLDivElement | null>(null);
-  const figureColor = cell.piece === cell.piece.toUpperCase() ? PIECE_COLORS.WHITE : PIECE_COLORS.BLACK;
+  const figureColor = cell.piece === cell.piece.toUpperCase() ? PIECE_COLORS.BLACK : PIECE_COLORS.WHITE;
   const figure = cell.piece.toLowerCase() as TFIgure;
 
   const handleDragStart = () => {
