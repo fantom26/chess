@@ -1,4 +1,4 @@
-import { TSelectOption } from "utils/validation";
+import { TSelectOption } from "@contexts/modal/utils/validation";
 import { FC } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import Select, { StylesConfig } from "react-select";

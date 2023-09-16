@@ -4,7 +4,7 @@ import { ChessSettingsModal, Game } from "@components/home";
 import { Header, Container } from "@components/shared";
 import { useModalContext } from "hooks";
 import { ICONS } from "@constants";
-import { MODALS } from "utils/enums";
+import { MODALS } from "@utils/enums";
 
 export default function Home() {
   const { generateModalHandlers } = useModalContext();

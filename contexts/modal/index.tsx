@@ -1,7 +1,7 @@
 /* eslint-disable no-empty-function */
 import { FC, ReactNode, createContext, useState } from "react";
-import { MODALS } from "../enums";
-import { TModals } from "../types";
+import { MODALS } from "../../utils/enums";
+import { TModals } from "../../utils/types";
 
 interface IStore {
   [MODALS.CHESS_SETTINGS]: boolean;

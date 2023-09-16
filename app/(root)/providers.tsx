@@ -1,9 +1,12 @@
 "use client";
 
-import { ChessProvider, ModalProvider } from "utils/contexts";
+import { ChessProvider, ModalProvider, GameProvider } from "@contexts";
+import { ReactNode } from "react";
 
-export const Providers = ({ children }: { children: React.ReactNode }) => (
+export const Providers = ({ children }: { children: ReactNode }) => (
   <ModalProvider>
-    <ChessProvider>{children}</ChessProvider>
+    <ChessProvider>
+      <GameProvider>{children}</GameProvider>
+    </ChessProvider>
   </ModalProvider>
 );

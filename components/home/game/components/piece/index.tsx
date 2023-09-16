@@ -2,11 +2,12 @@ import { PIECE_ICONS } from "@constants";
 import { useChessContext } from "@hooks";
 import { PIECE_COLORS } from "@utils/enums";
 import { ICell, TCollection, TFIgure } from "@utils/types";
+import { Square } from "chess.js";
 import { FC, useRef } from "react";
 
 interface PieceProps {
   cell: ICell;
-  setFromPos: (pos: string) => void;
+  setFromPos: (pos: Square) => void;
 }
 
 export const Piece: FC<PieceProps> = ({ cell, setFromPos }) => {
