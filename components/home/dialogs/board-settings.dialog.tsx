@@ -2,12 +2,12 @@ import { FC } from "react";
 
 import { Modal } from "components/shared/modal";
 import { useModalContext, useChessContext } from "hooks";
-import { FORM_FIELDS, MODALS } from "utils/enums";
+import { FORM_FIELDS, MODALS } from "@utils/enums";
 import { useForm } from "react-hook-form";
 import { Form } from "../../shared/form";
-import { MCollections } from "utils/mock/collections.mock";
-import { SettingsStageSchema, settingsResolver } from "utils/validation";
-import { MBoardColors } from "utils/mock/board-colors.mock";
+import { MCollections } from "@utils/mock/collections.mock";
+import { SettingsStageSchema, settingsResolver } from "@utils/validation";
+import { MBoardColors } from "@utils/mock/board-colors.mock";
 
 interface BoardSettingsProps {
   className?: string;

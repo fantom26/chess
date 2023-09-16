@@ -1,9 +1,11 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { Chess } from "chess.js";
-import { createBoard } from "utils/helpers";
+import { Chess, Square } from "chess.js";
+import { createBoard } from "@helpers";
 import { Board } from "./components";
 import { toast } from "react-toastify";
+import { useGameContext } from "@hooks";
+import { ACTIONS } from "@utils/enums";
 
 const FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 
@@ -11,6 +13,7 @@ export const Game = () => {
   const [fen, setFen] = useState(FEN);
   const { current: chess } = useRef(new Chess(fen));
   const [board, setBoard] = useState(createBoard(fen));
+  const { dispatch } = useGameContext();
 
   useEffect(() => {
     setBoard(createBoard(fen));
@@ -24,6 +27,7 @@ export const Game = () => {
         const from = fromPos.current;
         const to = pos;
         chess.move({ from, to });
+        dispatch({ type: ACTIONS.CLEAR_POSSIBLE_MOVES });
         setFen(chess.fen());
       }
     } catch (e) {
@@ -31,7 +35,14 @@ export const Game = () => {
     }
   };
 
-  const setFromPos = (pos: string) => (fromPos.current = pos);
+  const setFromPos = (pos: Square) => {
+    fromPos.current = pos;
+
+    dispatch({
+      type: ACTIONS.SET_POSSIBLE_MOVES,
+      payload: chess.moves({ square: pos })
+    });
+  };
 
   return (
     <div className="game">

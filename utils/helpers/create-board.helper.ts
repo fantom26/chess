@@ -1,12 +1,13 @@
 import { PIECE } from "@utils/enums";
 import { ICell, TFIgure } from "@utils/types";
+import { Square } from "chess.js";
 
 class Cell implements ICell {
-  pos: string;
+  pos: Square;
 
   piece: TFIgure;
 
-  constructor(pos: string, piece: TFIgure) {
+  constructor(pos: Square, piece: TFIgure) {
     this.pos = pos;
     this.piece = piece;
   }
@@ -35,12 +36,13 @@ export const createBoard = (fenString: string) => {
 
   const columns = ["a", "b", "c", "d", "e", "f", "g", "h"];
 
-  const cells = []; //[a1, b1, c1..., h8]
+  const cells: Square[] = []; //[a1, b1, c1..., h8]
 
   for (let i = 0; i < rows.length; i++) {
     const row = rows[i];
     for (let j = 0; j < columns.length; j++) {
-      cells.push(columns[j] + row); //e.g a1, b1, c1...
+      const square = `${columns[j]}${row}`;
+      cells.push(square as Square); //e.g a1, b1, c1...
     }
   }
 

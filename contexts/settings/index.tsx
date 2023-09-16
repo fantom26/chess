@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { Dispatch, FC, ReactNode, SetStateAction, createContext, useState } from "react";
-import { BOARD_COLORS, COLLECTIONS, FORM_FIELDS } from "../enums";
-import { TSelectOption } from "../validation";
+import { BOARD_COLORS, COLLECTIONS, FORM_FIELDS } from "../../utils/enums";
+import { TSelectOption } from "../../utils/validation";
 
 interface IStore {
   [FORM_FIELDS.PEACE_THEME]: TSelectOption;

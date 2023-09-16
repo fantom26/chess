@@ -1,5 +1,5 @@
 import { useContext } from "react";
 
-import { ChessContext } from "utils/contexts";
+import { ChessContext } from "@contexts";
 
 export const useChessContext = () => useContext(ChessContext);
