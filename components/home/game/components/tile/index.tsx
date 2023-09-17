@@ -2,7 +2,7 @@ import { ICell } from "@utils/types";
 import { FC } from "react";
 import { isLightSquare } from "@components/home/helpers";
 import { Piece } from "../piece";
-import { Square } from "chess.js";
+import { BLACK, KING, Square, WHITE } from "chess.js";
 import { useGameContext } from "@hooks";
 
 interface TileProps {
@@ -15,10 +15,17 @@ interface TileProps {
 export const Tile: FC<TileProps> = (props) => {
   const { index, cell, makeMove, setFromPos } = props;
   const squareLight = isLightSquare(cell.pos, index);
-  const { possibleMoves } = useGameContext();
+  const { possibleMoves, check, turn } = useGameContext();
   const isPossibleMove = possibleMoves.includes(cell.pos);
+  const figureColor = cell.piece === cell.piece.toUpperCase() ? BLACK : WHITE;
+
   const handleDrop = () => {
     makeMove(cell.pos);
+  };
+
+  const inCheck = () => {
+    const king = cell.piece.toLowerCase() === KING;
+    return turn !== figureColor && king && check;
   };
 
   const generateClassNames = () => {
@@ -34,13 +41,17 @@ export const Tile: FC<TileProps> = (props) => {
       defaultClassName += " possible-move";
     }
 
+    if (inCheck()) {
+      defaultClassName += " check";
+    }
+
     return defaultClassName;
   };
 
   if (cell.piece) {
     return (
       <li className={generateClassNames()} key={cell.pos} onDrop={handleDrop} onDragOver={(e) => e.preventDefault()}>
-        <Piece cell={cell} setFromPos={setFromPos} />
+        <Piece figureColor={figureColor} cell={cell} setFromPos={setFromPos} />
       </li>
     );
   }

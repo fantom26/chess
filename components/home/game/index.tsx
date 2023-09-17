@@ -1,7 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { Chess, Square } from "chess.js";
-import { createBoard } from "@helpers";
+import { createBoard } from "../helpers";
 import { Board } from "./components";
 import { toast } from "react-toastify";
 import { useGameContext } from "@hooks";

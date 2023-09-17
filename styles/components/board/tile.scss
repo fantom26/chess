@@ -29,4 +29,8 @@ $transition-possible-move: 0.15s;
       @include transition($transition-possible-move, opacity, visibility, transform);
     }
   }
+
+  &.check {
+    background-color: red;
+  }
 }
