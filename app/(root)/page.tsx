@@ -1,6 +1,6 @@
 "use client";
 import "@/styles/globals.scss";
-import { ChessSettingsModal, Game } from "@components/home";
+import { Game } from "@components/home";
 import { Header, Container } from "@components/shared";
 import { useModalContext } from "hooks";
 import { ICONS } from "@constants";
@@ -24,7 +24,6 @@ export default function Home() {
           </Container>
         </div>
       </main>
-      <ChessSettingsModal />
     </>
   );
 }

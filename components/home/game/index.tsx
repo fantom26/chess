@@ -1,19 +1,20 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { Chess, Square } from "chess.js";
-import { createBoard } from "../helpers";
+import { createBoard, getGameOverState } from "../helpers";
 import { Board } from "./components";
 import { toast } from "react-toastify";
-import { useGameContext } from "@hooks";
-import { ACTIONS } from "@utils/enums";
+import { useGameContext, useModalContext } from "@hooks";
+import { ACTIONS, MODALS } from "@utils/enums";
+import { ChessSettingsModal, GameOverModal } from "../dialogs";
 
 const FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
-
 export const Game = () => {
   const [fen, setFen] = useState(FEN);
   const { current: chess } = useRef(new Chess(fen));
   const [board, setBoard] = useState(createBoard(fen));
   const { dispatch } = useGameContext();
+  const { generateModalHandlers } = useModalContext();
 
   useEffect(() => {
     setBoard(createBoard(fen));
@@ -45,16 +46,29 @@ export const Game = () => {
   };
 
   useEffect(() => {
+    const [gameOver, status] = getGameOverState(chess);
+
+    if (gameOver) {
+      dispatch({ type: ACTIONS.GAME_OVER, status, player: chess.turn() });
+      generateModalHandlers(MODALS.GAME_OVER).open();
+      return;
+    }
+
     dispatch({
       type: ACTIONS.SET_TURN,
       player: chess.turn(),
       check: chess.inCheck()
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fen, dispatch, chess]);
 
   return (
-    <div className="game">
-      <Board cells={board} makeMove={makeMove} setFromPos={setFromPos} />
-    </div>
+    <>
+      <div className="game">
+        <Board cells={board} makeMove={makeMove} setFromPos={setFromPos} />
+      </div>
+      <GameOverModal />
+      <ChessSettingsModal />
+    </>
   );
 };

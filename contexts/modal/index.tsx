@@ -1,10 +1,10 @@
 /* eslint-disable no-empty-function */
 import { FC, ReactNode, createContext, useState } from "react";
 import { MODALS } from "../../utils/enums";
-import { TModals } from "../../utils/types";
 
 interface IStore {
   [MODALS.CHESS_SETTINGS]: boolean;
+  [MODALS.GAME_OVER]: boolean;
 }
 
 interface ModalProviderProps {
@@ -13,7 +13,7 @@ interface ModalProviderProps {
 
 export interface ModalContextProps {
   modalStore: IStore;
-  generateModalHandlers: (name: TModals) => {
+  generateModalHandlers: (name: MODALS) => {
     open: () => void;
     close: () => void;
   };
@@ -21,7 +21,8 @@ export interface ModalContextProps {
 
 const initialState: ModalContextProps = {
   modalStore: {
-    [MODALS.CHESS_SETTINGS]: false
+    [MODALS.CHESS_SETTINGS]: false,
+    [MODALS.GAME_OVER]: false
   },
   generateModalHandlers: () => ({
     open: () => {},
@@ -35,7 +36,7 @@ export const ModalProvider: FC<ModalProviderProps> = (props) => {
   const { children } = props;
   const [modalStore, setModalStore] = useState<IStore>(initialState.modalStore);
 
-  const generateModalHandlers = (name: TModals) => {
+  const generateModalHandlers = (name: MODALS) => {
     const open = () => {
       setModalStore((prev) => ({
         ...prev,
