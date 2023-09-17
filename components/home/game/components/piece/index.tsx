@@ -1,8 +1,7 @@
 import { PIECE_ICONS } from "@constants";
 import { useChessContext } from "@hooks";
-import { PIECE_COLORS } from "@utils/enums";
 import { ICell, TCollection, TFIgure } from "@utils/types";
-import { Square } from "chess.js";
+import { BLACK, Square, WHITE } from "chess.js";
 import { FC, useRef } from "react";
 
 interface PieceProps {
@@ -13,7 +12,7 @@ interface PieceProps {
 export const Piece: FC<PieceProps> = ({ cell, setFromPos }) => {
   const { chessStore } = useChessContext();
   const element = useRef<HTMLDivElement | null>(null);
-  const figureColor = cell.piece === cell.piece.toUpperCase() ? PIECE_COLORS.BLACK : PIECE_COLORS.WHITE;
+  const figureColor = cell.piece === cell.piece.toUpperCase() ? BLACK : WHITE;
   const figure = cell.piece.toLowerCase() as TFIgure;
 
   const handleDragStart = () => {

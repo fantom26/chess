@@ -1,28 +1,28 @@
 .piece {
   display: flex;
 
-  &[data-color="black"] {
-    .white {
+  &[data-color="b"] {
+    .w {
       fill: var(--clr-white);
       stroke: var(--clr-white);
       stop-color: var(--clr-white);
     }
 
-    .black {
+    .b {
       fill: var(--clr-black);
       stroke: var(--clr-black);
       stop-color: var(--clr-black);
     }
   }
 
-  &[data-color="white"] {
-    .white {
+  &[data-color="w"] {
+    .w {
       fill: var(--clr-black);
       stroke: var(--clr-black);
       stop-color: var(--clr-black);
     }
 
-    .black {
+    .b {
       fill: var(--clr-white);
       stroke: var(--clr-white);
       stop-color: var(--clr-white);

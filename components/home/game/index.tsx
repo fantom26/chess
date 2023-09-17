@@ -40,9 +40,17 @@ export const Game = () => {
 
     dispatch({
       type: ACTIONS.SET_POSSIBLE_MOVES,
-      payload: chess.moves({ square: pos })
+      moves: chess.moves({ square: pos })
     });
   };
+
+  useEffect(() => {
+    dispatch({
+      type: ACTIONS.SET_TURN,
+      player: chess.turn(),
+      check: chess.inCheck()
+    });
+  }, [fen, dispatch, chess]);
 
   return (
     <div className="game">
