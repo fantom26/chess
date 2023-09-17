@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { Chess, Square } from "chess.js";
+import { Chess, DEFAULT_POSITION, Square } from "chess.js";
 import { createBoard, getGameOverState } from "../helpers";
 import { Board } from "./components";
 import { toast } from "react-toastify";
@@ -8,17 +8,12 @@ import { useGameContext, useModalContext } from "@hooks";
 import { ACTIONS, MODALS } from "@utils/enums";
 import { ChessSettingsModal, GameOverModal } from "../dialogs";
 
-const FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 export const Game = () => {
-  const [fen, setFen] = useState(FEN);
+  const [fen, setFen] = useState(DEFAULT_POSITION);
   const { current: chess } = useRef(new Chess(fen));
   const [board, setBoard] = useState(createBoard(fen));
   const { dispatch } = useGameContext();
   const { generateModalHandlers } = useModalContext();
-
-  useEffect(() => {
-    setBoard(createBoard(fen));
-  }, [fen]);
 
   const fromPos = useRef<string | null>(null);
 
@@ -61,6 +56,10 @@ export const Game = () => {
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fen, dispatch, chess]);
+
+  useEffect(() => {
+    setBoard(createBoard(fen));
+  }, [fen]);
 
   return (
     <>

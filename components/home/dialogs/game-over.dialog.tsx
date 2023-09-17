@@ -10,9 +10,6 @@ export const GameOverModal: FC = () => {
 
   const { status, turn } = useGameContext();
 
-  console.log("status", status);
-  console.log("turn", turn);
-
   let winner;
   if (status !== GAME_STATUS.CONTINUE) {
     if (turn === BLACK) {
@@ -21,7 +18,6 @@ export const GameOverModal: FC = () => {
       winner = "black";
     }
   }
-  console.log(winner);
 
   return (
     <Modal width={45} visible={modalStore[MODALS.GAME_OVER]} onClose={generateModalHandlers(MODALS.GAME_OVER).close} bodyClassName="modal-game-over">

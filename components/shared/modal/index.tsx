@@ -1,4 +1,4 @@
-import { FC, ReactNode, useEffect, useRef, useState } from "react";
+import { FC, KeyboardEvent, ReactNode, useEffect, useRef, useState } from "react";
 
 import { createPortal } from "react-dom";
 import { Transition } from "react-transition-group";
@@ -28,6 +28,12 @@ export const Modal: FC<ModalProps> = (props) => {
 
   const modalRef = useRef<HTMLDivElement | null>(null);
 
+  const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === "Escape") {
+      onClose();
+    }
+  };
+
   useEffect(() => {
     setIsBrowser(true);
 
@@ -52,7 +58,7 @@ export const Modal: FC<ModalProps> = (props) => {
   return createPortal(
     <Transition in={visible} timeout={animationDuration} mountOnEnter unmountOnExit>
       {(state) => (
-        <div style={styles} className={`modal ${state}`} onClick={onClose} role="dialog" aria-modal="true" ref={modalRef}>
+        <div style={styles} onKeyDown={handleKeyDown} className={`modal ${state}`} onClick={onClose} role="dialog" aria-modal="true" ref={modalRef}>
           <div className="modal-wrapper">
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
               <div className={bodyClassName ? `modal-content__body ${bodyClassName}` : "modal-content__body"}>{children}</div>
