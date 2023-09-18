@@ -30,6 +30,23 @@ $transition-possible-move: 0.15s;
     }
   }
 
+  &-number,
+  &-letter {
+    position: absolute;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  &-number {
+    left: 0.3rem;
+    top: 0.3rem;
+  }
+
+  &-letter {
+    right: 0.3rem;
+    bottom: 0.3rem;
+  }
+
   &.check {
     background-color: red;
   }

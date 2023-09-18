@@ -4,7 +4,7 @@ import { Providers } from "./providers";
 import { Quicksand } from "next/font/google";
 
 const quicksand = Quicksand({
-  weight: "400",
+  weight: ["400", "700"],
   subsets: ["latin"]
 });
 

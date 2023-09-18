@@ -10,9 +10,19 @@
     .tile {
       &--black {
         background-color: var(--clr-board-stone-d);
+
+        .tile-number,
+        .tile-letter {
+          color: var(--clr-board-stone-l);
+        }
       }
       &--white {
         background-color: var(--clr-board-stone-l);
+
+        .tile-number,
+        .tile-letter {
+          color: var(--clr-board-stone-d);
+        }
       }
     }
   }
@@ -21,9 +31,19 @@
     .tile {
       &--black {
         background-color: var(--clr-board-classic-d);
+
+        .tile-number,
+        .tile-letter {
+          color: var(--clr-board-classic-l);
+        }
       }
       &--white {
         background-color: var(--clr-board-classic-l);
+
+        .tile-number,
+        .tile-letter {
+          color: var(--clr-board-classic-d);
+        }
       }
     }
   }
@@ -32,9 +52,19 @@
     .tile {
       &--black {
         background-color: var(--clr-board-grey-d);
+
+        .tile-number,
+        .tile-letter {
+          color: var(--clr-board-grey-l);
+        }
       }
       &--white {
         background-color: var(--clr-board-grey-l);
+
+        .tile-number,
+        .tile-letter {
+          color: var(--clr-board-grey-d);
+        }
       }
     }
   }
@@ -43,9 +73,19 @@
     .tile {
       &--black {
         background-color: var(--clr-board-walnut-d);
+
+        .tile-number,
+        .tile-letter {
+          color: var(--clr-board-walnut-l);
+        }
       }
       &--white {
         background-color: var(--clr-board-walnut-l);
+
+        .tile-number,
+        .tile-letter {
+          color: var(--clr-board-walnut-d);
+        }
       }
     }
   }
@@ -54,9 +94,19 @@
     .tile {
       &--black {
         background-color: var(--clr-board-metal-d);
+
+        .tile-number,
+        .tile-letter {
+          color: var(--clr-board-metal-l);
+        }
       }
       &--white {
         background-color: var(--clr-board-metal-l);
+
+        .tile-number,
+        .tile-letter {
+          color: var(--clr-board-metal-d);
+        }
       }
     }
   }

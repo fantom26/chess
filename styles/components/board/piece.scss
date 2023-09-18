@@ -1,4 +1,5 @@
 .piece {
+  z-index: 1;
   display: flex;
 
   &[data-color="b"] {

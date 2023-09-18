@@ -1,4 +1,4 @@
-import { PIECE } from "@utils/enums";
+import { LETTERS, PIECE } from "@utils/enums";
 import { ICell, TFIgure } from "@utils/types";
 import { Square } from "chess.js";
 
@@ -34,7 +34,7 @@ export const createBoard = (fenString: string) => {
     .map((n) => n.toString())
     .reverse(); //["8", "7", "6", "5", "4", "3", "2", "1"]
 
-  const columns = ["a", "b", "c", "d", "e", "f", "g", "h"];
+  const columns = [LETTERS.A, LETTERS.B, LETTERS.C, LETTERS.D, LETTERS.E, LETTERS.F, LETTERS.G, LETTERS.H];
 
   const cells: Square[] = []; //[a1, b1, c1..., h8]
 
