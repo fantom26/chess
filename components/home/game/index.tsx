@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import { useGameContext, useModalContext } from "@hooks";
 import { ACTIONS, MODALS } from "@utils/enums";
 import { ChessSettingsModal, GameOverModal } from "../dialogs";
+import { ICONS } from "@constants";
 
 export const Game = () => {
   const [fen, setFen] = useState(DEFAULT_POSITION);
@@ -40,6 +41,12 @@ export const Game = () => {
     });
   };
 
+  const flipBoard = () => {
+    console.log("fen", fen);
+    console.log("reverse", fen.split("").reverse().join(""));
+    // setFen((prev) => prev.split("").reverse().join(""));
+  };
+
   useEffect(() => {
     const [gameOver, status] = getGameOverState(chess);
 
@@ -63,8 +70,14 @@ export const Game = () => {
 
   return (
     <>
-      <div className="game">
-        <Board cells={board} makeMove={makeMove} setFromPos={setFromPos} />
+      <Board chess={chess} cells={board} makeMove={makeMove} setFromPos={setFromPos} />
+      <div className="chess-btns">
+        <button className="chess-settings" type="button" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).open}>
+          {ICONS.settings}
+        </button>
+        <button type="button" onClick={flipBoard}>
+          f
+        </button>
       </div>
       <GameOverModal />
       <ChessSettingsModal />

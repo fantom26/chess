@@ -1,22 +1,21 @@
 import { ICell } from "@utils/types";
 import { FC } from "react";
-import { isLightSquare } from "@components/home/helpers";
 import { Piece } from "../piece";
-import { BLACK, KING, SQUARES, Square, WHITE } from "chess.js";
+import { BLACK, KING, SQUARES, Square, WHITE, Chess } from "chess.js";
 import { useGameContext } from "@hooks";
 import { LETTERS } from "@utils/enums";
 
 interface TileProps {
   cell: ICell;
   index: number;
+  chess: Chess;
   makeMove: (pos: string) => void;
   setFromPos: (pos: Square) => void;
 }
 
 export const Tile: FC<TileProps> = (props) => {
-  const { index, cell, makeMove, setFromPos } = props;
-
-  const squareLight = isLightSquare(cell.pos, index);
+  const { index, cell, makeMove, setFromPos, chess } = props;
+  const squareLight = chess.squareColor(cell.pos);
   const { possibleMoves, check, turn } = useGameContext();
   const isPossibleMove = possibleMoves.includes(cell.pos);
   const figureColor = cell.piece === cell.piece.toUpperCase() ? BLACK : WHITE;
@@ -34,9 +33,9 @@ export const Tile: FC<TileProps> = (props) => {
   const generateClassNames = () => {
     let defaultClassName = "tile";
 
-    if (squareLight) {
+    if (squareLight === "light") {
       defaultClassName += " tile--white";
-    } else {
+    } else if (squareLight === "dark") {
       defaultClassName += " tile--black";
     }
 

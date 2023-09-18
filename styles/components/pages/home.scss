@@ -16,6 +16,14 @@
       display: flex;
       width: 100%;
       max-width: 1.6rem;
+      max-height: 1.6rem;
+    }
+
+    &-btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
     }
   }
 }
