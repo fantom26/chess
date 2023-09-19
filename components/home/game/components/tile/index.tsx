@@ -1,8 +1,8 @@
 import { ICell } from "@utils/types";
 import { FC } from "react";
 import { Piece } from "../piece";
-import { BLACK, KING, SQUARES, Square, WHITE, Chess } from "chess.js";
-import { useGameContext } from "@hooks";
+import { BLACK, KING, Square, WHITE, Chess } from "chess.js";
+import { useChessContext, useGameContext } from "@hooks";
 import { LETTERS } from "@utils/enums";
 
 interface TileProps {
@@ -17,9 +17,10 @@ export const Tile: FC<TileProps> = (props) => {
   const { index, cell, makeMove, setFromPos, chess } = props;
   const squareLight = chess.squareColor(cell.pos);
   const { possibleMoves, check, turn } = useGameContext();
+  const { chessStore } = useChessContext();
   const isPossibleMove = possibleMoves.includes(cell.pos);
   const figureColor = cell.piece === cell.piece.toUpperCase() ? BLACK : WHITE;
-  const [letter, number] = SQUARES[index].split("");
+  const [letter, number] = chessStore.squares[index].split("");
 
   const handleDrop = () => {
     makeMove(cell.pos);

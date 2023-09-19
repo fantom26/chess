@@ -2,10 +2,12 @@
 import { Dispatch, FC, ReactNode, SetStateAction, createContext, useState } from "react";
 import { BOARD_COLORS, COLLECTIONS, FORM_FIELDS } from "../../utils/enums";
 import { TSelectOption } from "../../utils/validation";
+import { SQUARES, Square } from "chess.js";
 
 interface IStore {
   [FORM_FIELDS.PEACE_THEME]: TSelectOption;
   [FORM_FIELDS.BOARD_THEME]: TSelectOption;
+  squares: Square[];
 }
 
 interface ChessProviderProps {
@@ -26,7 +28,8 @@ const initialState: ChessContextProps = {
     [FORM_FIELDS.BOARD_THEME]: {
       label: BOARD_COLORS.CLASSIC,
       value: BOARD_COLORS.CLASSIC
-    }
+    },
+    squares: SQUARES
   },
   // eslint-disable-next-line no-empty-function
   setChessStore: () => {}

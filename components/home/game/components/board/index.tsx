@@ -14,7 +14,6 @@ interface BoardProps {
 export const Board: FC<BoardProps> = ({ cells, ...props }) => {
   const { chessStore } = useChessContext();
 
-  console.log("cells", cells);
   return (
     <ul className={`board board--${chessStore.boardTheme.value}`}>
       {cells.map((cell, index) => (

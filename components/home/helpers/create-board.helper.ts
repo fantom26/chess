@@ -12,10 +12,11 @@ class Cell implements ICell {
     this.piece = piece;
   }
 }
-//  returns an array of range 1, n
-const range = (n: number) => Array.from({ length: n }, (_, i) => i + 1);
 
-export const createBoard = (fenString: string) => {
+const columns = [LETTERS.A, LETTERS.B, LETTERS.C, LETTERS.D, LETTERS.E, LETTERS.F, LETTERS.G, LETTERS.H];
+const rows = Array.from({ length: 8 }, (_, i) => i + 1);
+
+export const createBoard = (fenString: string, boardFlipped: boolean) => {
   const [fen] = fenString.split(" "); //Get the first portion
 
   const fenPieces = [...fen.replaceAll("/", "")]; //rnbqkbnrpppppppp8888PPPPPPPPRNBQKBNR
@@ -30,19 +31,25 @@ export const createBoard = (fenString: string) => {
     }
   });
 
-  const rows = range(8)
-    .map((n) => n.toString())
-    .reverse(); //["8", "7", "6", "5", "4", "3", "2", "1"]
-
-  const columns = [LETTERS.A, LETTERS.B, LETTERS.C, LETTERS.D, LETTERS.E, LETTERS.F, LETTERS.G, LETTERS.H];
-
   const cells: Square[] = []; //[a1, b1, c1..., h8]
 
-  for (let i = 0; i < rows.length; i++) {
-    const row = rows[i];
-    for (let j = 0; j < columns.length; j++) {
-      const square = `${columns[j]}${row}`;
-      cells.push(square as Square); //e.g a1, b1, c1...
+  if (boardFlipped) {
+    const reversedColumns = [...columns].reverse();
+    for (let i = 0; i < rows.length; i++) {
+      const row = rows[i];
+      for (let j = 0; j < columns.length; j++) {
+        const square = `${reversedColumns[j]}${row}`;
+        cells.push(square as Square); //e.g a1, b1, c1...
+      }
+    }
+  } else {
+    const reversedRows = [...rows].reverse();
+    for (let i = 0; i < rows.length; i++) {
+      const row = reversedRows[i];
+      for (let j = 0; j < columns.length; j++) {
+        const square = `${columns[j]}${row}`;
+        cells.push(square as Square); //e.g a1, b1, c1...
+      }
     }
   }
 

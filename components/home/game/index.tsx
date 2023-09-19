@@ -4,16 +4,24 @@ import { Chess, DEFAULT_POSITION, Square } from "chess.js";
 import { createBoard, getGameOverState } from "../helpers";
 import { Board } from "./components";
 import { toast } from "react-toastify";
-import { useGameContext, useModalContext } from "@hooks";
+import { useChessContext, useGameContext, useModalContext } from "@hooks";
 import { ACTIONS, MODALS } from "@utils/enums";
 import { ChessSettingsModal, GameOverModal } from "../dialogs";
 import { ICONS } from "@constants";
 
+const reverseFen = (fen: string) => {
+  const fenArr = fen.split(" ");
+  const [fenBoard] = fenArr;
+  return [fenBoard.split("").reverse().join(""), ...fenArr.slice(1)].join(" ");
+};
+
 export const Game = () => {
   const [fen, setFen] = useState(DEFAULT_POSITION);
   const { current: chess } = useRef(new Chess(fen));
-  const [board, setBoard] = useState(createBoard(fen));
+  const [boardFlipped, setBoardFlipped] = useState(false);
+  const [board, setBoard] = useState(createBoard(fen, false));
   const { dispatch } = useGameContext();
+  const { setChessStore } = useChessContext();
   const { generateModalHandlers } = useModalContext();
 
   const fromPos = useRef<string | null>(null);
@@ -25,7 +33,7 @@ export const Game = () => {
         const to = pos;
         chess.move({ from, to });
         dispatch({ type: ACTIONS.CLEAR_POSSIBLE_MOVES });
-        setFen(chess.fen());
+        setFen(boardFlipped ? reverseFen(chess.fen()) : chess.fen());
       }
     } catch (e) {
       toast.warn("Invalid move");
@@ -42,9 +50,9 @@ export const Game = () => {
   };
 
   const flipBoard = () => {
-    console.log("fen", fen);
-    console.log("reverse", fen.split("").reverse().join(""));
-    // setFen((prev) => prev.split("").reverse().join(""));
+    setFen(reverseFen(fen));
+    setChessStore((prev) => ({ ...prev, squares: prev.squares.reverse() }));
+    setBoardFlipped((prev) => !prev);
   };
 
   useEffect(() => {
@@ -65,8 +73,12 @@ export const Game = () => {
   }, [fen, dispatch, chess]);
 
   useEffect(() => {
-    setBoard(createBoard(fen));
+    // console.log("boardFlipped", boardFlipped);
+    setBoard(createBoard(fen, boardFlipped));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fen]);
+
+  // console.log("board", board);
 
   return (
     <>
