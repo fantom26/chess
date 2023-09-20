@@ -1,3 +1,4 @@
+"use client";
 import { FC } from "react";
 
 import { Modal } from "components/shared/modal";
@@ -21,7 +22,7 @@ export const GameOverModal: FC = () => {
 
   return (
     <Modal width={45} visible={modalStore[MODALS.GAME_OVER]} onClose={generateModalHandlers(MODALS.GAME_OVER).close} bodyClassName="modal-game-over">
-      <h1>Game over</h1>
+      <h2>Game over</h2>
       <p>
         The game ended in a <mark>{status}</mark>
       </p>

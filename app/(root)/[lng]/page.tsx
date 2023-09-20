@@ -1,4 +1,3 @@
-"use client";
 import "@/styles/globals.scss";
 import { Game } from "@components/home";
 import { Header, Container } from "@components/shared";

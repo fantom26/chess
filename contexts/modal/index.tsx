@@ -1,3 +1,4 @@
+"use client";
 /* eslint-disable no-empty-function */
 import { FC, ReactNode, createContext, useState } from "react";
 import { MODALS } from "../../utils/enums";

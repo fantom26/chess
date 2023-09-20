@@ -1,3 +1,4 @@
+"use client";
 import { FC } from "react";
 
 import { Modal } from "components/shared/modal";
@@ -7,8 +8,12 @@ import { useForm } from "react-hook-form";
 import { Form } from "@components/shared";
 import { SettingsStageSchema, settingsResolver } from "@utils/validation";
 import { generateSelectOptions } from "@helpers";
+import { useParams } from "next/navigation";
+import { useTranslation } from "@i18n/client";
 
 export const ChessSettingsModal: FC = () => {
+  const { lng } = useParams();
+  const { t } = useTranslation(lng as string, "common");
   const { modalStore, generateModalHandlers } = useModalContext();
   const { chessStore, setChessStore } = useChessContext();
 
@@ -36,7 +41,7 @@ export const ChessSettingsModal: FC = () => {
       <Form methods={methods} onSubmit={handleSubmit(updateSettings)}>
         <Form.Select name={FORM_FIELDS.PEACE_THEME} options={generateSelectOptions(COLLECTIONS)} />
         <Form.Select name={FORM_FIELDS.BOARD_THEME} options={generateSelectOptions(BOARD_COLORS)} />
-        <button type="submit">Save</button>
+        <button type="submit">{t("btn.save")}</button>
       </Form>
     </Modal>
   );

@@ -1,3 +1,4 @@
+"use client";
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { Dispatch, FC, ReactNode, SetStateAction, createContext, useState } from "react";
 import { BOARD_COLORS, COLLECTIONS, FORM_FIELDS } from "../../utils/enums";

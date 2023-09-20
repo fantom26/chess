@@ -1,3 +1,4 @@
+"use client";
 import { ReactNode } from "react";
 import { FormProvider, UseFormReturn } from "react-hook-form";
 import { ControlledSelect } from ".";

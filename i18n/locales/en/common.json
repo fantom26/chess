@@ -1,0 +1,22 @@
+{
+  "modals": {
+    "settings": {
+      "pieces": "Pieces",
+      "board": "Board"
+    },
+    "gameOver": {
+      "title": "Game over",
+      "status": "Game over, by {{status}}",
+      "winner": "{{winner}} won"
+    }
+  },
+  "btn": {
+    "back": "Back",
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "alts": {
+    "settings": "Set up the chess board",
+    "reverse": "Flip board"
+  }
+}

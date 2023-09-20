@@ -1,3 +1,4 @@
+"use client";
 import { Container, Logo } from "@components/shared";
 import { FC } from "react";
 

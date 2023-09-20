@@ -1,3 +1,4 @@
+"use client";
 import { Dispatch, ReactNode, createContext, useReducer } from "react";
 import { AppActions, GameReducer } from "./reducer";
 import { Color, WHITE } from "chess.js";
