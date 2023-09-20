@@ -9,12 +9,13 @@ interface TileProps {
   cell: ICell;
   index: number;
   chess: Chess;
+  flipped: boolean;
   makeMove: (pos: string) => void;
   setFromPos: (pos: Square) => void;
 }
 
 export const Tile: FC<TileProps> = (props) => {
-  const { index, cell, makeMove, setFromPos, chess } = props;
+  const { index, cell, flipped, makeMove, setFromPos, chess } = props;
   const squareLight = chess.squareColor(cell.pos);
   const { possibleMoves, check, turn } = useGameContext();
   const { chessStore } = useChessContext();
@@ -53,8 +54,8 @@ export const Tile: FC<TileProps> = (props) => {
 
   const Details = () => (
     <>
-      {+number === 1 && <span className="tile-letter">{letter}</span>}
-      {letter === LETTERS.A && <span className="tile-number">{number}</span>}
+      {+number === (flipped ? 8 : 1) && <span className="tile-letter">{letter}</span>}
+      {letter === (flipped ? LETTERS.H : LETTERS.A) && <span className="tile-number">{number}</span>}
     </>
   );
 

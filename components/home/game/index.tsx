@@ -73,7 +73,7 @@ export const Game = () => {
 
   return (
     <>
-      <Board chess={chess} cells={board} makeMove={makeMove} setFromPos={setFromPos} />
+      <Board flipped={boardFlipped} chess={chess} cells={board} makeMove={makeMove} setFromPos={setFromPos} />
       <div className="chess-btns">
         <button className="chess-icon" type="button" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).open}>
           {ICONS[ICONS_NAME.SETTINGS]}
