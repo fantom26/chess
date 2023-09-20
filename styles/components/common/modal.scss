@@ -11,10 +11,6 @@
 
   &.entering {
     animation: showModal var(--duration) forwards;
-
-    .modal-content {
-      animation: showModalContent var(--duration) forwards;
-    }
   }
 
   &.entered {
@@ -29,10 +25,6 @@
 
   &.exiting {
     animation: showModal var(--duration) reverse;
-
-    .modal-content {
-      animation: showModalContent var(--duration) reverse;
-    }
   }
 
   &.exited {
@@ -101,17 +93,5 @@
   100% {
     opacity: 1;
     visibility: visible;
-  }
-}
-
-@keyframes showModalContent {
-  0% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
