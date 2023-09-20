@@ -1,19 +1,13 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { Chess, DEFAULT_POSITION, Square } from "chess.js";
-import { createBoard, getGameOverState } from "../helpers";
+import { createBoard, getGameOverState, reverseFen } from "../helpers";
 import { Board } from "./components";
 import { toast } from "react-toastify";
 import { useChessContext, useGameContext, useModalContext } from "@hooks";
-import { ACTIONS, MODALS } from "@utils/enums";
+import { ACTIONS, ICONS_NAME, MODALS } from "@utils/enums";
 import { ChessSettingsModal, GameOverModal } from "../dialogs";
 import { ICONS } from "@constants";
-
-const reverseFen = (fen: string) => {
-  const fenArr = fen.split(" ");
-  const [fenBoard] = fenArr;
-  return [fenBoard.split("").reverse().join(""), ...fenArr.slice(1)].join(" ");
-};
 
 export const Game = () => {
   const [fen, setFen] = useState(DEFAULT_POSITION);
@@ -73,22 +67,19 @@ export const Game = () => {
   }, [fen, dispatch, chess]);
 
   useEffect(() => {
-    // console.log("boardFlipped", boardFlipped);
     setBoard(createBoard(fen, boardFlipped));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fen]);
-
-  // console.log("board", board);
 
   return (
     <>
       <Board chess={chess} cells={board} makeMove={makeMove} setFromPos={setFromPos} />
       <div className="chess-btns">
-        <button className="chess-settings" type="button" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).open}>
-          {ICONS.settings}
+        <button className="chess-icon" type="button" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).open}>
+          {ICONS[ICONS_NAME.SETTINGS]}
         </button>
-        <button type="button" onClick={flipBoard}>
-          f
+        <button className="chess-icon" type="button" onClick={flipBoard}>
+          {ICONS[ICONS_NAME.REVERSE]}
         </button>
       </div>
       <GameOverModal />

@@ -1,4 +1,5 @@
 export enum ICONS_NAME {
   SETTINGS = "settings",
-  LOGO = "logo"
+  LOGO = "logo",
+  REVERSE = "reverse"
 }
