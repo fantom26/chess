@@ -10,35 +10,35 @@ const customStyles: StylesConfig<TSelectOption, false> = {
     boxShadow: "initial",
     backgroundColor: "var(--clr-bg)",
     borderColor: "var(--select-border)",
-    color: "var(--clr-white)",
+    color: "var(--clr-white-100)",
     fontFamily: "var(--font-family)",
     fontSize: "var(--font-size)",
     borderRadius: "5px",
     transition: "border var(--transition), color var(--transition), background-color var(--transition)",
     "&:hover": {
       backgroundColor: "var(--select-hover-background)",
-      color: "var(--clr-white)",
+      color: "var(--clr-white-100)",
       transition: "border var(--transition), color var(--transition), background-color var(--transition)"
     },
     "&:focus": {
       backgroundColor: "var(--select-focus-background)",
-      color: "var(--clr-white)",
+      color: "var(--clr-white-100)",
       transition: "border var(--transition), color var(--transition), background-color var(--transition)"
     }
   }),
   singleValue: (provided) => ({
     ...provided,
-    color: "var(--clr-white)"
+    color: "var(--clr-white-100)"
   }),
   option: (provided, state) => ({
     ...provided,
     backgroundColor: state.isSelected ? "var(--select-active-background)" : state.isFocused ? "var(--select-hover-background)" : "var(--clr-bg)",
-    color: state.isSelected ? "var(--clr-white)" : state.isFocused ? "var(--clr-white)" : "var(--clr-white)",
+    color: state.isSelected ? "var(--clr-white-100)" : state.isFocused ? "var(--clr-white-100)" : "var(--clr-white-100)",
     transition: "color var(--transition), background-color var(--transition)",
 
     "&:hover": {
       backgroundColor: "var(--select-hover-background)",
-      color: "var(--clr-white)",
+      color: "var(--clr-white-100)",
       transition: "color var(--transition), background-color var(--transition)"
     }
   })
@@ -62,6 +62,7 @@ export const ControlledSelect: FC<SelectProps> = (props) => {
       defaultValue={defaultValue}
       render={({ field: { onChange, value } }) => (
         <Select
+          className="select"
           value={value}
           styles={customStyles}
           options={options}

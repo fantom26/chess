@@ -4,29 +4,29 @@
 
   &[data-color="b"] {
     .w {
-      fill: var(--clr-white);
-      stroke: var(--clr-white);
-      stop-color: var(--clr-white);
+      fill: var(--clr-white-100);
+      stroke: var(--clr-white-100);
+      stop-color: var(--clr-white-100);
     }
 
     .b {
-      fill: var(--clr-black);
-      stroke: var(--clr-black);
-      stop-color: var(--clr-black);
+      fill: var(--clr-black-900);
+      stroke: var(--clr-black-900);
+      stop-color: var(--clr-black-900);
     }
   }
 
   &[data-color="w"] {
     .w {
-      fill: var(--clr-black);
-      stroke: var(--clr-black);
-      stop-color: var(--clr-black);
+      fill: var(--clr-black-900);
+      stroke: var(--clr-black-900);
+      stop-color: var(--clr-black-900);
     }
 
     .b {
-      fill: var(--clr-white);
-      stroke: var(--clr-white);
-      stop-color: var(--clr-white);
+      fill: var(--clr-white-100);
+      stroke: var(--clr-white-100);
+      stop-color: var(--clr-white-100);
     }
   }
 }

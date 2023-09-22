@@ -1,0 +1,13 @@
+:root {
+  --content-width: 117rem;
+  --container-offset: 1.5rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --transition: 0.3s;
+  --font-weight: 400;
+
+  --radius: 0.5rem;
+  --border-width: 0.1rem;
+
+  --clr-bg: #121212;
+  --text-color: var(--clr-white-100);
+}

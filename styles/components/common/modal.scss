@@ -52,8 +52,16 @@
 
     &__body {
       position: relative;
-      padding: 4rem 2.5rem 3.5rem;
+      padding: 4.5rem 2.5rem 3.5rem;
     }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 1rem;
   }
 
   &__close {
@@ -71,7 +79,7 @@
       top: 50%;
       width: 2rem;
       height: 0.2rem;
-      background-color: var(--clr-white);
+      background-color: var(--clr-white-100);
     }
 
     &::before {

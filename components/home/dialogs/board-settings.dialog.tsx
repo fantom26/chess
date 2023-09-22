@@ -3,9 +3,9 @@ import { FC } from "react";
 
 import { Modal } from "components/shared/modal";
 import { useModalContext, useChessContext } from "@hooks";
-import { BOARD_COLORS, COLLECTIONS, FORM_FIELDS, MODALS } from "@utils/enums";
+import { BOARD_COLORS, ButtonVariant, COLLECTIONS, FORM_FIELDS, MODALS } from "@utils/enums";
 import { useForm } from "react-hook-form";
-import { Form } from "@components/shared";
+import { Button, Form } from "@components/shared";
 import { SettingsStageSchema, settingsResolver } from "@utils/validation";
 import { generateSelectOptions } from "@helpers";
 import { useParams } from "next/navigation";
@@ -41,7 +41,14 @@ export const ChessSettingsModal: FC = () => {
       <Form methods={methods} onSubmit={handleSubmit(updateSettings)}>
         <Form.Select name={FORM_FIELDS.PEACE_THEME} options={generateSelectOptions(COLLECTIONS)} />
         <Form.Select name={FORM_FIELDS.BOARD_THEME} options={generateSelectOptions(BOARD_COLORS)} />
-        <button type="submit">{t("btn.save")}</button>
+        <div className="modal__actions">
+          <Button variant={ButtonVariant.outlined} type="button" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).close}>
+            {t("btn.cancel")}
+          </Button>
+          <Button variant={ButtonVariant.contained} type="submit">
+            {t("btn.save")}
+          </Button>
+        </div>
       </Form>
     </Modal>
   );

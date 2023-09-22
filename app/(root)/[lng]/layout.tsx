@@ -10,7 +10,7 @@ import { languages } from "@i18n/settings";
 export const generateStaticParams = async () => languages.map((lang) => ({ lang }));
 
 const quicksand = Quicksand({
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"]
 });
 
