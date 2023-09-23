@@ -66,6 +66,7 @@ export const ControlledSelect: FC<SelectProps> = (props) => {
         <Select
           className="select"
           value={value}
+          isSearchable={false}
           styles={customStyles}
           options={options}
           defaultValue={defaultValue}

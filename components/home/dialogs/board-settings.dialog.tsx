@@ -5,7 +5,7 @@ import { Modal } from "components/shared/modal";
 import { useModalContext, useChessContext } from "@hooks";
 import { BOARD_COLORS, ButtonVariant, COLLECTIONS, FORM_FIELDS, MODALS } from "@utils/enums";
 import { useForm } from "react-hook-form";
-import { Button, Form } from "@components/shared";
+import { Button, Flex, Form } from "@components/shared";
 import { SettingsStageSchema, settingsResolver } from "@utils/validation";
 import { generateSelectOptions } from "@helpers";
 import { useParams } from "next/navigation";
@@ -21,7 +21,8 @@ export const ChessSettingsModal: FC = () => {
     resolver: settingsResolver,
     defaultValues: {
       [FORM_FIELDS.PEACE_THEME]: chessStore[FORM_FIELDS.PEACE_THEME],
-      [FORM_FIELDS.BOARD_THEME]: chessStore[FORM_FIELDS.BOARD_THEME]
+      [FORM_FIELDS.BOARD_THEME]: chessStore[FORM_FIELDS.BOARD_THEME],
+      [FORM_FIELDS.HIGHLIGHT_MOVE]: chessStore[FORM_FIELDS.HIGHLIGHT_MOVE]
     }
   });
 
@@ -42,8 +43,9 @@ export const ChessSettingsModal: FC = () => {
       <Form methods={methods} onSubmit={handleSubmit(updateSettings)}>
         <Form.Select name={FORM_FIELDS.PEACE_THEME} options={generateSelectOptions(COLLECTIONS)} />
         <Form.Select name={FORM_FIELDS.BOARD_THEME} options={generateSelectOptions(BOARD_COLORS)} />
-        <Form.Switch name={FORM_FIELDS.BOARD_THEME} />
-
+        <Flex className="modal-chess-settings__switch" alignItems="center" container>
+          <Form.Switch name={FORM_FIELDS.HIGHLIGHT_MOVE} />
+        </Flex>
         <div className="modal__actions">
           <Button variant={ButtonVariant.outlined} type="button" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).close}>
             {t("btn.cancel")}
