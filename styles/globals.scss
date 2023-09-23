@@ -5,7 +5,13 @@
 $containerWidth: 120rem;
 
 body {
-  @include font-source(false, 1.6rem, var(--clr-black-900), var(--font-weight), false);
+  @include font-source(
+    "'Quicksand', sans-serif",
+    var(--the-smallest-size),
+    var(--clr-black-900),
+    var(--normal-weight),
+    var(--small-line-height)
+  );
   background-color: #302e2b;
 }
 

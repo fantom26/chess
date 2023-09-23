@@ -1,0 +1,11 @@
+@mixin fade($type: "show") {
+  @if $type == "hide" {
+    opacity: 0;
+    visibility: hidden;
+    @include transition(var(--transition), visibility, opacity);
+  } @else {
+    opacity: 1;
+    visibility: visible;
+    @include transition(var(--transition), visibility, opacity);
+  }
+}

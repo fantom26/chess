@@ -1,4 +1,6 @@
-@mixin pseudo($pos: absolute, $content: "") {
+@mixin pseudo($width: 100%, $height: 100%, $display: inline-block, $pos: absolute, $content: "") {
   content: $content;
   position: $pos;
+  display: $display;
+  @include box($width, $height);
 }

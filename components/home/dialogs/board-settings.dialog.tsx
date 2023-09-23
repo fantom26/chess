@@ -3,9 +3,9 @@ import { FC } from "react";
 
 import { Modal } from "components/shared/modal";
 import { useModalContext, useChessContext } from "@hooks";
-import { BOARD_COLORS, ButtonVariant, COLLECTIONS, FORM_FIELDS, MODALS } from "@utils/enums";
+import { BOARD_COLORS, ButtonVariant, COLLECTIONS, FORM_FIELDS, MODALS, TagVariant } from "@utils/enums";
 import { useForm } from "react-hook-form";
-import { Button, Flex, Form } from "@components/shared";
+import { Button, Flex, Form, Typography } from "@components/shared";
 import { SettingsStageSchema, settingsResolver } from "@utils/validation";
 import { generateSelectOptions } from "@helpers";
 import { useParams } from "next/navigation";
@@ -43,7 +43,10 @@ export const ChessSettingsModal: FC = () => {
       <Form methods={methods} onSubmit={handleSubmit(updateSettings)}>
         <Form.Select name={FORM_FIELDS.PEACE_THEME} options={generateSelectOptions(COLLECTIONS)} />
         <Form.Select name={FORM_FIELDS.BOARD_THEME} options={generateSelectOptions(BOARD_COLORS)} />
-        <Flex className="modal-chess-settings__switch" alignItems="center" container>
+        <Flex className="modal-chess-settings__switch" alignItems="center" justifyContent="space-between" container>
+          <Typography tag={TagVariant.H3} variant={TagVariant.PARAGRAPH}>
+            {t("modals.settings.highlight_moves")}
+          </Typography>
           <Form.Switch name={FORM_FIELDS.HIGHLIGHT_MOVE} />
         </Flex>
         <div className="modal__actions">

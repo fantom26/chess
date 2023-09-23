@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
 
-type JustifyContent = "center" | "start" | "end" | "flex-start" | "flex-end" | "left" | "right";
+type JustifyContent = "center" | "start" | "end" | "flex-start" | "flex-end" | "left" | "right" | "space-between" | "stretch" | "space-around";
 
 type FlexDirection = "row" | "column" | "row-reverse" | "column-reverse";
 
@@ -18,6 +18,7 @@ export interface FlexProps {
   flexShrink: number;
   flexWrap: FlexWrap;
   flex: string;
+  gap: string;
   alignItems: AlignItems;
   margin: string;
   padding: string;
@@ -37,6 +38,7 @@ export const Flex: FC<Partial<FlexProps>> = (props) => (
       flexGrow: props.flexGrow || 0,
       flexBasis: props.flexBasis || "auto",
       flexShrink: props.flexShrink || 1,
+      gap: props.gap || "initial",
       flexWrap: props.flexWrap || "nowrap",
       flex: props.flex || "0 1 auto",
       alignItems: props.alignItems || "stretch",

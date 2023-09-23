@@ -1,4 +1,12 @@
+// scss variables for complex calculation in scss functions
+$the-smallest-size: 1.6rem;
+$small-size: 2rem;
+$medium-size: 2.4rem;
+$large-size: 2.8rem;
+$the-largest-size: 3.2rem;
+
 :root {
+  // css variables for CSS-in-JS and etc.
   --the-smallest-size: 1.6rem;
   --small-size: 2rem;
   --medium-size: 2.4rem;

@@ -1,6 +1,6 @@
 html {
   font-family: var(--font-family);
-  font-weight: var(--font-weight);
+  font-weight: var(--normal-weight);
   font-size: 62.5%;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -35,7 +35,8 @@ a {
   color: inherit;
 }
 
-img, svg {
+img,
+svg {
   height: auto;
   max-width: 100%;
   object-fit: cover;

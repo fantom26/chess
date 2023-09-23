@@ -2,7 +2,8 @@
   "modals": {
     "settings": {
       "pieces": "Фігури",
-      "board": "Дошка"
+      "board": "Дошка",
+      "highlight_moves": "Підкреслити ходи"
     },
     "gameOver": {
       "title": "Гра завершена",

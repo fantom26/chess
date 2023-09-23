@@ -2,7 +2,8 @@
   "modals": {
     "settings": {
       "pieces": "Pieces",
-      "board": "Board"
+      "board": "Board",
+      "highlight_moves": "Highlight Moves"
     },
     "gameOver": {
       "title": "Game over",

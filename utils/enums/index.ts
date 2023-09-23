@@ -8,3 +8,4 @@ export * from "./game-actions.enum";
 export * from "./game-status.enum";
 export * from "./letters.enum";
 export * from "./btn-variant.enum";
+export * from "./typography-tag";
