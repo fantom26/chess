@@ -29,6 +29,7 @@ export const ChessSettingsModal: FC = () => {
 
   const updateSettings = (data: SettingsStageSchema) => {
     setChessStore((prev) => ({ ...prev, ...data }));
+    generateModalHandlers(MODALS.CHESS_SETTINGS).close();
   };
 
   return (
@@ -41,6 +42,8 @@ export const ChessSettingsModal: FC = () => {
       <Form methods={methods} onSubmit={handleSubmit(updateSettings)}>
         <Form.Select name={FORM_FIELDS.PEACE_THEME} options={generateSelectOptions(COLLECTIONS)} />
         <Form.Select name={FORM_FIELDS.BOARD_THEME} options={generateSelectOptions(BOARD_COLORS)} />
+        <Form.Switch name={FORM_FIELDS.BOARD_THEME} />
+
         <div className="modal__actions">
           <Button variant={ButtonVariant.outlined} type="button" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).close}>
             {t("btn.cancel")}

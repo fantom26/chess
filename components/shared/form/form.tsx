@@ -2,6 +2,7 @@
 import { ReactNode } from "react";
 import { FormProvider, UseFormReturn } from "react-hook-form";
 import { ControlledSelect } from ".";
+import { ControlledSwitch } from "./switch";
 
 interface FormProps {
   children: ReactNode;
@@ -20,3 +21,4 @@ export const Form = (props: FormProps) => {
 };
 
 Form.Select = ControlledSelect;
+Form.Switch = ControlledSwitch;

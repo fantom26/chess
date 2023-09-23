@@ -32,7 +32,9 @@ const customStyles: StylesConfig<TSelectOption, false> = {
   }),
   option: (provided, state) => ({
     ...provided,
+    // eslint-disable-next-line no-nested-ternary
     backgroundColor: state.isSelected ? "var(--select-active-background)" : state.isFocused ? "var(--select-hover-background)" : "var(--clr-bg)",
+    // eslint-disable-next-line no-nested-ternary
     color: state.isSelected ? "var(--clr-white-100)" : state.isFocused ? "var(--clr-white-100)" : "var(--clr-white-100)",
     transition: "color var(--transition), background-color var(--transition)",
 
