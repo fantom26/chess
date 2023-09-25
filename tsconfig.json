@@ -37,8 +37,6 @@
       "@constants/*": ["constants/*"],
       "@contexts": ["contexts/index"],
       "@contexts/*": ["contexts/*"],
-      "@declarations": ["utils/declarations/index"],
-      "@declarations/*": ["utils/declarations/*"],
       "@helpers": ["utils/helpers/index"],
       "@helpers/*": ["utils/helpers/*"],
       "@utils": ["utils/index"],
@@ -51,6 +49,6 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/common/index.ts", ".next/types/**/*.ts", "next-i18next.config.js", "middleware.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "middleware.js", "utils/enums/typography-tag.enum.ts"],
   "exclude": ["node_modules"]
 }

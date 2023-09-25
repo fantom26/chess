@@ -6,6 +6,7 @@ import { Quicksand } from "next/font/google";
 import { dir } from "i18next";
 import { ReactNode } from "react";
 import { languages } from "@i18n/settings";
+import { notFound } from "next/navigation";
 
 export const generateStaticParams = async () => languages.map((lang) => ({ lang }));
 
@@ -22,6 +23,9 @@ interface IRootLayout {
 }
 
 export default function RootLayout({ children, params: { lng } }: IRootLayout) {
+  if (!languages.includes(lng)) {
+    return notFound();
+  }
   return (
     <html lang={lng} dir={dir(lng)} className={quicksand.className}>
       <body>
