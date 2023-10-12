@@ -23,12 +23,12 @@ export const WelcomeForm = () => {
   return (
     <div className="home__form-wrapper">
       <Typography tag={TagVariant.H1} variant={TagVariant.H1} center={true}>
-        Welcome in chess
+        {t("pages.home.onlineGameTitle")}
       </Typography>
       <Form classes="home__form" methods={methods} onSubmit={handleSubmit(startGame)}>
-        <Form.Input type="text" placeholder="Enter gameId" name={FORM_FIELDS.ROOM_ID} />
+        <Form.Input type="text" placeholder={t("placeholders.gameId")} name={FORM_FIELDS.ROOM_ID} />
         <Button variant={ButtonVariant.outlined} type="submit">
-          {t("btn.cancel")}
+          {t("pages.home.createGame")}
         </Button>
       </Form>
     </div>

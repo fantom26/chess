@@ -11,10 +11,19 @@
       "winner": "{{winner}} переміг"
     }
   },
+  "pages": {
+    "home": {
+      "createGame": "Створити гру",
+      "onlineGameTitle": "Грайте в шахи з друзями онлайн"
+    }
+  },
   "btn": {
     "back": "Назад",
     "save": "Збірігти",
     "cancel": "Відмінити"
+  },
+  "placeholders": {
+    "gameId": "Введіть id гри"
   },
   "alts": {
     "settings": "Налаштувати шахову дошку",

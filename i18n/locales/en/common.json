@@ -11,10 +11,19 @@
       "winner": "{{winner}} won"
     }
   },
+  "pages": {
+    "home": {
+      "createGame": "Create game",
+      "onlineGameTitle": "Play Chess with your friends online"
+    }
+  },
   "btn": {
     "back": "Back",
     "save": "Save",
     "cancel": "Cancel"
+  },
+  "placeholders": {
+    "gameId": "Enter game id"
   },
   "alts": {
     "settings": "Set up the chess board",
