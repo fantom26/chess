@@ -1,29 +1,16 @@
 .home {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-  padding-block: 1.5rem;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 2.5rem;
 
-  .chess {
     &-wrapper {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-    }
-
-    &-icon {
-      display: flex;
-      width: 100%;
-      max-width: 2.2rem;
-      max-height: 2.2rem;
-    }
-
-    &-btns {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
+      @include push--auto;
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      max-width: 50rem;
+      background-color: var(--clr-bg);
     }
   }
 }

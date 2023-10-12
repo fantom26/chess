@@ -1,20 +1,14 @@
+"use client";
 import "@/styles/globals.scss";
-import { Game } from "@components/home";
-import { Header, Container } from "@components/shared";
+import { WelcomeForm } from "@components/home";
+import { Container } from "@components/shared";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <>
-      <Header />
-      <main>
-        <div className="home">
-          <Container>
-            <div className="chess-wrapper">
-              <Game />
-            </div>
-          </Container>
-        </div>
-      </main>
-    </>
+    <div className="home page--center">
+      <Container>
+        <WelcomeForm />
+      </Container>
+    </div>
   );
 }

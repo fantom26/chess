@@ -1,2 +1,1 @@
-export * from "./game";
-export * from "./dialogs";
+export * from "./form";

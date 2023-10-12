@@ -57,6 +57,7 @@
     "no-fallthrough": "error",
     "no-func-assign": "error",
     "no-import-assign": "error",
+    "import/no-named-as-default": 0,
     "no-invalid-regexp": "error",
     "no-irregular-whitespace": "error",
     "no-obj-calls": "error",

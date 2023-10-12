@@ -119,14 +119,16 @@ export const Game = () => {
 
   return (
     <>
-      <Board flipped={boardFlipped} chess={chess} cells={board} makeMove={makeMove} setFromPos={setFromPos} />
-      <div className="chess-btns">
-        <button className="chess-icon" type="button" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).open}>
-          {ICONS[ICONS_NAME.SETTINGS]}
-        </button>
-        <button className="chess-icon" type="button" onClick={flipBoard}>
-          {ICONS[ICONS_NAME.REVERSE]}
-        </button>
+      <div className="game-wrapper">
+        <Board flipped={boardFlipped} chess={chess} cells={board} makeMove={makeMove} setFromPos={setFromPos} />
+        <div className="game-btns">
+          <button className="game-icon" type="button" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).open}>
+            {ICONS[ICONS_NAME.SETTINGS]}
+          </button>
+          <button className="game-icon" type="button" onClick={flipBoard}>
+            {ICONS[ICONS_NAME.REVERSE]}
+          </button>
+        </div>
       </div>
       <GameOverModal />
       <ChessSettingsModal />

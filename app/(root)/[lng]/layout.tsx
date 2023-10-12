@@ -7,6 +7,7 @@ import { dir } from "i18next";
 import { ReactNode } from "react";
 import { languages } from "@i18n/settings";
 import { notFound } from "next/navigation";
+import { Header } from "@components/shared";
 
 export const generateStaticParams = async () => languages.map((lang) => ({ lang }));
 
@@ -30,7 +31,10 @@ export default function RootLayout({ children, params: { lng } }: IRootLayout) {
     <html lang={lng} dir={dir(lng)} className={quicksand.className}>
       <body>
         <Providers>
-          <div className="wrapper">{children}</div>
+          <div className="wrapper">
+            <Header />
+            <main>{children}</main>
+          </div>
           <ToastContainer
             position="top-right"
             autoClose={5000}
