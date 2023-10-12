@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { Chess, DEFAULT_POSITION, Square } from "chess.js";
+import { Chess, Color, DEFAULT_POSITION, Square } from "chess.js";
 import { createBoard, getGameOverState, reverseFen } from "../helpers";
 import { Board } from "./components";
 import { useChessContext, useGameContext, useModalContext } from "@hooks";
@@ -9,6 +9,8 @@ import { ChessSettingsModal, GameOverModal } from "../dialogs";
 import { ICONS } from "@constants";
 import useSound from "use-sound";
 import { useParams } from "next/navigation";
+import io from "socket.io-client";
+const socket = io("localhost:5000");
 
 export const Game = () => {
   const params = useParams();
@@ -48,6 +50,7 @@ export const Game = () => {
         play({ id: SOUNDS_EFFECTS.MOVE_SELF });
         dispatch({ type: ACTIONS.CLEAR_POSSIBLE_MOVES });
         setFen(boardFlipped ? reverseFen(chess.fen()) : chess.fen());
+        socket.emit("move", { gameID: "20", from, to: pos });
       }
     } catch (e) {
       play({ id: SOUNDS_EFFECTS.ILLEGAL });
@@ -93,6 +96,26 @@ export const Game = () => {
     setBoard(createBoard(fen, boardFlipped));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fen]);
+
+  useEffect(() => {
+    socket.emit("join", { name: "Frank", gameID: "20" }, ({ color }: { color: Color }) => {
+      console.log({ color });
+    });
+    socket.on("welcome", ({ message, opponent }) => {
+      console.log({ message, opponent });
+    });
+    socket.on("opponentJoin", ({ message, opponent }) => {
+      console.log({ message, opponent });
+    });
+
+    socket.on("opponentMove", ({ from, to }) => {
+      chess.move({ from, to });
+      setFen(chess.fen());
+    });
+    socket.on("message", ({ message }) => {
+      console.log({ message });
+    });
+  }, [chess]);
 
   return (
     <>
