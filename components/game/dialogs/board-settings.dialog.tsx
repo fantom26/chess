@@ -9,11 +9,11 @@ import { Button, Flex, Form, Typography } from "@components/shared";
 import { SettingsStageSchema, settingsResolver } from "@utils/validation";
 import { generateSelectOptions } from "@helpers";
 import { useParams } from "next/navigation";
-import { useTranslation } from "@i18n/client";
+import { useTranslation } from "react-i18next";
 
 export const ChessSettingsModal: FC = () => {
-  const { lng } = useParams();
-  const { t } = useTranslation(lng as string, "common");
+  const { locale } = useParams();
+  const { t } = useTranslation(locale);
   const { modalStore, generateModalHandlers } = useModalContext();
   const { chessStore, setChessStore } = useChessContext();
 

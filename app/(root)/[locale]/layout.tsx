@@ -5,11 +5,11 @@ import { Quicksand } from "next/font/google";
 
 import { dir } from "i18next";
 import { ReactNode } from "react";
-import { languages } from "@i18n/settings";
 import { notFound } from "next/navigation";
 import { Header } from "@components/shared";
-
-export const generateStaticParams = async () => languages.map((lang) => ({ lang }));
+import { langs } from "@constants/shared/common";
+import i18nConfig from "@i18n.config";
+import initTranslations from "@i18n";
 
 const quicksand = Quicksand({
   weight: ["400", "500", "600", "700"],
@@ -19,20 +19,24 @@ const quicksand = Quicksand({
 interface IRootLayout {
   children: ReactNode;
   params: {
-    lng: string;
+    locale: string;
   };
 }
 
-export default function RootLayout({ children, params: { lng } }: IRootLayout) {
-  if (!languages.includes(lng)) {
+export const generateStaticParams = () => i18nConfig.locales.map((locale) => ({ locale }));
+
+export default async function RootLayout({ children, params: { locale } }: IRootLayout) {
+  const { options } = await initTranslations(locale, ["langs", "modals", "pages", "btn", "placeholders", "alts"]);
+
+  if (!langs.includes(locale)) {
     return notFound();
   }
   return (
-    <html lang={lng} dir={dir(lng)} className={quicksand.className}>
+    <html lang={locale} dir={dir(locale)} className={quicksand.className}>
       <body>
-        <Providers>
+        <Providers locale={locale} namespaces={options.ns}>
           <div className="wrapper">
-            <Header lng={lng} />
+            <Header locale={locale} />
             <main>{children}</main>
           </div>
           <ToastContainer

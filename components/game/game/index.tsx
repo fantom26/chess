@@ -8,13 +8,11 @@ import { ACTIONS, GAME_STATUS, ICONS_NAME, MODALS, SOUNDS_EFFECTS } from "@utils
 import { ChessSettingsModal, GameOverModal } from "../dialogs";
 import { ICONS } from "@constants";
 import useSound from "use-sound";
-import { useParams } from "next/navigation";
 import io from "socket.io-client";
 const socket = io("localhost:5000");
 
 export const Game = () => {
-  const params = useParams();
-  const [play] = useSound(`${params.lng}/sounds/effects.mp3`, {
+  const [play] = useSound("/sounds/effects.mp3", {
     volume: 1,
     sprite: {
       [SOUNDS_EFFECTS.CAPTURE]: [0, 370.7482993197279],
