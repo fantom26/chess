@@ -1,4 +1,8 @@
 {
+  "langs": {
+    "uk": "UA",
+    "en": "EN"
+  },
   "modals": {
     "settings": {
       "pieces": "Pieces",

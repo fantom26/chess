@@ -32,7 +32,7 @@ export default function RootLayout({ children, params: { lng } }: IRootLayout) {
       <body>
         <Providers>
           <div className="wrapper">
-            <Header />
+            <Header lng={lng} />
             <main>{children}</main>
           </div>
           <ToastContainer

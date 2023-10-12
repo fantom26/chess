@@ -1,8 +1,5 @@
 .logo {
-  @include push--auto;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-all-center;
   color: var(--clr-white-100);
   gap: 0.5rem;
 

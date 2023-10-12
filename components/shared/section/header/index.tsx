@@ -1,10 +1,13 @@
-import { Container, Logo } from "@components/shared";
+import { Container, Langs, Logo } from "@components/shared";
 import { FC } from "react";
 
-export const Header: FC = () => (
+export const Header: FC<{ lng: string }> = ({ lng }) => (
   <header className="header">
     <Container>
-      <Logo />
+      <div className="header__wrapper">
+        <Logo />
+        <Langs lng={lng} />
+      </div>
     </Container>
   </header>
 );

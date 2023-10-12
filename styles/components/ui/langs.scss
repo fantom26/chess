@@ -1,0 +1,71 @@
+.langs {
+  @include font-source(
+    $size: fluid($small-size, $the-smallest-size),
+    $weight: var(--medium-weight),
+    $colour: var(--clr-white-100),
+    $lh: var(--small-line-height)
+  );
+  position: relative;
+  cursor: pointer;
+
+  &__dropdown {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 2;
+    margin-top: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    @include transition(var(--transition), opacity, visibility);
+
+    &-item {
+      a {
+        display: flex;
+        align-items: center;
+      }
+
+      @media (hover) {
+        &:hover {
+          font-weight: 700;
+          transition: font-weight var(--transition);
+        }
+      }
+    }
+
+    &-item + &-item {
+      margin-top: 0.5rem;
+    }
+  }
+
+  &--current {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__triangle {
+    display: flex;
+    width: 1.2rem;
+    height: 0.8rem;
+    transform: rotate(0);
+    transition: transform var(--transition);
+  }
+
+  &:focus &__dropdown,
+  &:hover &__dropdown {
+    opacity: 1;
+    visibility: visible;
+    transition:
+      opacity var(--transition),
+      visibility var(--transition);
+  }
+
+  &:focus &--current,
+  &:hover &--current {
+    .langs__triangle {
+      transform: rotate(-180deg);
+      transition: transform var(--transition);
+    }
+  }
+}

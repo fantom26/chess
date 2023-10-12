@@ -22,7 +22,7 @@ export const WelcomeForm = () => {
 
   return (
     <div className="home__form-wrapper">
-      <Typography tag={TagVariant.H1} variant={TagVariant.H1} center={true}>
+      <Typography tag={TagVariant.H1} variant={TagVariant.H2} center={true}>
         {t("pages.home.onlineGameTitle")}
       </Typography>
       <Form classes="home__form" methods={methods} onSubmit={handleSubmit(startGame)}>

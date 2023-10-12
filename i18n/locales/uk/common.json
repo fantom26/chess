@@ -1,4 +1,8 @@
 {
+  "langs": {
+    "uk": "Укр",
+    "en": "Англ"
+  },
   "modals": {
     "settings": {
       "pieces": "Фігури",
