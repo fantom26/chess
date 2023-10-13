@@ -7,7 +7,7 @@ import { usePathname, useRouter } from "next/navigation";
 import i18nConfig from "@i18n.config";
 
 export const Langs = ({ locale }: { locale: string }) => {
-  const { t, i18n } = useTranslation(locale);
+  const { t, i18n } = useTranslation();
   const currentLocale = i18n.language;
   const router = useRouter();
   const currentPathname = usePathname();
@@ -36,7 +36,7 @@ export const Langs = ({ locale }: { locale: string }) => {
     <>
       <div className="langs">
         <div className="langs--current">
-          <span>{t(locale)}</span>
+          <span>{t(`langs.${locale}`)}</span>
           <span className="langs__triangle">{ICONS[ICONS_NAME.LANG_TRIANGLE]}</span>
         </div>
         <ul className="langs__dropdown">
@@ -44,7 +44,7 @@ export const Langs = ({ locale }: { locale: string }) => {
             .filter((l) => l !== locale)
             .map((l, index) => (
               <li key={index} onClick={() => handleChange(l)} className="langs__dropdown-item">
-                {t(l)}
+                {t(`langs.${l}`)}
               </li>
             ))}
         </ul>

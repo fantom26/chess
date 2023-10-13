@@ -26,7 +26,7 @@ interface IRootLayout {
 export const generateStaticParams = () => i18nConfig.locales.map((locale) => ({ locale }));
 
 export default async function RootLayout({ children, params: { locale } }: IRootLayout) {
-  const { options } = await initTranslations(locale, ["langs", "modals", "pages", "btn", "placeholders", "alts"]);
+  const { options } = await initTranslations(locale, ["common"]);
 
   if (!langs.includes(locale)) {
     return notFound();
