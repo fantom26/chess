@@ -3,42 +3,30 @@ import { useState, useRef, useEffect } from "react";
 import { Chess, Color, DEFAULT_POSITION, Square } from "chess.js";
 import { createBoard, getGameOverState, reverseFen } from "../helpers";
 import { Board, SideBar } from "./components";
-import { useChessContext, useGameContext, useModalContext } from "@hooks";
-import { ACTIONS, GAME_STATUS, ICONS_NAME, MODALS, SOUNDS_EFFECTS } from "@utils/enums";
+import { useChessContext, useChessSounds, useGameContext, useModalContext } from "@hooks";
+import { ACTIONS, GAME_STATUS, ICONS_NAME, MODALS, QUERY_PARAMS, SOUNDS_EFFECTS } from "@utils/enums";
 import { ChessSettingsModal, GameOverModal, JoinGameModal } from "../dialogs";
 import { ICONS } from "@constants";
-import useSound from "use-sound";
 import io from "socket.io-client";
 import { Button } from "@components/shared";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 const socket = io("localhost:5000");
 
 export const Game = () => {
-  const [play] = useSound("/sounds/effects.mp3", {
-    volume: 1,
-    sprite: {
-      [SOUNDS_EFFECTS.CAPTURE]: [0, 370.7482993197279],
-      [SOUNDS_EFFECTS.CASTLE]: [2000, 267.2789115646257],
-      [SOUNDS_EFFECTS.GAME_END]: [4000, 284.69387755102014],
-      [SOUNDS_EFFECTS.GAME_START]: [6000, 275.2154195011336],
-      [SOUNDS_EFFECTS.ILLEGAL]: [8000, 219.50113378684756],
-      [SOUNDS_EFFECTS.MOVE_CHECK]: [10000, 332.2902494331075],
-      [SOUNDS_EFFECTS.MOVE_OPPONENT]: [12000, 152.65306122448942],
-      [SOUNDS_EFFECTS.MOVE_SELF]: [14000, 153.87755102040757],
-      [SOUNDS_EFFECTS.NOTIFY]: [16000, 182.72108843537538],
-      [SOUNDS_EFFECTS.PREMOVE]: [18000, 197.2335600907016],
-      [SOUNDS_EFFECTS.PROMOTE]: [20000, 262.2675736961462],
-      [SOUNDS_EFFECTS.TENSECONDS]: [22000, 620.2267573696147]
-    }
-  });
+  const { play } = useChessSounds();
   const [fen, setFen] = useState(DEFAULT_POSITION);
   const { current: chess } = useRef(new Chess(fen));
   const [boardFlipped, setBoardFlipped] = useState(false);
   const [board, setBoard] = useState(createBoard(fen, false));
+  const playerName = useRef<string | null>(null);
+  const gameID = useRef<string | null>(null);
+  const fromPos = useRef<string | null>(null);
+  const router = useRouter();
+  const { locale } = useParams();
   const { dispatch } = useGameContext();
   const { setChessStore } = useChessContext();
   const { generateModalHandlers } = useModalContext();
-
-  const fromPos = useRef<string | null>(null);
+  const searchParams = useSearchParams();
 
   const makeMove = (pos: string) => {
     try {
@@ -49,7 +37,7 @@ export const Game = () => {
         play({ id: SOUNDS_EFFECTS.MOVE_SELF });
         dispatch({ type: ACTIONS.CLEAR_POSSIBLE_MOVES });
         setFen(boardFlipped ? reverseFen(chess.fen()) : chess.fen());
-        socket.emit("move", { gameID: "20", from, to: pos });
+        socket.emit("move", { gameID: gameID.current, from, to: pos });
       }
     } catch (e) {
       play({ id: SOUNDS_EFFECTS.ILLEGAL });
@@ -97,7 +85,15 @@ export const Game = () => {
   }, [fen]);
 
   useEffect(() => {
-    socket.emit("join", { name: "Frank", gameID: "20" }, ({ color }: { color: Color }) => {
+    playerName.current = searchParams.get(QUERY_PARAMS.NAME);
+    gameID.current = searchParams.get(QUERY_PARAMS.GAME_ID);
+  }, [searchParams]);
+
+  useEffect(() => {
+    socket.emit("join", { name: playerName.current, gameID: gameID.current }, ({ error, color }: { error: boolean; color: Color }) => {
+      if (error) {
+        router.push(`${locale}`);
+      }
       console.log({ color });
     });
     socket.on("welcome", ({ message, opponent }) => {
@@ -114,7 +110,7 @@ export const Game = () => {
     socket.on("message", ({ message }) => {
       console.log({ message });
     });
-  }, [chess]);
+  }, [chess, router]);
 
   return (
     <>

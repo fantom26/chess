@@ -1,3 +1,4 @@
 export enum QUERY_PARAMS {
-  GAME_ID = "gameId"
+  GAME_ID = "id",
+  NAME = "name"
 }

@@ -8,9 +8,12 @@ import { useForm } from "react-hook-form";
 import { Button, Form, Typography } from "@components/shared";
 import { JoinGameDefaultValues, JoinGameResolver, JoinGameSchema } from "@utils/validation";
 import { useTranslation } from "react-i18next";
+import { useParams, useRouter } from "next/navigation";
 
 export const JoinGameModal: FC = () => {
   const { t } = useTranslation();
+  const { replace } = useRouter();
+  const { locale } = useParams();
   const { modalStore, generateModalHandlers } = useModalContext();
 
   const methods = useForm<JoinGameSchema>({
@@ -21,7 +24,8 @@ export const JoinGameModal: FC = () => {
   const { handleSubmit, reset } = methods;
 
   const joinGame = (data: JoinGameSchema) => {
-    console.log("data", data);
+    const { name, gameId } = data;
+    replace(`/${locale}?name=${name}&id=${gameId}`);
     reset();
     generateModalHandlers(MODALS.JOIN_GAME).close();
   };
