@@ -1,11 +1,13 @@
 import { Button, ClipboardCopy, Typography } from "@components/shared";
-import { ButtonVariant, TagVariant } from "@utils/enums";
+import { useModalContext } from "@hooks";
+import { ButtonVariant, MODALS, TagVariant } from "@utils/enums";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export const SideBar = () => {
   const [gameID, setGameID] = useState<string | null>(null);
   const { t } = useTranslation();
+  const { generateModalHandlers } = useModalContext();
 
   const generateGameId = () => {
     const id = Math.random().toString().replace("0.", "");
@@ -28,7 +30,7 @@ export const SideBar = () => {
         {t("pages.home.playVS")}
       </Typography>
       <div className="sidebar__btn">
-        <Button>{t("btn.play")}</Button>
+        <Button onClick={generateModalHandlers(MODALS.JOIN_GAME).open}>{t("btn.play")}</Button>
       </div>
       <div className="sidebar__btn" onClick={generateGameId}>
         {gameID ? <ClipboardCopy text={gameID as string} /> : <Button variant={ButtonVariant.outlined}>{t("btn.invite-link")}</Button>}

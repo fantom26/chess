@@ -1,4 +1,4 @@
-import { ElementType, FC, HTMLAttributes } from "react";
+import { ElementType, FC, HTMLAttributes, ReactNode } from "react";
 
 import { TagVariant } from "@utils/enums";
 
@@ -8,11 +8,12 @@ export interface TypographyProps extends HTMLAttributes<HTMLHeadingElement> {
   uppercase?: boolean;
   center?: boolean;
   classNames?: string;
-  children?: string;
+  children?: ReactNode;
+  gutterBottom?: boolean;
 }
 
 export const Typography: FC<TypographyProps> = (props) => {
-  const { classNames, tag: Tag = "div", variant = TagVariant.DIV, uppercase = false, center = false, children } = props;
+  const { classNames, tag: Tag = "div", variant = TagVariant.DIV, uppercase = false, center = false, children, gutterBottom = false } = props;
 
   const getClasses = () => {
     let className = classNames ? `typography ${classNames}` : "typography";
@@ -38,6 +39,8 @@ export const Typography: FC<TypographyProps> = (props) => {
         break;
       }
     }
+
+    if (gutterBottom) className += " gutterBottom";
 
     if (uppercase) className += " uppercase";
 

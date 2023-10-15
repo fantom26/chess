@@ -13,6 +13,9 @@
       "title": "Game over",
       "status": "Game over, by {{status}}",
       "winner": "{{winner}} won"
+    },
+    "joinGame": {
+      "title": "Join to the game!"
     }
   },
   "pages": {
@@ -26,6 +29,14 @@
     "cancel": "Cancel",
     "play": "Play",
     "invite-link": "Invite link"
+  },
+  "placeholders": {
+    "gameId": "Enter game id",
+    "playerName": "Your name"
+  },
+  "validations": {
+    "required": "Required field",
+    "mustBeNumber": "Value must be a number"
   },
   "alts": {
     "settings": "Set up the chess board",

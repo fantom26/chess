@@ -28,6 +28,10 @@
     line-height: var(--medium-line-height);
   }
 
+  &.gutterBottom {
+    margin-bottom: 1.5rem;
+  }
+
   &.center {
     text-align: center;
   }

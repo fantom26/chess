@@ -3,10 +3,7 @@
 import { FC, ReactNode, createContext, useState } from "react";
 import { MODALS } from "../../utils/enums";
 
-interface IStore {
-  [MODALS.CHESS_SETTINGS]: boolean;
-  [MODALS.GAME_OVER]: boolean;
-}
+type IStore = Record<MODALS, boolean>;
 
 interface ModalProviderProps {
   children: ReactNode;
@@ -23,7 +20,8 @@ export interface ModalContextProps {
 const initialState: ModalContextProps = {
   modalStore: {
     [MODALS.CHESS_SETTINGS]: false,
-    [MODALS.GAME_OVER]: false
+    [MODALS.GAME_OVER]: false,
+    [MODALS.JOIN_GAME]: false
   },
   generateModalHandlers: () => ({
     open: () => {},

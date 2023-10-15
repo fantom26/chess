@@ -2,7 +2,7 @@
 import { Input } from "@components/shared/form";
 import { ICONS } from "@constants";
 import { ICONS_NAME } from "@utils/enums";
-import { FC, useState } from "react";
+import { FC, MouseEvent, useState } from "react";
 
 type ClipboardCopyProps = {
   text: string;
@@ -20,7 +20,7 @@ export const ClipboardCopy: FC<ClipboardCopyProps> = ({ text }) => {
     }
   };
 
-  const handleCopyClick = (e: any) => {
+  const handleCopyClick = (e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
     e.stopPropagation();
     copyTextToClipboard(text)
       .then(() => {

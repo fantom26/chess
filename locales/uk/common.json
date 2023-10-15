@@ -13,6 +13,9 @@
       "title": "Гра завершена",
       "status": "Гра закінчилася. {{status}}",
       "winner": "{{winner}} переміг"
+    },
+    "joinGame": {
+      "title": "Приєднатися до гри!"
     }
   },
   "pages": {
@@ -26,6 +29,14 @@
     "cancel": "Відмінити",
     "play": "Грати",
     "invite-link": "Створити посилання"
+  },
+  "placeholders": {
+    "gameId": "Введіть id гри",
+    "playerName": "Ваше ім'я"
+  },
+  "validations": {
+    "required": "Обов'язкове поле",
+    "mustBeNumber": "Має бути числом"
   },
   "alts": {
     "settings": "Налаштувати шахову дошку",

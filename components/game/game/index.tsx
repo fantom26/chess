@@ -5,10 +5,11 @@ import { createBoard, getGameOverState, reverseFen } from "../helpers";
 import { Board, SideBar } from "./components";
 import { useChessContext, useGameContext, useModalContext } from "@hooks";
 import { ACTIONS, GAME_STATUS, ICONS_NAME, MODALS, SOUNDS_EFFECTS } from "@utils/enums";
-import { ChessSettingsModal, GameOverModal } from "../dialogs";
+import { ChessSettingsModal, GameOverModal, JoinGameModal } from "../dialogs";
 import { ICONS } from "@constants";
 import useSound from "use-sound";
 import io from "socket.io-client";
+import { Button } from "@components/shared";
 const socket = io("localhost:5000");
 
 export const Game = () => {
@@ -121,18 +122,19 @@ export const Game = () => {
         <div className="game-wrapper">
           <Board flipped={boardFlipped} chess={chess} cells={board} makeMove={makeMove} setFromPos={setFromPos} />
           <div className="game-btns">
-            <button className="game-icon" type="button" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).open}>
+            <Button className="game-icon" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).open}>
               {ICONS[ICONS_NAME.SETTINGS]}
-            </button>
-            <button className="game-icon" type="button" onClick={flipBoard}>
+            </Button>
+            <Button className="game-icon" onClick={flipBoard}>
               {ICONS[ICONS_NAME.REVERSE]}
-            </button>
+            </Button>
           </div>
         </div>
         <SideBar />
       </div>
       <GameOverModal />
       <ChessSettingsModal />
+      <JoinGameModal />
     </>
   );
 };
