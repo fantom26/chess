@@ -1,13 +1,13 @@
 "use client";
 import "@/styles/globals.scss";
-import { WelcomeForm } from "@components/home";
+import { Game } from "@components/game";
 import { Container } from "@components/shared";
 
 export default function HomePage() {
   return (
-    <div className="home page--center">
+    <div className="game page--center">
       <Container>
-        <WelcomeForm />
+        <Game />
       </Container>
     </div>
   );

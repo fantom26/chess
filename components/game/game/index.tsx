@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Chess, Color, DEFAULT_POSITION, Square } from "chess.js";
 import { createBoard, getGameOverState, reverseFen } from "../helpers";
-import { Board } from "./components";
+import { Board, SideBar } from "./components";
 import { useChessContext, useGameContext, useModalContext } from "@hooks";
 import { ACTIONS, GAME_STATUS, ICONS_NAME, MODALS, SOUNDS_EFFECTS } from "@utils/enums";
 import { ChessSettingsModal, GameOverModal } from "../dialogs";
@@ -117,16 +117,19 @@ export const Game = () => {
 
   return (
     <>
-      <div className="game-wrapper">
-        <Board flipped={boardFlipped} chess={chess} cells={board} makeMove={makeMove} setFromPos={setFromPos} />
-        <div className="game-btns">
-          <button className="game-icon" type="button" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).open}>
-            {ICONS[ICONS_NAME.SETTINGS]}
-          </button>
-          <button className="game-icon" type="button" onClick={flipBoard}>
-            {ICONS[ICONS_NAME.REVERSE]}
-          </button>
+      <div className="home">
+        <div className="game-wrapper">
+          <Board flipped={boardFlipped} chess={chess} cells={board} makeMove={makeMove} setFromPos={setFromPos} />
+          <div className="game-btns">
+            <button className="game-icon" type="button" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).open}>
+              {ICONS[ICONS_NAME.SETTINGS]}
+            </button>
+            <button className="game-icon" type="button" onClick={flipBoard}>
+              {ICONS[ICONS_NAME.REVERSE]}
+            </button>
+          </div>
         </div>
+        <SideBar />
       </div>
       <GameOverModal />
       <ChessSettingsModal />

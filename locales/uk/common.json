@@ -17,17 +17,15 @@
   },
   "pages": {
     "home": {
-      "createGame": "Створити гру",
-      "onlineGameTitle": "Грайте в шахи з друзями онлайн"
+      "playVS": "Грай проти"
     }
   },
   "btn": {
     "back": "Назад",
     "save": "Збірігти",
-    "cancel": "Відмінити"
-  },
-  "placeholders": {
-    "gameId": "Введіть id гри"
+    "cancel": "Відмінити",
+    "play": "Грати",
+    "invite-link": "Створити посилання"
   },
   "alts": {
     "settings": "Налаштувати шахову дошку",

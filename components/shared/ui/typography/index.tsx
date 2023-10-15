@@ -47,7 +47,7 @@ export const Typography: FC<TypographyProps> = (props) => {
   };
 
   return (
-    <Tag className={getClasses()} variant={variant} uppercase={uppercase} center={center}>
+    <Tag className={getClasses()} variant={variant}>
       {children}
     </Tag>
   );

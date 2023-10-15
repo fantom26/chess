@@ -17,17 +17,15 @@
   },
   "pages": {
     "home": {
-      "createGame": "Create game",
-      "onlineGameTitle": "Play Chess with your friends online"
+      "playVS": "Play VS"
     }
   },
   "btn": {
     "back": "Back",
     "save": "Save",
-    "cancel": "Cancel"
-  },
-  "placeholders": {
-    "gameId": "Enter game id"
+    "cancel": "Cancel",
+    "play": "Play",
+    "invite-link": "Invite link"
   },
   "alts": {
     "settings": "Set up the chess board",

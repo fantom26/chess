@@ -16,6 +16,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 2.2rem;
     gap: 1rem;
   }
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }

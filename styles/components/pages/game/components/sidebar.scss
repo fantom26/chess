@@ -1,0 +1,10 @@
+.sidebar {
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  width: 100%;
+  background-color: var(--clr-black-800);
+
+  &__btn {
+    margin-top: 2rem;
+  }
+}

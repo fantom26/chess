@@ -9,7 +9,7 @@ export interface ButtonProps extends HTMLProps<HTMLButtonElement> {
 }
 
 export const Button: FC<Partial<ButtonProps>> = (props) => {
-  const { variant = ButtonVariant.contained, children, type, ...rest } = props;
+  const { variant = ButtonVariant.contained, children, type = "button", ...rest } = props;
 
   const generateClassNames = () => {
     let className = "btn";
