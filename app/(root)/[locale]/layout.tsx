@@ -40,7 +40,7 @@ export default async function RootLayout({ children, params: { locale } }: IRoot
             <main>{children}</main>
           </div>
           <ToastContainer
-            position="top-right"
+            position="bottom-right"
             autoClose={5000}
             hideProgressBar={false}
             newestOnTop

@@ -5,5 +5,6 @@ export enum ICONS_NAME {
   LANG_TRIANGLE = "langTriangle",
   COPY = "copy",
   COMPLETE = "complete",
-  LINK = "link"
+  LINK = "link",
+  PLAYER = "player"
 }

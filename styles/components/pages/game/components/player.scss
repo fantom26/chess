@@ -1,0 +1,12 @@
+.player {
+  @include flex-v-center;
+
+  gap: 0.5rem;
+
+  &__img {
+    display: flex;
+    border-radius: var(--radius);
+    max-width: 4rem;
+    background-color: var(--clr-white-100);
+  }
+}

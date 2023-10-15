@@ -90,31 +90,33 @@ export const Game = () => {
   }, [searchParams]);
 
   useEffect(() => {
-    socket.emit("join", { name: playerName.current, gameID: gameID.current }, ({ error, color }: { error: boolean; color: Color }) => {
-      if (error) {
-        router.push(`${locale}`);
-      }
-      dispatch({ type: ACTIONS.SET_PLAYER, name: playerName.current as string });
-      dispatch({ type: ACTIONS.SET_PLAYER_COLOR, color });
-    });
-    socket.on("welcome", ({ message, opponent }) => {
-      dispatch({ type: ACTIONS.SET_MESSAGE, message });
-      dispatch({ type: ACTIONS.SET_OPPONENT, name: opponent });
-    });
-    socket.on("opponentJoin", ({ message, opponent }) => {
-      dispatch({ type: ACTIONS.SET_MESSAGE, message });
-      dispatch({ type: ACTIONS.SET_OPPONENT, name: opponent });
-    });
+    if (gameID.current && playerName.current) {
+      socket.emit("join", { name: playerName.current, gameID: gameID.current }, ({ error, color }: { error: boolean; color: Color }) => {
+        if (error) {
+          router.push(`${locale}`);
+        }
+        dispatch({ type: ACTIONS.SET_PLAYER, name: playerName.current as string });
+        dispatch({ type: ACTIONS.SET_PLAYER_COLOR, color });
+      });
+      socket.on("welcome", ({ message, opponent }) => {
+        dispatch({ type: ACTIONS.SET_MESSAGE, message });
+        dispatch({ type: ACTIONS.SET_OPPONENT, name: opponent });
+      });
+      socket.on("opponentJoin", ({ message, opponent }) => {
+        dispatch({ type: ACTIONS.SET_MESSAGE, message });
+        dispatch({ type: ACTIONS.SET_OPPONENT, name: opponent });
+      });
 
-    socket.on("opponentMove", ({ from, to }) => {
-      chess.move({ from, to });
-      setFen(chess.fen());
-      dispatch({ type: ACTIONS.SET_MESSAGE, message: "Your turn" });
-      dispatch({ type: ACTIONS.SET_OPPONENT_MOVES, moves: [from, to] });
-    });
-    socket.on("message", ({ message }) => {
-      dispatch({ type: ACTIONS.SET_MESSAGE, message });
-    });
+      socket.on("opponentMove", ({ from, to }) => {
+        chess.move({ from, to });
+        setFen(chess.fen());
+        dispatch({ type: ACTIONS.SET_MESSAGE, message: "Your turn" });
+        dispatch({ type: ACTIONS.SET_OPPONENT_MOVES, moves: [from, to] });
+      });
+      socket.on("message", ({ message }) => {
+        dispatch({ type: ACTIONS.SET_MESSAGE, message });
+      });
+    }
   }, [chess, router, dispatch]);
 
   return (

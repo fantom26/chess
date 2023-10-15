@@ -8,7 +8,6 @@ import { ICONS_NAME } from "@utils/enums";
 
 export const Logo: FC = () => (
   <Link href="/" className="logo">
-    <span className="logo-icon">{ICONS[ICONS_NAME.LOGO]}</span>
-    <span className="logo-text">Chess</span>
+    {ICONS[ICONS_NAME.LOGO]}
   </Link>
 );

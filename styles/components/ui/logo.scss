@@ -1,13 +1,5 @@
 .logo {
   @include flex-all-center;
-  color: var(--clr-white-100);
+  flex-direction: column;
   gap: 0.5rem;
-
-  &-icon {
-    display: flex;
-  }
-
-  &-text {
-    font-size: fluid(5rem, 3rem);
-  }
 }

@@ -1,7 +1,7 @@
 .header {
-  padding-block: 1rem;
-
-  &__wrapper {
-    @include flex-all-sb;
-  }
+  @include flex-v-center;
+  flex-direction: column;
+  padding: 1rem 0.5rem;
+  background-color: var(--clr-black-800);
+  gap: 1.5rem;
 }

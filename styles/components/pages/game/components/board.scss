@@ -6,6 +6,12 @@
   max-width: 80rem;
   max-height: 80rem;
 
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
   &--stone {
     .tile {
       &--black {
