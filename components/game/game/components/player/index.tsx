@@ -4,7 +4,7 @@ import { ICONS_NAME, TagVariant } from "@utils/enums";
 import { FC } from "react";
 
 interface PlayerProps {
-  name: string | null;
+  name: string | undefined;
 }
 
 export const Player: FC<PlayerProps> = ({ name }) => (
