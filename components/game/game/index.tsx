@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { Chess, Color, DEFAULT_POSITION, Square } from "chess.js";
+import { Chess, DEFAULT_POSITION, Square } from "chess.js";
 import { createBoard, getGameOverState, reverseFen } from "../helpers";
 import { Board, SideBar } from "./components";
 import { useChessContext, useChessSounds, useGameContext, useModalContext } from "@hooks";
@@ -10,6 +10,7 @@ import { ICONS } from "@constants";
 import io from "socket.io-client";
 import { Button } from "@components/shared";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
+import { IPlayer } from "@utils/types";
 const socket = io("localhost:5000");
 
 export const Game = () => {
@@ -91,20 +92,20 @@ export const Game = () => {
 
   useEffect(() => {
     if (gameID.current && playerName.current) {
-      socket.emit("join", { name: playerName.current, gameID: gameID.current }, ({ error, color }: { error: boolean; color: Color }) => {
+      socket.emit("join", { name: playerName.current, gameID: gameID.current }, ({ error }: { error: boolean }) => {
         if (error) {
           router.push(`${locale}`);
         }
-        dispatch({ type: ACTIONS.SET_PLAYER, name: playerName.current as string });
-        dispatch({ type: ACTIONS.SET_PLAYER_COLOR, color });
       });
-      socket.on("welcome", ({ message, opponent }) => {
+      socket.on("welcome", ({ message, opponent }: { message: string; opponent: IPlayer }) => {
+        console.log("player1", opponent);
         dispatch({ type: ACTIONS.SET_MESSAGE, message });
-        dispatch({ type: ACTIONS.SET_OPPONENT, name: opponent });
+        dispatch({ type: ACTIONS.SET_OPPONENT, opponent });
       });
-      socket.on("opponentJoin", ({ message, opponent }) => {
+      socket.on("opponentJoin", ({ message, opponent }: { message: string; opponent: IPlayer }) => {
+        console.log("player2", opponent);
         dispatch({ type: ACTIONS.SET_MESSAGE, message });
-        dispatch({ type: ACTIONS.SET_OPPONENT, name: opponent });
+        dispatch({ type: ACTIONS.SET_OPPONENT, opponent });
       });
 
       socket.on("opponentMove", ({ from, to }) => {

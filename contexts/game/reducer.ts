@@ -1,6 +1,7 @@
 import { ACTIONS, GAME_STATUS } from "@utils/enums";
 import { IStore } from ".";
 import { Color, Move } from "chess.js";
+import { IPlayer } from "@utils/types";
 
 const getPositions = (moves: string[]) =>
   moves.map((move) => {
@@ -12,9 +13,8 @@ type SET_POSSIBLE_MOVES = { type: ACTIONS.SET_POSSIBLE_MOVES; moves: string[] };
 type CLEAR_POSSIBLE_MOVES = { type: ACTIONS.CLEAR_POSSIBLE_MOVES };
 type SET_TURN = { type: ACTIONS.SET_TURN; check: boolean; player: Color };
 type GAME_OVER = { type: ACTIONS.GAME_OVER; status: GAME_STATUS; player: Color };
-type SET_PLAYER = { type: ACTIONS.SET_PLAYER; name: string };
-type SET_OPPONENT = { type: ACTIONS.SET_OPPONENT; name: string };
-type SET_PLAYER_COLOR = { type: ACTIONS.SET_PLAYER_COLOR; color: Color };
+type SET_PLAYER = { type: ACTIONS.SET_PLAYER; opponent: IPlayer };
+type SET_OPPONENT = { type: ACTIONS.SET_OPPONENT; opponent: IPlayer };
 type SET_MESSAGE = { type: ACTIONS.SET_MESSAGE; message: string };
 type CLEAR_MESSAGE = { type: ACTIONS.CLEAR_MESSAGE };
 type SET_OPPONENT_MOVES = { type: ACTIONS.SET_OPPONENT_MOVES; moves: Move[] };
@@ -27,7 +27,6 @@ export type AppActions =
   | GAME_OVER
   | SET_PLAYER
   | SET_OPPONENT
-  | SET_PLAYER_COLOR
   | SET_MESSAGE
   | CLEAR_MESSAGE
   | SET_OPPONENT_MOVES
@@ -57,11 +56,9 @@ export const GameReducer = (state: IStore, action: AppActions) => {
         turn: action.player
       };
     case ACTIONS.SET_PLAYER:
-      return { ...state, playerName: action.name };
-    case ACTIONS.SET_PLAYER_COLOR:
-      return { ...state, playerColor: action.color };
+      return { ...state, player: action.opponent };
     case ACTIONS.SET_OPPONENT:
-      return { ...state, opponentName: action.name };
+      return { ...state, opponent: action.opponent };
     case ACTIONS.SET_MESSAGE:
       return { ...state, message: action.message };
     case ACTIONS.CLEAR_MESSAGE:

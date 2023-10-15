@@ -1,6 +1,5 @@
 .player {
-  @include flex-v-center;
-
+  display: flex;
   gap: 0.5rem;
 
   &__img {
@@ -8,5 +7,11 @@
     border-radius: var(--radius);
     max-width: 4rem;
     background-color: var(--clr-white-100);
+  }
+
+  &__info {
+    &-name {
+      color: var(--clr-white-100);
+    }
   }
 }

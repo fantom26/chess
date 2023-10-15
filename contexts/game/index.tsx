@@ -3,6 +3,7 @@ import { Dispatch, ReactNode, createContext, useReducer } from "react";
 import { AppActions, GameReducer } from "./reducer";
 import { Color, Move, WHITE } from "chess.js";
 import { GAME_STATUS } from "@utils/enums";
+import { IPlayer } from "@utils/types";
 
 export interface IStore {
   possibleMoves: string[];
@@ -10,9 +11,9 @@ export interface IStore {
   check: boolean;
   gameOver: boolean;
   status: GAME_STATUS;
-  playerName: string;
-  playerColor: string;
-  opponentName: string;
+  player: IPlayer | null;
+  playerColor: Color;
+  opponent: IPlayer | null;
   message: string;
   opponentMoves: Move[];
 
@@ -25,9 +26,9 @@ const initialState: IStore = {
   check: false, //true if the side to move (current turn) is in check
   gameOver: false,
   status: GAME_STATUS.CONTINUE,
-  playerName: "",
-  playerColor: "",
-  opponentName: "",
+  player: null,
+  playerColor: "w",
+  opponent: null,
   message: "",
   opponentMoves: [],
 

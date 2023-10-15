@@ -18,19 +18,19 @@ interface BoardProps {
 export const Board: FC<BoardProps> = (props) => {
   const { cells, flipped, ...rest } = props;
   const { chessStore } = useChessContext();
-  const { opponentName, playerName } = useGameContext();
+  const { opponent, player } = useGameContext();
   const searchParams = useSearchParams();
   const hasGameId = searchParams.has(QUERY_PARAMS.GAME_ID);
 
   return (
     <div className="board-wrapper">
-      <Player name={flipped ? opponentName : playerName} />
+      <Player name={flipped ? opponent?.name : player?.name} />
       <ul className={`board board--${chessStore.boardTheme.value}`} style={{ ...(!hasGameId && { pointerEvents: "none" }) }}>
         {cells.map((cell, index) => (
           <Tile cell={cell} index={index} key={cell.pos} flipped={flipped} {...rest} />
         ))}
       </ul>
-      <Player name={flipped ? playerName : opponentName} />
+      <Player name={flipped ? player?.name : opponent?.name} />
     </div>
   );
 };
