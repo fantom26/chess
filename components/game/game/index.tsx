@@ -94,23 +94,28 @@ export const Game = () => {
       if (error) {
         router.push(`${locale}`);
       }
-      console.log({ color });
+      dispatch({ type: ACTIONS.SET_PLAYER, name: playerName.current as string });
+      dispatch({ type: ACTIONS.SET_PLAYER_COLOR, color });
     });
     socket.on("welcome", ({ message, opponent }) => {
-      console.log({ message, opponent });
+      dispatch({ type: ACTIONS.SET_MESSAGE, message });
+      dispatch({ type: ACTIONS.SET_OPPONENT, name: opponent });
     });
     socket.on("opponentJoin", ({ message, opponent }) => {
-      console.log({ message, opponent });
+      dispatch({ type: ACTIONS.SET_MESSAGE, message });
+      dispatch({ type: ACTIONS.SET_OPPONENT, name: opponent });
     });
 
     socket.on("opponentMove", ({ from, to }) => {
       chess.move({ from, to });
       setFen(chess.fen());
+      dispatch({ type: ACTIONS.SET_MESSAGE, message: "Your turn" });
+      dispatch({ type: ACTIONS.SET_OPPONENT_MOVES, moves: [from, to] });
     });
     socket.on("message", ({ message }) => {
-      console.log({ message });
+      dispatch({ type: ACTIONS.SET_MESSAGE, message });
     });
-  }, [chess, router]);
+  }, [chess, router, dispatch]);
 
   return (
     <>

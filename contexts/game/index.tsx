@@ -1,7 +1,7 @@
 "use client";
 import { Dispatch, ReactNode, createContext, useReducer } from "react";
 import { AppActions, GameReducer } from "./reducer";
-import { Color, WHITE } from "chess.js";
+import { Color, Move, WHITE } from "chess.js";
 import { GAME_STATUS } from "@utils/enums";
 
 export interface IStore {
@@ -10,6 +10,11 @@ export interface IStore {
   check: boolean;
   gameOver: boolean;
   status: GAME_STATUS;
+  playerName: string;
+  playerColor: string;
+  opponentName: string;
+  message: string;
+  opponentMoves: Move[];
 
   dispatch: Dispatch<AppActions>;
 }
@@ -20,6 +25,11 @@ const initialState: IStore = {
   check: false, //true if the side to move (current turn) is in check
   gameOver: false,
   status: GAME_STATUS.CONTINUE,
+  playerName: "",
+  playerColor: "",
+  opponentName: "",
+  message: "",
+  opponentMoves: [],
 
   dispatch: () => {}
 };
