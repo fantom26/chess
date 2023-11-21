@@ -37,7 +37,7 @@ export const Tile: FC<TileProps> = (props) => {
 
     if (squareLight === "light") {
       defaultClassName += " tile--white";
-    } else if (squareLight === "dark") {
+    } else {
       defaultClassName += " tile--black";
     }
 

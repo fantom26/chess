@@ -1,5 +1,5 @@
 "use client";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 
 import { Modal } from "components/shared/modal";
 import { useModalContext, useChessContext } from "@hooks";
@@ -26,12 +26,17 @@ export const ChessSettingsModal: FC = () => {
     }
   });
 
-  const { handleSubmit } = methods;
+  const { handleSubmit, reset } = methods;
 
   const updateSettings = (data: SettingsStageSchema) => {
     setChessStore((prev) => ({ ...prev, ...data }));
     generateModalHandlers(MODALS.CHESS_SETTINGS).close();
   };
+
+  useEffect(() => {
+    reset(chessStore);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chessStore]);
 
   return (
     <Modal

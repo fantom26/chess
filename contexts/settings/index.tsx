@@ -1,9 +1,11 @@
 "use client";
 /* eslint-disable @typescript-eslint/no-empty-function */
-import { Dispatch, FC, ReactNode, SetStateAction, createContext, useState } from "react";
+import { Dispatch, FC, ReactNode, SetStateAction, createContext, useEffect, useState } from "react";
 import { BOARD_COLORS, COLLECTIONS, FORM_FIELDS } from "../../utils/enums";
 import { TSelectOption } from "../../utils/validation";
 import { SQUARES, Square } from "chess.js";
+import { localStorageService } from "@services";
+import { LOCAL_STORAGE_SETTING_KEY } from "@constants/shared/common";
 
 interface IStore {
   [FORM_FIELDS.PEACE_THEME]: TSelectOption;
@@ -42,12 +44,28 @@ export const ChessContext = createContext(initialState);
 
 export const ChessProvider: FC<ChessProviderProps> = (props) => {
   const { children } = props;
-  const [chessStore, setChessStore] = useState<IStore>(initialState.chessStore);
+  const [chessStore, setChessStore] = useState<ChessContextProps["chessStore"]>(initialState.chessStore);
 
   const value = {
     chessStore,
     setChessStore
   };
+
+  useEffect(() => {
+    const settingsInBrowserStorage = localStorageService.getItem(LOCAL_STORAGE_SETTING_KEY);
+
+    if (settingsInBrowserStorage) {
+      setChessStore(settingsInBrowserStorage);
+    } else {
+      setChessStore(initialState.chessStore);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (chessStore) {
+      localStorageService.setItem(LOCAL_STORAGE_SETTING_KEY, chessStore);
+    }
+  }, [chessStore]);
 
   return <ChessContext.Provider value={value}>{children}</ChessContext.Provider>;
 };
