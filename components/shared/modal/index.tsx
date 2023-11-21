@@ -9,7 +9,6 @@ import { useScrollLock } from "hooks";
 interface ModalProps {
   visible: boolean;
   children: ReactNode;
-  animationDuration?: number;
   bodyClassName?: string;
   width?: number;
   onClose: () => void;
@@ -17,13 +16,12 @@ interface ModalProps {
 
 export const Modal: FC<ModalProps> = (props) => {
   // **Props
-  const { visible, width = 83, animationDuration = 300, bodyClassName, children, onClose } = props;
+  const { visible, width = 83, bodyClassName, children, onClose } = props;
   const { lockScroll, unlockScroll } = useScrollLock();
 
   const [isBrowser, setIsBrowser] = useState<boolean>(false);
 
   const styles: Record<string, string> = {
-    "--duration": `${animationDuration}ms`,
     "--width": `${width}rem`
   };
 
@@ -39,11 +37,18 @@ export const Modal: FC<ModalProps> = (props) => {
     setIsBrowser(true);
 
     if (!visible) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
 
     lockScroll();
+    window.addEventListener("keydown", handleKeyDown as any);
 
     return () => {
       unlockScroll();
+      window.removeEventListener("keydown", handleKeyDown as any);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [visible]);
@@ -57,7 +62,7 @@ export const Modal: FC<ModalProps> = (props) => {
   }
 
   return createPortal(
-    <Transition in={visible} timeout={animationDuration} mountOnEnter unmountOnExit>
+    <Transition in={visible} timeout={300} mountOnEnter unmountOnExit>
       {(state) => (
         <div style={styles} onKeyDown={handleKeyDown} className={`modal ${state}`} onClick={onClose} role="dialog" aria-modal="true" ref={modalRef}>
           <div className="modal-wrapper">
