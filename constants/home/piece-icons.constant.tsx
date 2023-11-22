@@ -639,26 +639,26 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
   [COLLECTIONS.GPT]: {
     [PIECE.BISHOP]: (
       <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="40" className={WHITE} stroke="#000" strokeWidth="2" />
-        <circle cx="50" cy="30" r="25" className={WHITE} stroke="#000" strokeWidth="2" />
-        <rect x="40" y="80" width="20" height="10" className={WHITE} stroke="#000" strokeWidth="2" />
+        <circle cx="50" cy="50" r="40" className={`${WHITE} stroke`} strokeWidth="2" />
+        <circle cx="50" cy="30" r="25" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="40" y="80" width="20" height="10" className={`${WHITE} stroke`} strokeWidth="2" />
         <line x1="50" y1="30" x2="50" y2="70" className={BLACK} strokeWidth="2" />
         <line x1="40" y1="45" x2="60" y2="45" className={BLACK} strokeWidth="2" />
       </svg>
     ),
     [PIECE.KING]: (
       <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <rect x="20" y="60" width="60" height="20" rx="10" className={WHITE} stroke="#000" strokeWidth="2" />
-        <rect x="30" y="40" width="40" height="20" rx="10" className={WHITE} stroke="#000" strokeWidth="2" />
-        <rect x="35" y="20" width="30" height="20" rx="10" className={WHITE} stroke="#000" strokeWidth="2" />
-        <circle cx="50" cy="15" r="15" className={WHITE} stroke="#000" strokeWidth="2" />
-        <polygon points="45,15 50,5 55,15" className={WHITE} stroke="#000" strokeWidth="2" />
+        <rect x="20" y="60" width="60" height="20" rx="10" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="30" y="40" width="40" height="20" rx="10" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="35" y="20" width="30" height="20" rx="10" className={`${WHITE} stroke`} strokeWidth="2" />
+        <circle cx="50" cy="15" r="15" className={`${WHITE} stroke`} strokeWidth="2" />
+        <polygon points="45,15 50,5 55,15" className={`${WHITE} stroke`} strokeWidth="2" />
       </svg>
     ),
     [PIECE.KNIGHT]: (
       <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="30" r="15" className={WHITE} stroke="#000" strokeWidth="2" />
-        <rect x="40" y="45" width="20" height="20" rx="5" className={WHITE} stroke="#000" strokeWidth="2" />
+        <circle cx="50" cy="30" r="15" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="40" y="45" width="20" height="20" rx="5" className={`${WHITE} stroke`} strokeWidth="2" />
         <line x1="50" y1="35" x2="50" y2="50" className={BLACK} strokeWidth="2" />
         <line x1="50" y1="50" x2="45" y2="55" className={BLACK} strokeWidth="2" />
         <line x1="50" y1="50" x2="55" y2="55" className={BLACK} strokeWidth="2" />
@@ -666,7 +666,7 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
       </svg>
     ),
     [PIECE.PAWN]: (
-      <svg width="100" height="100" viewBox="0 0 100 100" className={WHITE} stroke="#000" strokeWidth="2" xmlns="http://www.w3.org/2000/svg">
+      <svg width="100" height="100" viewBox="0 0 100 100" className={`${WHITE} stroke`} strokeWidth="2" xmlns="http://www.w3.org/2000/svg">
         <circle cx="50" cy="70" r="20" />
         <circle cx="50" cy="50" r="25" />
         <ellipse cx="50" cy="35" rx="15" ry="10" />
@@ -675,23 +675,23 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
     ),
     [PIECE.QUEEN]: (
       <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 35 Q50 15 80 35 Q50 5 20 35" className={WHITE} stroke="#000" strokeWidth="2" />
-        <rect x="30" y="60" width="40" height="15" rx="7" className={WHITE} stroke="#000" strokeWidth="2" />
-        <rect x="35" y="45" width="30" height="15" rx="7" className={WHITE} stroke="#000" strokeWidth="2" />
-        <rect x="40" y="30" width="20" height="15" rx="7" className={WHITE} stroke="#000" strokeWidth="2" />
-        <circle cx="50" cy="25" r="10" className={WHITE} stroke="#000" strokeWidth="2" />
+        <path d="M20 35 Q50 15 80 35 Q50 5 20 35" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="30" y="60" width="40" height="15" rx="7" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="35" y="45" width="30" height="15" rx="7" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="40" y="30" width="20" height="15" rx="7" className={`${WHITE} stroke`} strokeWidth="2" />
+        <circle cx="50" cy="25" r="10" className={`${WHITE} stroke`} strokeWidth="2" />
       </svg>
     ),
     [PIECE.ROOK]: (
       <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <rect x="20" y="70" width="60" height="20" rx="5" className={WHITE} stroke="#000" strokeWidth="2" />
-        <rect x="30" y="50" width="40" height="20" rx="5" className={WHITE} stroke="#000" strokeWidth="2" />
-        <rect x="35" y="40" width="30" height="10" rx="3" className={WHITE} stroke="#000" strokeWidth="2" />
-        <rect x="40" y="30" width="20" height="10" rx="3" className={WHITE} stroke="#000" strokeWidth="2" />
-        <rect x="45" y="20" width="10" height="10" rx="3" className={WHITE} stroke="#000" strokeWidth="2" />
-        <rect x="30" y="10" width="40" height="10" rx="3" className={WHITE} stroke="#000" strokeWidth="2" />
-        <rect x="35" y="5" width="30" height="5" rx="2" className={WHITE} stroke="#000" strokeWidth="2" />
-        <rect x="40" y="2" width="20" height="3" rx="1" className={WHITE} stroke="#000" strokeWidth="2" />
+        <rect x="20" y="70" width="60" height="20" rx="5" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="30" y="50" width="40" height="20" rx="5" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="35" y="40" width="30" height="10" rx="3" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="40" y="30" width="20" height="10" rx="3" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="45" y="20" width="10" height="10" rx="3" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="30" y="10" width="40" height="10" rx="3" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="35" y="5" width="30" height="5" rx="2" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="40" y="2" width="20" height="3" rx="1" className={`${WHITE} stroke`} strokeWidth="2" />
       </svg>
     ),
     [PIECE.EMPTY]: <></>
