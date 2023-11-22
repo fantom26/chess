@@ -1,27 +1,15 @@
 .typography {
   color: var(--text-color);
   &.h1 {
-    @include font-source(
-      $size: fluid($the-largest-size, $medium-size),
-      $weight: var(--bold-weight),
-      $lh: var(--small-line-height)
-    );
+    @include font-source($size: fluid($the-largest-size, $medium-size), $weight: var(--bold-weight), $lh: var(--small-line-height));
   }
 
   &.h2 {
-    @include font-source(
-      $size: fluid($large-size, $small-size),
-      $weight: var(--semibold-weight),
-      $lh: var(--small-line-height)
-    );
+    @include font-source($size: fluid($large-size, $small-size), $weight: var(--semibold-weight), $lh: var(--small-line-height));
   }
 
   &.h3 {
-    @include font-source(
-      $size: fluid($medium-size, calc($the-smallest-size + 0.2rem)),
-      $weight: var(--medium-weight),
-      $lh: var(--small-line-height)
-    );
+    @include font-source($size: fluid($medium-size, calc($the-smallest-size + 0.2rem)), $weight: var(--medium-weight), $lh: var(--small-line-height));
   }
 
   &.paragraph {

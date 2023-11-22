@@ -6,3 +6,4 @@ export * from "./typography";
 export * from "./langs";
 export * from "./tabs";
 export * from "./clipboard";
+export * from "./global-loader";

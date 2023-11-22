@@ -27,13 +27,7 @@
 }
 
 .tab {
-  @include font-source(
-    false,
-    var(--medium-size),
-    var(--clr-black-800),
-    var(--normal-weight),
-    var(--medium-line-height)
-  );
+  @include font-source(false, var(--medium-size), var(--clr-black-800), var(--normal-weight), var(--medium-line-height));
   border: var(--border-width) solid transparent;
   padding: 1rem 2rem;
   background: none;
@@ -55,12 +49,6 @@
 
   &-content {
     margin-top: 2rem;
-    @include font-source(
-      false,
-      var(--medium-size),
-      var(--clr-black-900),
-      var(--normal-weight),
-      var(--medium-line-height)
-    );
+    @include font-source(false, var(--medium-size), var(--clr-black-900), var(--normal-weight), var(--medium-line-height));
   }
 }

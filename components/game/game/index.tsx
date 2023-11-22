@@ -98,12 +98,10 @@ export const Game = () => {
         }
       });
       socket.on("welcome", ({ message, opponent }: { message: string; opponent: IPlayer }) => {
-        console.log("player1", opponent);
         dispatch({ type: ACTIONS.SET_MESSAGE, message });
         dispatch({ type: ACTIONS.SET_OPPONENT, opponent });
       });
       socket.on("opponentJoin", ({ message, opponent }: { message: string; opponent: IPlayer }) => {
-        console.log("player2", opponent);
         dispatch({ type: ACTIONS.SET_MESSAGE, message });
         dispatch({ type: ACTIONS.SET_OPPONENT, opponent });
       });
@@ -118,6 +116,7 @@ export const Game = () => {
         dispatch({ type: ACTIONS.SET_MESSAGE, message });
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chess, router, dispatch]);
 
   return (

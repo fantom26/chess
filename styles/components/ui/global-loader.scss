@@ -1,0 +1,49 @@
+$dark-clr: var(--clr-board-stone-d);
+$light-clr: var(--clr-board-stone-l);
+
+.preloader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-50%, -50%);
+}
+
+.chess-icon {
+  border: 0.8rem solid #333;
+  @include box(12.5rem);
+  border-radius: 2rem;
+  background-image: conic-gradient(
+    $dark-clr 0,
+    $dark-clr 90deg,
+    $light-clr 90deg,
+    $light-clr 180deg,
+    $dark-clr 180deg,
+    $dark-clr 270deg,
+    $light-clr 270deg,
+    $light-clr 360deg
+  );
+  animation-name: loading;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loading {
+  20% {
+    transform: rotate(90deg);
+  }
+  40% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(270deg);
+  }
+  80% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

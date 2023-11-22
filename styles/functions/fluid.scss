@@ -8,9 +8,5 @@
   /* stylelint-disable-next-line scss/no-global-function-names */
   $calc-value: unquote("#{ $min-value - ( $min-vw * $factor ) } + #{ 100vw * $factor }");
 
-  @return clamp(
-    #{if($min-value > $max-value, $max-value, $min-value)},
-    #{$calc-value},
-    #{if($min-value > $max-value, $min-value, $max-value)}
-  );
+  @return clamp(#{if($min-value > $max-value, $max-value, $min-value)}, #{$calc-value}, #{if($min-value > $max-value, $min-value, $max-value)});
 }
