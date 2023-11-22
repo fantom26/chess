@@ -1,6 +1,7 @@
 import { PIECE_ICONS } from "@constants";
 import { useChessContext } from "@hooks";
-import { ICell, TCollection, TFIgure } from "@utils/types";
+import { COLLECTIONS } from "@utils/enums";
+import { ICell, TFIgure } from "@utils/types";
 import { Color, Square } from "chess.js";
 import { FC, useRef } from "react";
 
@@ -40,7 +41,7 @@ export const Piece: FC<PieceProps> = ({ cell, setFromPos, figureColor }) => {
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
     >
-      {PIECE_ICONS[chessStore.peaceTheme.value as TCollection][figure]}
+      {PIECE_ICONS[chessStore.peaceTheme.value as COLLECTIONS][figure]}
     </div>
   );
 };

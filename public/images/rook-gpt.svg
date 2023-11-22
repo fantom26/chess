@@ -1,5 +1,12 @@
-<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-  <rect x="40" y="70" width="20" height="10" fill="white" stroke="black" stroke-width="1" />
-  <rect x="35" y="40" width="30" height="30" fill="white" stroke="black" stroke-width="1" />
-  <rect x="30" y="55" width="40" height="15" fill="white" stroke="black" stroke-width="1" />
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rook body -->
+  <rect x="20" y="70" width="60" height="20" rx="5" fill="#fff" stroke="#000" stroke-width="2"/>
+  <rect x="30" y="50" width="40" height="20" rx="5" fill="#fff" stroke="#000" stroke-width="2"/>
+  <rect x="35" y="40" width="30" height="10" rx="3" fill="#fff" stroke="#000" stroke-width="2"/>
+  <rect x="40" y="30" width="20" height="10" rx="3" fill="#fff" stroke="#000" stroke-width="2"/>
+  <rect x="45" y="20" width="10" height="10" rx="3" fill="#fff" stroke="#000" stroke-width="2"/>
+  <!-- Rook top -->
+  <rect x="30" y="10" width="40" height="10" rx="3" fill="#fff" stroke="#000" stroke-width="2"/>
+  <rect x="35" y="5" width="30" height="5" rx="2" fill="#fff" stroke="#000" stroke-width="2"/>
+  <rect x="40" y="2" width="20" height="3" rx="1" fill="#fff" stroke="#000" stroke-width="2"/>
 </svg>

@@ -1,3 +1,0 @@
-import { COLLECTIONS } from "../enums";
-
-export type TCollection = COLLECTIONS.CLASSIC | COLLECTIONS.CLUB | COLLECTIONS.NEWSPAPER;
