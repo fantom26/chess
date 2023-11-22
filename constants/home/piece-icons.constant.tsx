@@ -12,7 +12,7 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         />
         <path
           d="M29.3347 76.2712L24.8291 79.548V93.8844H75.2104V79.548L70.2952 76.2712M29.3347 76.2712V72.9944C29.3347 72.9944 30.1883 72.06 31.4391 70.5368M29.3347 76.2712H70.2952M70.2952 76.2712V72.9944C70.2952 72.9944 69.6388 72.0584 68.6472 70.5368M31.4391 70.5368C34.3017 67.0512 39.2453 60.482 40.8036 54.9716C43.0432 47.0536 39.9845 32.4435 39.9845 32.4435H61.284C61.284 32.4435 57.806 44.596 59.6456 52.514C60.9832 58.2712 66.0052 66.4828 68.6472 70.5368M31.4391 70.5368H68.6472"
-          stroke="url(#paint0_linear_302_1219)"
+          className="stroke"
           strokeWidth="0.723179"
         />
         <path
@@ -21,7 +21,7 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         />
         <path
           d="M33.1156 33.6992C33.1156 33.6992 31.6758 29.4282 31.6758 27.3292C31.6758 25.2302 34.0755 22.9498 34.0755 22.9498L45.6572 13.7266C44.1536 12.7044 43.1944 11.1518 43.1944 9.4134C43.1944 6.33508 46.2024 3.8396 49.9132 3.8396C53.6244 3.8396 56.6324 6.33508 56.6324 9.4134C56.6324 11.1484 55.6768 12.6983 54.1784 13.7205L66.2312 22.9498C66.2312 22.9498 68.1508 25.2302 68.1508 27.3292C68.1508 29.4282 66.2312 33.6992 66.2312 33.6992M33.1156 33.6992L34.0755 38.8749H64.7912L66.2312 33.6992M33.1156 33.6992H49.6732H66.2312"
-          stroke="url(#paint1_linear_302_1219)"
+          className="stroke"
           strokeWidth="0.723179"
         />
         <defs>
@@ -44,7 +44,7 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         />
         <path
           d="M29.5757 83.4716L25.0701 86.1142V97.6755H75.4516V86.1142L70.5364 83.4716M29.5757 83.4716V80.829C29.5757 80.829 30.4292 80.0755 31.6801 78.8468M29.5757 83.4716H70.5364M70.5364 83.4716V80.829C70.5364 80.829 69.88 80.0742 68.888 78.8468M31.6801 78.8468C34.5427 76.0358 39.4862 70.7381 41.0448 66.2945C43.284 59.909 40.2256 48.1265 40.2256 48.1265H61.5248C61.5248 48.1265 58.0468 57.9271 59.8864 64.3126C61.224 68.9552 66.2464 75.5778 68.888 78.8468M31.6801 78.8468H68.888"
-          stroke="url(#paint0_linear_302_1227)"
+          className="stroke"
           strokeWidth="0.723179"
         />
         <path
@@ -53,7 +53,7 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         />
         <path
           d="M61.5551 43.2522L70.5507 36.9045L54.2759 24.0781C55.9615 23.0889 56.3079 22.0936 56.3079 20.5822C56.3079 18.4874 54.7843 16.7823 52.1851 16.234V11.8166H57.4323V8.79395H52.1851V4.26001H48.0623V8.79395H42.8147V11.8166H48.4371V16.2677C46.0143 16.8557 44.3139 18.5605 44.3139 20.5822C44.3139 21.489 44.5419 22.9098 46.0703 23.9071H45.8135L31.1958 36.9045L39.4416 43.2522M61.5551 43.2522H63.8039V50.2041H36.8179V43.2522H39.4416M61.5551 43.2522H39.4416"
-          stroke="url(#paint1_linear_302_1227)"
+          className="stroke"
           strokeWidth="0.723179"
         />
         <defs>
@@ -76,7 +76,7 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         />
         <path
           d="M73.8645 76.8036L78.4697 80.5716V95.2236H28.2339V80.5716L32.8388 76.8036M73.8645 76.8036L72.1901 70.5244M73.8645 76.8036H32.8388M32.8388 76.8036L35.7692 70.5244M72.1901 70.5244C72.1901 70.5244 78.1053 44.252 73.4461 31.173C68.7865 18.0942 48.3281 4.79932 48.3281 4.79932V14.0092C48.3281 14.0092 38.7937 17.1626 35.7692 19.4514C32.7447 21.7402 32.8388 25.7308 32.8388 25.7308L21.1172 32.8476L24.4662 42.8948C24.4662 42.8948 31.3736 37.8711 38.281 39.5456C45.1885 41.22 48.3281 36.6152 48.3281 36.6152C48.3281 36.6152 38.8711 51.5264 36.3972 59.64C34.704 65.1928 35.7692 70.5244 35.7692 70.5244M72.1901 70.5244H35.7692"
-          stroke="url(#paint0_linear_302_1224)"
+          className="stroke"
           strokeWidth="0.723179"
         />
         <defs>
@@ -95,13 +95,12 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         />
         <path
           d="M29.2938 76.1643L24.7944 79.4367V93.7527H75.1056V79.4367L70.1972 76.1643M29.2938 76.1643V72.8919C29.2938 72.8919 30.1461 71.9592 31.3952 70.438M29.2938 76.1643H70.1972M70.1972 76.1643V72.8919C70.1972 72.8919 69.5416 71.9576 68.5512 70.438M31.3952 70.438C34.2538 66.9572 39.1904 60.3971 40.7468 54.8947C42.9832 46.9875 39.9286 32.3978 39.9286 32.3978H61.1984C61.1984 32.3978 57.7252 44.5335 59.5624 52.4403C60.898 58.1891 65.9132 66.3896 68.5512 70.438M31.3952 70.438H68.5512"
-          stroke="url(#paint0_linear_302_1237)"
+          className="stroke"
           strokeWidth="0.722168"
         />
         <path
           d="M50.5636 36.8972C58.922 36.8972 65.6978 30.1214 65.6978 21.763C65.6978 13.4046 58.922 6.62878 50.5636 6.62878C42.2053 6.62878 35.4294 13.4046 35.4294 21.763C35.4294 30.1214 42.2053 36.8972 50.5636 36.8972Z"
-          className={WHITE}
-          stroke="url(#paint1_linear_302_1237)"
+          className={`${WHITE} stroke`}
           strokeWidth="0.722168"
         />
         <defs>
@@ -124,7 +123,7 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         />
         <path
           d="M29.576 79.5048L25.0703 82.7816V97.1176H75.4517V82.7816L70.5365 79.5048M29.576 79.5048V76.228C29.576 76.228 30.4295 75.2936 31.6804 73.77M29.576 79.5048H70.5365M70.5365 79.5048V76.228C70.5365 76.228 69.8801 75.292 68.8885 73.77M31.6804 73.77C34.5429 70.2844 39.4865 63.7152 41.0449 58.2052C43.2845 50.2872 40.2257 35.6769 40.2257 35.6769H61.5253C61.5253 35.6769 58.0473 47.8296 59.8869 55.7476C61.2241 61.5044 66.2465 69.7164 68.8885 73.77M31.6804 73.77H68.8885"
-          stroke="url(#paint0_linear_302_1232)"
+          className="stroke"
           strokeWidth="0.723179"
         />
         <path
@@ -133,7 +132,7 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         />
         <path
           d="M40.488 37.1503C40.488 37.1503 37.4485 32.2791 35.3839 29.8589C33.3193 27.4386 26.9988 24.7549 26.9988 24.7549C26.9988 24.7549 32.3228 21.2431 35.3839 20.7446C38.445 20.2462 43.4044 20.7446 43.4044 20.7446L46.7656 16.1298C45.188 14.9314 43.4044 13.0353 43.4044 10.9012C43.4044 7.27691 46.3424 4.33899 49.9668 4.33899C53.5912 4.33899 56.5288 7.27691 56.5288 10.9012C56.5288 12.7725 55.254 14.9343 53.9976 16.1298L57.9872 20.7446C57.9872 20.7446 63.1688 20.2462 66.3724 20.7446C69.576 21.2431 74.3928 24.7549 74.3928 24.7549C74.3928 24.7549 68.864 27.4386 66.3724 29.8589C63.8808 32.2791 61.6328 37.1503 61.6328 37.1503M40.488 37.1503H37.9359V45.1708H63.8204V37.1503H61.6328M40.488 37.1503H61.6328"
-          stroke="url(#paint1_linear_302_1232)"
+          className="stroke"
           strokeWidth="0.723179"
         />
         <defs>
@@ -156,7 +155,7 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         />
         <path
           d="M29.335 76.2708L24.8293 79.5476V93.884H75.2108V79.5476L70.2956 76.2708M29.335 76.2708V72.994C29.335 72.994 30.1885 72.0596 31.4394 70.5364M29.335 76.2708H70.2956M70.2956 76.2708V72.994C70.2956 72.994 69.6392 72.058 68.6476 70.5364M31.4394 70.5364C34.3019 67.0508 39.2455 60.4816 40.804 54.9712C43.0436 47.0532 39.9847 32.443 39.9847 32.443H61.2844C61.2844 32.443 57.8064 44.5956 59.646 52.5136C60.9832 58.2708 66.0056 66.4824 68.6476 70.5364M31.4394 70.5364H68.6476"
-          stroke="url(#paint0_linear_302_1241)"
+          className="stroke"
           strokeWidth="0.723179"
         />
         <path
@@ -165,7 +164,7 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         />
         <path
           d="M25.0703 29.0475V32.2777L30.9924 37.123H70.8316L75.1384 32.2777V29.0475M25.0703 29.0475V4.82104H39.0678V19.3569H43.9132V4.82104H56.834V19.3569H61.6792V4.82104H75.1384V29.0475M25.0703 29.0475H75.1384"
-          stroke="url(#paint1_linear_302_1241)"
+          className="stroke"
           strokeWidth="0.723179"
         />
         <defs>
@@ -274,14 +273,12 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         <path
           d="M54.3884 15.418C54.3884 17.788 52.4592 19.7154 50.072 19.7154C47.6848 19.7154 45.7556 17.788 45.7556 15.418C45.7556 13.0479 47.6848 11.1205 50.072 11.1205C52.4592 11.1205 54.3884 13.0479 54.3884 15.418Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="2"
         />
-        <rect x="45.6526" y="19.531" width="8.6947" height="0.615763" rx="0.307881" className={WHITE} stroke="black" strokeWidth="0.615763" />
+        <rect x="45.6526" y="19.531" width="8.6947" height="0.615763" rx="0.307881" className={WHITE} strokeWidth="0.615763" />
         <path
           d="M37.2124 71.6647V71.1168C40.6131 67.1296 42.6664 61.9618 42.6664 56.3179C42.6664 52.0629 41.4992 48.0775 39.4666 44.6648H60.5336C58.5011 48.0775 57.3338 52.0629 57.3338 56.3179C57.3338 61.9618 59.3871 67.1296 62.7878 71.1168V71.6647H37.2124Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="2"
         />
         <path
@@ -294,10 +291,10 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
           d="M47.3544 19.839V18.839H46.8329L46.5344 19.2666L47.3544 19.839ZM36.291 35.6881L35.471 35.1157L35.4485 35.148L35.4286 35.182L36.291 35.6881ZM39.8641 43.6649L39.4403 44.5706L39.6417 44.6649H39.8641V43.6649ZM60.1359 43.6649V44.6649H60.3583L60.5598 44.5706L60.1359 43.6649ZM63.709 35.6881L64.5715 35.182L64.5515 35.148L64.529 35.1157L63.709 35.6881ZM52.6456 19.839L53.4656 19.2666L53.1671 18.839H52.6456V19.839ZM47.3544 20.839H50V18.839H47.3544V20.839ZM37.111 36.2605L48.1744 20.4114L46.5344 19.2666L35.471 35.1157L37.111 36.2605ZM40.288 42.7592C37.9145 41.6484 37.0234 40.2819 36.7429 39.146C36.4503 37.9607 36.7753 36.8387 37.1535 36.1942L35.4286 35.182C34.8392 36.1863 34.3606 37.8405 34.8012 39.6254C35.2541 41.4595 36.6332 43.257 39.4403 44.5706L40.288 42.7592ZM50 42.6649H39.8641V44.6649H50V42.6649ZM50 44.6649H60.1359V42.6649H50V44.6649ZM60.5598 44.5706C63.3668 43.257 64.746 41.4595 65.1988 39.6254C65.6395 37.8405 65.1608 36.1863 64.5715 35.182L62.8465 36.1942C63.2247 36.8387 63.5498 37.9607 63.2571 39.146C62.9767 40.2819 62.0855 41.6484 59.712 42.7592L60.5598 44.5706ZM64.529 35.1157L53.4656 19.2666L51.8256 20.4114L62.889 36.2605L64.529 35.1157ZM52.6456 18.839H50V20.839H52.6456V18.839Z"
           className={BLACK}
         />
-        <rect x="35.9041" y="44.6631" width="28.1922" height="1.99659" rx="0.998293" className={WHITE} stroke="black" strokeWidth="1.99659" />
-        <rect x="33.2598" y="73.6648" width="33.4804" height="3.32367" className={WHITE} stroke="black" strokeWidth="2" />
-        <rect x="28.6057" y="78.9884" width="42.7885" height="3.58968" className={WHITE} stroke="black" strokeWidth="2" />
-        <rect x="25.6389" y="84.5781" width="48.7222" height="3.58966" className={WHITE} stroke="black" strokeWidth="2" />
+        <rect x="35.9041" y="44.6631" width="28.1922" height="1.99659" rx="0.998293" className={WHITE} strokeWidth="1.99659" />
+        <rect x="33.2598" y="73.6648" width="33.4804" height="3.32367" className={WHITE} strokeWidth="2" />
+        <rect x="28.6057" y="78.9884" width="42.7885" height="3.58968" className={WHITE} strokeWidth="2" />
+        <rect x="25.6389" y="84.5781" width="48.7222" height="3.58966" className={WHITE} strokeWidth="2" />
       </svg>
     ),
     [PIECE.KING]: (
@@ -305,27 +302,24 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         <path
           d="M66.8566 32.2329C66.8566 35.013 65.0508 38.6717 61.9324 41.6773C58.8402 44.6577 54.613 46.8396 49.9995 46.8396C45.386 46.8396 41.1588 44.6577 38.0665 41.6773C34.9482 38.6717 33.1423 35.013 33.1423 32.2329C33.1423 29.5438 34.8514 26.9677 37.9107 25.0147C40.9585 23.0689 45.2298 21.8328 49.9995 21.8328C54.7692 21.8328 59.0405 23.0689 62.0883 25.0147C65.1476 26.9677 66.8566 29.5438 66.8566 32.2329Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="2"
         />
         <path
           d="M49.6356 15.1545V11.5023H50.1296V15.1545V16.1545H51.1296H54.7819V16.6485H51.1296H50.1296V17.6485V21.3008H49.6356V17.6485V16.6485H48.6356H44.9834V16.1545H48.6356H49.6356V15.1545Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="2"
         />
-        <rect x="35.2673" y="42.4914" width="29.2304" height="0.958399" rx="0.479199" className={WHITE} stroke="black" strokeWidth="0.958399" />
+        <rect x="35.2673" y="42.4914" width="29.2304" height="0.958399" rx="0.479199" className={WHITE} strokeWidth="0.958399" />
         <path
           d="M37.095 71.9357V71.3799C40.496 67.3788 42.549 62.1932 42.549 56.5305C42.549 52.2588 41.3806 48.2578 39.346 44.8322H60.4194C58.3848 48.2578 57.2164 52.2588 57.2164 56.5305C57.2164 62.1932 59.2694 67.3788 62.6704 71.3799V71.9357H37.095Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="2"
         />
-        <rect x="35.7881" y="44.8322" width="28.1888" height="2.00743" rx="1.00372" className={WHITE} stroke="black" strokeWidth="2" />
-        <rect x="33.1423" y="73.9357" width="33.4804" height="3.34268" className={WHITE} stroke="black" strokeWidth="2" />
-        <rect x="28.4883" y="79.2783" width="42.7885" height="3.60963" className={WHITE} stroke="black" strokeWidth="2" />
-        <rect x="25.5215" y="84.8879" width="48.7222" height="3.60963" className={WHITE} stroke="black" strokeWidth="2" />
-        <circle cx="49.9856" cy="16.3544" r="1.76196" className={WHITE} stroke="black" strokeWidth="2" />
+        <rect x="35.7881" y="44.8322" width="28.1888" height="2.00743" rx="1.00372" className={WHITE} strokeWidth="2" />
+        <rect x="33.1423" y="73.9357" width="33.4804" height="3.34268" className={WHITE} strokeWidth="2" />
+        <rect x="28.4883" y="79.2783" width="42.7885" height="3.60963" className={WHITE} strokeWidth="2" />
+        <rect x="25.5215" y="84.8879" width="48.7222" height="3.60963" className={WHITE} strokeWidth="2" />
+        <circle cx="49.9856" cy="16.3544" r="1.76196" className={WHITE} strokeWidth="2" />
       </svg>
     ),
     [PIECE.KNIGHT]: (
@@ -333,12 +327,11 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         <path
           d="M45.484 12.6976C43.0688 12.6976 43.6212 17.6223 44.1993 20.0846C43.5469 21.9428 41.381 22.7649 40.1225 23.7184C38.8639 24.6719 39.9699 26.083 37.7197 27.1891C35.4695 28.2951 33.0668 30.3165 28.7571 33.749C24.4474 37.1815 21.8539 38.4019 19.1079 38.7452C16.9111 39.0198 17.023 40.6902 17.3535 41.4912L23.9134 48.8138H26.8501C27.0408 47.746 28.3375 45.7627 31.3124 45.3432C34.2872 44.9237 41.0759 46.4874 45.2331 44.3516C48.5588 42.643 50.7632 39.1901 51.4497 37.6773L50.3636 40.8515C47.6178 48.4024 35.9911 52.2923 30.5209 53.2934C28.5474 57.3692 33.6633 65.6272 36.4679 69.2467V70.5287H65.4609V69.3525C69.5205 65.2928 71.8318 56.6526 72.4799 52.84C72.6268 56.6087 70.0016 64.2129 68.6707 67.5439L77.7253 70.5704C83.1139 62.3437 85.5283 48.5431 78.4118 34.6704C72.7034 23.5426 61.107 20.0606 56.0223 19.7106L55.7615 21.1766C51.7533 14.2393 47.2397 12.6334 45.484 12.6976Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="2"
         />
-        <rect x="33.6882" y="71.3851" width="33.4804" height="3.34268" className={WHITE} stroke="black" strokeWidth="2" />
-        <rect x="29.0342" y="76.7278" width="42.7885" height="3.60963" className={WHITE} stroke="black" strokeWidth="2" />
-        <rect x="26.0674" y="82.3374" width="48.7222" height="3.60963" className={WHITE} stroke="black" strokeWidth="2" />
+        <rect x="33.6882" y="71.3851" width="33.4804" height="3.34268" className={WHITE} strokeWidth="2" />
+        <rect x="29.0342" y="76.7278" width="42.7885" height="3.60963" className={WHITE} strokeWidth="2" />
+        <rect x="26.0674" y="82.3374" width="48.7222" height="3.60963" className={WHITE} strokeWidth="2" />
       </svg>
     ),
     [PIECE.PAWN]: (
@@ -346,34 +339,31 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         <path
           d="M59.6243 28.9924C59.6243 33.5836 55.4237 37.4909 50.0002 37.4909C44.5766 37.4909 40.376 33.5836 40.376 28.9924C40.376 24.4012 44.5766 20.4939 50.0002 20.4939C55.4237 20.4939 59.6243 24.4012 59.6243 28.9924Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="2"
         />
         <path
           d="M37.2124 62.587V62.0313C40.6134 58.0302 42.6664 52.8446 42.6664 47.1818C42.6664 42.9102 41.498 38.9092 39.4634 35.4835H60.5368C58.5022 38.9092 57.3338 42.9102 57.3338 47.1818C57.3338 52.8446 59.3869 58.0302 62.7878 62.0313V62.587H37.2124Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="2"
         />
-        <rect x="35.9058" y="35.4835" width="28.1888" height="2.00743" rx="1.00372" className={WHITE} stroke="black" strokeWidth="2" />
-        <rect x="33.2598" y="64.587" width="33.4804" height="3.34269" className={WHITE} stroke="black" strokeWidth="2" />
-        <rect x="28.6057" y="69.9297" width="42.7885" height="3.60963" className={WHITE} stroke="black" strokeWidth="2" />
-        <rect x="25.6389" y="75.5393" width="48.7222" height="3.60963" className={WHITE} stroke="black" strokeWidth="2" />
+        <rect x="35.9058" y="35.4835" width="28.1888" height="2.00743" rx="1.00372" className={WHITE} strokeWidth="2" />
+        <rect x="33.2598" y="64.587" width="33.4804" height="3.34269" className={WHITE} strokeWidth="2" />
+        <rect x="28.6057" y="69.9297" width="42.7885" height="3.60963" className={WHITE} strokeWidth="2" />
+        <rect x="25.6389" y="75.5393" width="48.7222" height="3.60963" className={WHITE} strokeWidth="2" />
       </svg>
     ),
     [PIECE.QUEEN]: (
       <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="35.385" y="39.3908" width="29.2304" height="0.958399" rx="0.479199" className={WHITE} stroke="black" strokeWidth="0.958399" />
+        <rect x="35.385" y="39.3908" width="29.2304" height="0.958399" rx="0.479199" className={WHITE} strokeWidth="0.958399" />
         <path
           d="M37.2124 68.8351V68.2793C40.6134 64.2782 42.6664 59.0926 42.6664 53.4299C42.6664 49.1582 41.498 45.1572 39.4634 41.7316H60.5368C58.5022 45.1572 57.3338 49.1582 57.3338 53.4299C57.3338 59.0926 59.3869 64.2782 62.7878 68.2793V68.8351H37.2124Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="2"
         />
-        <rect x="35.9058" y="41.7316" width="28.1888" height="2.00743" rx="1.00372" className={WHITE} stroke="black" strokeWidth="2" />
-        <rect x="33.2598" y="70.8351" width="33.4804" height="3.34268" className={WHITE} stroke="black" strokeWidth="2" />
-        <rect x="28.6057" y="76.1777" width="42.7885" height="3.60963" className={WHITE} stroke="black" strokeWidth="2" />
-        <rect x="25.6389" y="81.7874" width="48.7222" height="3.60963" className={WHITE} stroke="black" strokeWidth="2" />
+        <rect x="35.9058" y="41.7316" width="28.1888" height="2.00743" rx="1.00372" className={WHITE} strokeWidth="2" />
+        <rect x="33.2598" y="70.8351" width="33.4804" height="3.34268" className={WHITE} strokeWidth="2" />
+        <rect x="28.6057" y="76.1777" width="42.7885" height="3.60963" className={WHITE} strokeWidth="2" />
+        <rect x="25.6389" y="81.7874" width="48.7222" height="3.60963" className={WHITE} strokeWidth="2" />
         <mask id="path-7-inside-1_2_2193" className={WHITE}>
           <path
             fillRule="evenodd"
@@ -395,7 +385,6 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         <path
           d="M37.5079 39.8701C36.6384 37.479 34.0457 31.9853 30.631 29.1397C27.2162 26.294 30.1172 25.6221 31.9945 25.6419C32.9801 25.849 35.3996 26.5507 37.1937 27.7014C38.3358 28.4339 38.2698 27.3732 38.1898 26.0876C38.1128 24.8488 38.0227 23.4012 38.9877 23.1472C40.9377 22.6341 42.4806 23.9866 45.2309 26.3975L45.3014 26.4593C46.7411 27.7213 47.1088 26.5374 47.5574 25.0929C47.9796 23.7335 48.4735 22.1432 50.0001 22.1432C51.5267 22.1432 52.0206 23.7335 52.4428 25.0929C52.8915 26.5374 53.2592 27.7213 54.6989 26.4593L54.7694 26.3975C57.5197 23.9866 59.0626 22.6341 61.0125 23.1472C61.9775 23.4012 61.8875 24.8488 61.8104 26.0876C61.7304 27.3732 61.6645 28.4339 62.8066 27.7014C64.6006 26.5507 67.0202 25.849 68.0057 25.6419C69.8831 25.6221 72.784 26.294 69.3693 29.1397C65.9545 31.9853 63.3618 37.479 62.4923 39.8701H37.5079Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="2"
         />
       </svg>
@@ -405,13 +394,12 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         <path
           d="M35.8492 36.908C36.3008 37.0977 37.204 37.6193 37.204 38.1885C37.204 38.7576 35.0363 54.835 33.9524 62.8026C33.7717 63.3243 33.2479 64.4104 32.5975 64.5811C31.9472 64.7518 43.8879 64.6522 49.9396 64.5811C55.9912 64.6522 67.9319 64.7518 67.2816 64.5811C66.6313 64.4104 66.1074 63.3243 65.9268 62.8026C64.8429 54.835 62.6751 38.7576 62.6751 38.1885C62.6751 37.6193 63.5784 37.0977 64.03 36.908H49.9396H35.8492Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="2"
         />
-        <rect x="31.2266" y="33.9005" width="37.426" height="2.00743" rx="1.00372" className={WHITE} stroke="black" strokeWidth="2" />
-        <rect x="33.1992" y="63.004" width="33.4804" height="3.34268" className={WHITE} stroke="black" strokeWidth="2" />
-        <rect x="28.5452" y="68.3467" width="42.7885" height="3.60963" className={WHITE} stroke="black" strokeWidth="2" />
-        <rect x="25.5784" y="73.9563" width="48.7222" height="3.60963" className={WHITE} stroke="black" strokeWidth="2" />
+        <rect x="31.2266" y="33.9005" width="37.426" height="2.00743" rx="1.00372" className={WHITE} strokeWidth="2" />
+        <rect x="33.1992" y="63.004" width="33.4804" height="3.34268" className={WHITE} strokeWidth="2" />
+        <rect x="28.5452" y="68.3467" width="42.7885" height="3.60963" className={WHITE} strokeWidth="2" />
+        <rect x="25.5784" y="73.9563" width="48.7222" height="3.60963" className={WHITE} strokeWidth="2" />
         <path
           d="M69.2632 20.9076L68.3598 33.4343L63.2848 33.0303H31.795L30.0049 20.9877H39.1182L39.6064 30.1282H45.5193V20.9877H54.1986V30.1282H63.2848L63.2006 21.0052L69.2632 20.9076Z"
           fill="#F1F1F1"
@@ -419,7 +407,6 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         <path
           d="M67.4506 28.1325L67.8831 21.0048H69.1991L68.7289 28.1325H68.7382L68.6041 30.0257L68.5411 30.9798H68.5364L68.3602 33.4663H31.5061L29.9482 21.0351H36.8306L37.3898 28.1325H41.4331L40.8309 21.0351H50.2941V28.1325H56.101V21.0351H64.5749V28.1325H67.4506Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="2"
         />
       </svg>
@@ -434,7 +421,6 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
           clipRule="evenodd"
           d="M20.5002 81.3333C28.0335 79.1778 42.9668 82.2889 50.5002 76.8889C58.0335 82.2889 72.9668 79.1778 80.5002 81.3333C80.5002 81.3333 84.1668 82.5333 87.1668 85.7778C85.6557 87.9333 83.5002 87.9778 80.5002 86.8889C72.9668 84.7333 58.0335 87.9111 50.5002 84.6667C42.9668 87.9111 28.0335 84.7333 20.5002 86.8889C17.5002 87.9778 15.3446 87.9333 13.8335 85.7778C16.8335 82.5333 20.5002 81.3333 20.5002 81.3333Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
@@ -443,7 +429,6 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
           clipRule="evenodd"
           d="M33.8334 72.4444C39.389 78 61.6112 78 67.1668 72.4444C68.2779 69.1111 67.1668 68 67.1668 68C67.1668 62.4444 61.6112 59.1111 61.6112 59.1111C73.8334 55.7778 74.9445 33.5555 50.5001 24.6667C26.0556 33.5555 27.1668 55.7778 39.389 59.1111C39.389 59.1111 33.8334 62.4444 33.8334 68C33.8334 68 32.7223 69.1111 33.8334 72.4444Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
@@ -452,28 +437,21 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
           clipRule="evenodd"
           d="M56.0557 19.1111C56.0557 20.5845 55.4704 21.9976 54.4285 23.0395C53.3866 24.0813 51.9736 24.6667 50.5001 24.6667C49.0267 24.6667 47.6136 24.0813 46.5718 23.0395C45.5299 21.9976 44.9446 20.5845 44.9446 19.1111C44.9446 17.6377 45.5299 16.2246 46.5718 15.1827C47.6136 14.1409 49.0267 13.5555 50.5001 13.5555C51.9736 13.5555 53.3866 14.1409 54.4285 15.1827C55.4704 16.2246 56.0557 17.6377 56.0557 19.1111Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
-        <path
-          d="M39.3891 59.1111H61.6113M33.8335 68H67.1668M50.5002 35.7778V46.8889M44.9446 41.3333H56.0557"
-          stroke="black"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
+        <path d="M39.3891 59.1111H61.6113M33.8335 68H67.1668M50.5002 35.7778V46.8889M44.9446 41.3333H56.0557" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
     [PIECE.KING]: (
       <svg width="101" height="100" viewBox="0 0 101 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50.5 25.8445V13.3333" stroke="black" strokeWidth="1.5" strokeLinecap="round" />
-        <path d="M44.9446 17.7778H56.0557" stroke="black" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M50.5 25.8445V13.3333" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M44.9446 17.7778H56.0557" strokeWidth="1.5" strokeLinecap="round" />
         <path
           fillRule="evenodd"
           clipRule="evenodd"
           d="M50.5 55.5556C50.5 55.5556 60.5 38.8889 57.1667 32.2222C57.1667 32.2222 54.9445 26.6667 50.5 26.6667C46.0556 26.6667 43.8333 32.2222 43.8333 32.2222C40.5 38.8889 50.5 55.5556 50.5 55.5556Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="1.5"
         />
         <path
@@ -484,26 +462,13 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         />
         <path
           d="M50.5001 52.2222C56.0556 35.5556 77.1667 28.8889 86.0556 43.3333C92.7223 56.6667 72.7223 66.6667 72.7223 66.6667V82.2222C60.5001 90 40.5001 90 28.2779 82.2222V66.6667C28.2779 66.6667 8.27786 56.6667 14.9445 43.3333C23.8334 28.8889 44.9445 35.5556 50.5001 52.2222ZM50.5001 52.2222V60"
-          stroke="black"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
-        <path d="M28.2778 66.6667C40.5001 60 60.5001 60 72.7223 66.6667" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path
-          d="M28.2778 74.4445C40.5001 67.7778 60.5001 67.7778 72.7223 74.4445"
-          stroke="black"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M28.2778 82.2222C40.5001 75.5556 60.5001 75.5556 72.7223 82.2222"
-          stroke="black"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+        <path d="M28.2778 66.6667C40.5001 60 60.5001 60 72.7223 66.6667" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M28.2778 74.4445C40.5001 67.7778 60.5001 67.7778 72.7223 74.4445" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M28.2778 82.2222C40.5001 75.5556 60.5001 75.5556 72.7223 82.2222" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     [PIECE.KNIGHT]: (
@@ -516,7 +481,6 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         />
         <path
           d="M48.8888 22.8889C72.2221 25.1111 85.5555 40.6667 84.4444 87.3333H33.3333C33.3333 67.3333 55.5555 72.8889 51.111 40.6667"
-          stroke="black"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -529,7 +493,6 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         />
         <path
           d="M53.3333 40.6667C54.1777 47.1333 40.9999 57.0444 35.5555 60.6667C28.8888 65.1111 29.2888 70.3111 24.4444 69.5556C22.1288 67.4667 27.5777 62.8 24.4444 62.8889C22.2221 62.8889 24.8666 65.6222 22.2221 67.3333C19.9999 67.3333 13.3266 69.5556 13.3333 58.4444C13.3333 54 26.6666 31.7778 26.6666 31.7778C26.6666 31.7778 30.8666 27.5556 31.111 24C29.4888 21.7911 29.9999 19.5556 29.9999 17.3333C32.2221 15.1111 36.6666 22.8889 36.6666 22.8889H41.111C41.111 22.8889 42.8444 18.4622 46.6666 16.2222C48.8888 16.2222 48.8888 22.8889 48.8888 22.8889"
-          stroke="black"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -539,7 +502,6 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
           clipRule="evenodd"
           d="M21.1111 57.3333C21.1111 57.628 20.9941 57.9106 20.7857 58.119C20.5773 58.3274 20.2947 58.4445 20 58.4445C19.7053 58.4445 19.4227 58.3274 19.2144 58.119C19.006 57.9106 18.8889 57.628 18.8889 57.3333C18.8889 57.0387 19.006 56.756 19.2144 56.5477C19.4227 56.3393 19.7053 56.2222 20 56.2222C20.2947 56.2222 20.5773 56.3393 20.7857 56.5477C20.9941 56.756 21.1111 57.0387 21.1111 57.3333Z"
           fill="black"
-          stroke="black"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -549,7 +511,6 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
           clipRule="evenodd"
           d="M33.1843 35.6667C32.7423 36.4323 32.217 37.108 31.724 37.5451C31.2309 37.9823 30.8106 38.1451 30.5554 37.9978C30.3002 37.8504 30.2311 37.405 30.3632 36.7594C30.4953 36.1139 30.8178 35.3211 31.2598 34.5556C31.7019 33.79 32.2272 33.1143 32.7202 32.6771C33.2132 32.2399 33.6335 32.0771 33.8887 32.2244C34.1439 32.3718 34.2131 32.8172 34.081 33.4628C33.9489 34.1083 33.6263 34.9011 33.1843 35.6667Z"
           fill="black"
-          stroke="black"
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -561,7 +522,6 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         <path
           d="M50.4999 20C45.5888 20 41.611 23.9778 41.611 28.8889C41.611 30.8667 42.2554 32.6889 43.3443 34.1778C39.011 36.6667 36.0554 41.3111 36.0554 46.6667C36.0554 51.1778 38.1443 55.2 41.411 57.8444C34.7443 60.2 24.9443 70.1778 24.9443 87.7778H76.0554C76.0554 70.1778 66.2554 60.2 59.5888 57.8444C62.8554 55.2 64.9443 51.1778 64.9443 46.6667C64.9443 41.3111 61.9888 36.6667 57.6554 34.1778C58.7443 32.6889 59.3888 30.8667 59.3888 28.8889C59.3888 23.9778 55.411 20 50.4999 20Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="1.5"
           strokeLinecap="round"
         />
@@ -572,51 +532,44 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         <path
           d="M20.5001 57.7778C39.389 54.4445 67.1668 54.4445 80.5001 57.7778L86.0557 30L69.389 55.5556L68.7224 24.2222L57.1668 54.4445L50.5001 22.2222L43.8335 54.4445L32.2779 24.2222L31.6112 55.5556L14.9446 30L20.5001 57.7778Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
         <path
           d="M20.5 57.7778C20.5 62.2222 23.8333 62.2222 26.0556 66.6667C28.2778 70 28.2778 68.8889 27.1667 74.4445C23.8333 76.6667 24.9444 80 24.9444 80C21.6111 83.3334 24.9444 85.5556 24.9444 85.5556C39.3889 87.7778 61.6111 87.7778 76.0556 85.5556C76.0556 85.5556 79.3889 83.3334 76.0556 80C76.0556 80 77.1667 76.6667 73.8333 74.4445C72.7222 68.8889 72.7222 70 74.9444 66.6667C77.1667 62.2222 80.5 62.2222 80.5 57.7778C61.6111 54.4445 39.3889 54.4445 20.5 57.7778Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
-        <path d="M26.0557 66.6667C33.8334 64.4444 67.1668 64.4444 74.9446 66.6667" stroke="black" strokeWidth="1.5" strokeLinejoin="round" />
-        <path d="M27.1667 74.4445C40.5001 72.2222 60.5001 72.2222 73.8334 74.4445" stroke="black" strokeWidth="1.5" strokeLinejoin="round" />
+        <path d="M26.0557 66.6667C33.8334 64.4444 67.1668 64.4444 74.9446 66.6667" strokeWidth="1.5" strokeLinejoin="round" />
+        <path d="M27.1667 74.4445C40.5001 72.2222 60.5001 72.2222 73.8334 74.4445" strokeWidth="1.5" strokeLinejoin="round" />
         <path
           d="M13.8334 31.1111C16.288 31.1111 18.2778 29.1213 18.2778 26.6667C18.2778 24.2121 16.288 22.2222 13.8334 22.2222C11.3788 22.2222 9.38892 24.2121 9.38892 26.6667C9.38892 29.1213 11.3788 31.1111 13.8334 31.1111Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
         <path
           d="M31.6112 24.4445C34.0658 24.4445 36.0556 22.4546 36.0556 20C36.0556 17.5454 34.0658 15.5556 31.6112 15.5556C29.1566 15.5556 27.1667 17.5454 27.1667 20C27.1667 22.4546 29.1566 24.4445 31.6112 24.4445Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
         <path
           d="M50.5001 22.2222C52.9547 22.2222 54.9446 20.2324 54.9446 17.7778C54.9446 15.3232 52.9547 13.3333 50.5001 13.3333C48.0455 13.3333 46.0557 15.3232 46.0557 17.7778C46.0557 20.2324 48.0455 22.2222 50.5001 22.2222Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
         <path
           d="M69.389 24.4445C71.8436 24.4445 73.8335 22.4546 73.8335 20C73.8335 17.5454 71.8436 15.5556 69.389 15.5556C66.9344 15.5556 64.9446 17.5454 64.9446 20C64.9446 22.4546 66.9344 24.4445 69.389 24.4445Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
         <path
           d="M87.1666 31.1111C89.6212 31.1111 91.6111 29.1213 91.6111 26.6667C91.6111 24.2121 89.6212 22.2222 87.1666 22.2222C84.712 22.2222 82.7222 24.2121 82.7222 26.6667C82.7222 29.1213 84.712 31.1111 87.1666 31.1111Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
@@ -624,21 +577,12 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
     ),
     [PIECE.ROOK]: (
       <svg width="101" height="100" viewBox="0 0 101 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          fillRule="evenodd"
-          clipRule="evenodd"
-          d="M20.5 87.3333H80.5V80.6667H20.5V87.3333Z"
-          className={WHITE}
-          stroke="black"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-        />
+        <path fillRule="evenodd" clipRule="evenodd" d="M20.5 87.3333H80.5V80.6667H20.5V87.3333Z" className={WHITE} strokeWidth="1.5" strokeLinejoin="round" />
         <path
           fillRule="evenodd"
           clipRule="evenodd"
           d="M27.1667 80.6667V71.7778H73.8334V80.6667H27.1667Z"
           className={WHITE}
-          stroke="black"
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
@@ -650,17 +594,16 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         />
         <path
           d="M24.9443 31.7778V20.6667H33.8332V25.1111H44.9443V20.6667H56.0554V25.1111H67.1666V20.6667H76.0554V31.7778"
-          stroke="black"
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
         <path fillRule="evenodd" clipRule="evenodd" d="M76.0554 31.7778L69.3888 38.4444H31.611L24.9443 31.7778" className={WHITE} />
-        <path d="M76.0554 31.7778L69.3888 38.4444H31.611L24.9443 31.7778" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M76.0554 31.7778L69.3888 38.4444H31.611L24.9443 31.7778" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         <path fillRule="evenodd" clipRule="evenodd" d="M69.3889 38.4444V66.2222H31.6111V38.4444" className={WHITE} />
-        <path d="M69.3889 38.4444V66.2222H31.6111V38.4444" stroke="black" strokeWidth="1.5" />
+        <path d="M69.3889 38.4444V66.2222H31.6111V38.4444" strokeWidth="1.5" />
         <path fillRule="evenodd" clipRule="evenodd" d="M69.3889 66.2222L72.7223 71.7778H28.2778L31.6112 66.2222" className={WHITE} />
-        <path d="M69.3889 66.2222L72.7223 71.7778H28.2778L31.6112 66.2222" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M24.9443 31.7778H76.0554" stroke="black" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M69.3889 66.2222L72.7223 71.7778H28.2778L31.6112 66.2222" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M24.9443 31.7778H76.0554" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
     [PIECE.EMPTY]: <></>

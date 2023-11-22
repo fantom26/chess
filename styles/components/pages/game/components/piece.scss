@@ -9,6 +9,10 @@
       stop-color: var(--clr-white-100);
     }
 
+    .stroke {
+      stroke: var(--clr-black-900);
+    }
+
     .b {
       fill: var(--clr-black-900);
       stroke: var(--clr-black-900);
@@ -21,6 +25,10 @@
       fill: var(--clr-black-900);
       stroke: var(--clr-black-900);
       stop-color: var(--clr-black-900);
+    }
+
+    .stroke {
+      stroke: var(--clr-white-100);
     }
 
     .b {
