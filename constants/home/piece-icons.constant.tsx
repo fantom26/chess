@@ -272,13 +272,13 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
       <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M54.3884 15.418C54.3884 17.788 52.4592 19.7154 50.072 19.7154C47.6848 19.7154 45.7556 17.788 45.7556 15.418C45.7556 13.0479 47.6848 11.1205 50.072 11.1205C52.4592 11.1205 54.3884 13.0479 54.3884 15.418Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="2"
         />
         <rect x="45.6526" y="19.531" width="8.6947" height="0.615763" rx="0.307881" className={WHITE} strokeWidth="0.615763" />
         <path
           d="M37.2124 71.6647V71.1168C40.6131 67.1296 42.6664 61.9618 42.6664 56.3179C42.6664 52.0629 41.4992 48.0775 39.4666 44.6648H60.5336C58.5011 48.0775 57.3338 52.0629 57.3338 56.3179C57.3338 61.9618 59.3871 67.1296 62.7878 71.1168V71.6647H37.2124Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="2"
         />
         <path
@@ -291,79 +291,79 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
           d="M47.3544 19.839V18.839H46.8329L46.5344 19.2666L47.3544 19.839ZM36.291 35.6881L35.471 35.1157L35.4485 35.148L35.4286 35.182L36.291 35.6881ZM39.8641 43.6649L39.4403 44.5706L39.6417 44.6649H39.8641V43.6649ZM60.1359 43.6649V44.6649H60.3583L60.5598 44.5706L60.1359 43.6649ZM63.709 35.6881L64.5715 35.182L64.5515 35.148L64.529 35.1157L63.709 35.6881ZM52.6456 19.839L53.4656 19.2666L53.1671 18.839H52.6456V19.839ZM47.3544 20.839H50V18.839H47.3544V20.839ZM37.111 36.2605L48.1744 20.4114L46.5344 19.2666L35.471 35.1157L37.111 36.2605ZM40.288 42.7592C37.9145 41.6484 37.0234 40.2819 36.7429 39.146C36.4503 37.9607 36.7753 36.8387 37.1535 36.1942L35.4286 35.182C34.8392 36.1863 34.3606 37.8405 34.8012 39.6254C35.2541 41.4595 36.6332 43.257 39.4403 44.5706L40.288 42.7592ZM50 42.6649H39.8641V44.6649H50V42.6649ZM50 44.6649H60.1359V42.6649H50V44.6649ZM60.5598 44.5706C63.3668 43.257 64.746 41.4595 65.1988 39.6254C65.6395 37.8405 65.1608 36.1863 64.5715 35.182L62.8465 36.1942C63.2247 36.8387 63.5498 37.9607 63.2571 39.146C62.9767 40.2819 62.0855 41.6484 59.712 42.7592L60.5598 44.5706ZM64.529 35.1157L53.4656 19.2666L51.8256 20.4114L62.889 36.2605L64.529 35.1157ZM52.6456 18.839H50V20.839H52.6456V18.839Z"
           className={BLACK}
         />
-        <rect x="35.9041" y="44.6631" width="28.1922" height="1.99659" rx="0.998293" className={WHITE} strokeWidth="1.99659" />
-        <rect x="33.2598" y="73.6648" width="33.4804" height="3.32367" className={WHITE} strokeWidth="2" />
-        <rect x="28.6057" y="78.9884" width="42.7885" height="3.58968" className={WHITE} strokeWidth="2" />
-        <rect x="25.6389" y="84.5781" width="48.7222" height="3.58966" className={WHITE} strokeWidth="2" />
+        <rect x="35.9041" y="44.6631" width="28.1922" height="1.99659" rx="0.998293" className={`${WHITE} stroke`} strokeWidth="1.99659" />
+        <rect x="33.2598" y="73.6648" width="33.4804" height="3.32367" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="28.6057" y="78.9884" width="42.7885" height="3.58968" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="25.6389" y="84.5781" width="48.7222" height="3.58966" className={`${WHITE} stroke`} strokeWidth="2" />
       </svg>
     ),
     [PIECE.KING]: (
       <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M66.8566 32.2329C66.8566 35.013 65.0508 38.6717 61.9324 41.6773C58.8402 44.6577 54.613 46.8396 49.9995 46.8396C45.386 46.8396 41.1588 44.6577 38.0665 41.6773C34.9482 38.6717 33.1423 35.013 33.1423 32.2329C33.1423 29.5438 34.8514 26.9677 37.9107 25.0147C40.9585 23.0689 45.2298 21.8328 49.9995 21.8328C54.7692 21.8328 59.0405 23.0689 62.0883 25.0147C65.1476 26.9677 66.8566 29.5438 66.8566 32.2329Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="2"
         />
         <path
           d="M49.6356 15.1545V11.5023H50.1296V15.1545V16.1545H51.1296H54.7819V16.6485H51.1296H50.1296V17.6485V21.3008H49.6356V17.6485V16.6485H48.6356H44.9834V16.1545H48.6356H49.6356V15.1545Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="2"
         />
         <rect x="35.2673" y="42.4914" width="29.2304" height="0.958399" rx="0.479199" className={WHITE} strokeWidth="0.958399" />
         <path
           d="M37.095 71.9357V71.3799C40.496 67.3788 42.549 62.1932 42.549 56.5305C42.549 52.2588 41.3806 48.2578 39.346 44.8322H60.4194C58.3848 48.2578 57.2164 52.2588 57.2164 56.5305C57.2164 62.1932 59.2694 67.3788 62.6704 71.3799V71.9357H37.095Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="2"
         />
-        <rect x="35.7881" y="44.8322" width="28.1888" height="2.00743" rx="1.00372" className={WHITE} strokeWidth="2" />
-        <rect x="33.1423" y="73.9357" width="33.4804" height="3.34268" className={WHITE} strokeWidth="2" />
-        <rect x="28.4883" y="79.2783" width="42.7885" height="3.60963" className={WHITE} strokeWidth="2" />
-        <rect x="25.5215" y="84.8879" width="48.7222" height="3.60963" className={WHITE} strokeWidth="2" />
-        <circle cx="49.9856" cy="16.3544" r="1.76196" className={WHITE} strokeWidth="2" />
+        <rect x="35.7881" y="44.8322" width="28.1888" height="2.00743" rx="1.00372" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="33.1423" y="73.9357" width="33.4804" height="3.34268" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="28.4883" y="79.2783" width="42.7885" height="3.60963" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="25.5215" y="84.8879" width="48.7222" height="3.60963" className={`${WHITE} stroke`} strokeWidth="2" />
+        <circle cx="49.9856" cy="16.3544" r="1.76196" className={`${WHITE} stroke`} strokeWidth="2" />
       </svg>
     ),
     [PIECE.KNIGHT]: (
       <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M45.484 12.6976C43.0688 12.6976 43.6212 17.6223 44.1993 20.0846C43.5469 21.9428 41.381 22.7649 40.1225 23.7184C38.8639 24.6719 39.9699 26.083 37.7197 27.1891C35.4695 28.2951 33.0668 30.3165 28.7571 33.749C24.4474 37.1815 21.8539 38.4019 19.1079 38.7452C16.9111 39.0198 17.023 40.6902 17.3535 41.4912L23.9134 48.8138H26.8501C27.0408 47.746 28.3375 45.7627 31.3124 45.3432C34.2872 44.9237 41.0759 46.4874 45.2331 44.3516C48.5588 42.643 50.7632 39.1901 51.4497 37.6773L50.3636 40.8515C47.6178 48.4024 35.9911 52.2923 30.5209 53.2934C28.5474 57.3692 33.6633 65.6272 36.4679 69.2467V70.5287H65.4609V69.3525C69.5205 65.2928 71.8318 56.6526 72.4799 52.84C72.6268 56.6087 70.0016 64.2129 68.6707 67.5439L77.7253 70.5704C83.1139 62.3437 85.5283 48.5431 78.4118 34.6704C72.7034 23.5426 61.107 20.0606 56.0223 19.7106L55.7615 21.1766C51.7533 14.2393 47.2397 12.6334 45.484 12.6976Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="2"
         />
-        <rect x="33.6882" y="71.3851" width="33.4804" height="3.34268" className={WHITE} strokeWidth="2" />
-        <rect x="29.0342" y="76.7278" width="42.7885" height="3.60963" className={WHITE} strokeWidth="2" />
-        <rect x="26.0674" y="82.3374" width="48.7222" height="3.60963" className={WHITE} strokeWidth="2" />
+        <rect x="33.6882" y="71.3851" width="33.4804" height="3.34268" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="29.0342" y="76.7278" width="42.7885" height="3.60963" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="26.0674" y="82.3374" width="48.7222" height="3.60963" className={`${WHITE} stroke`} strokeWidth="2" />
       </svg>
     ),
     [PIECE.PAWN]: (
       <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M59.6243 28.9924C59.6243 33.5836 55.4237 37.4909 50.0002 37.4909C44.5766 37.4909 40.376 33.5836 40.376 28.9924C40.376 24.4012 44.5766 20.4939 50.0002 20.4939C55.4237 20.4939 59.6243 24.4012 59.6243 28.9924Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="2"
         />
         <path
           d="M37.2124 62.587V62.0313C40.6134 58.0302 42.6664 52.8446 42.6664 47.1818C42.6664 42.9102 41.498 38.9092 39.4634 35.4835H60.5368C58.5022 38.9092 57.3338 42.9102 57.3338 47.1818C57.3338 52.8446 59.3869 58.0302 62.7878 62.0313V62.587H37.2124Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="2"
         />
-        <rect x="35.9058" y="35.4835" width="28.1888" height="2.00743" rx="1.00372" className={WHITE} strokeWidth="2" />
-        <rect x="33.2598" y="64.587" width="33.4804" height="3.34269" className={WHITE} strokeWidth="2" />
-        <rect x="28.6057" y="69.9297" width="42.7885" height="3.60963" className={WHITE} strokeWidth="2" />
-        <rect x="25.6389" y="75.5393" width="48.7222" height="3.60963" className={WHITE} strokeWidth="2" />
+        <rect x="35.9058" y="35.4835" width="28.1888" height="2.00743" rx="1.00372" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="33.2598" y="64.587" width="33.4804" height="3.34269" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="28.6057" y="69.9297" width="42.7885" height="3.60963" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="25.6389" y="75.5393" width="48.7222" height="3.60963" className={`${WHITE} stroke`} strokeWidth="2" />
       </svg>
     ),
     [PIECE.QUEEN]: (
       <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="35.385" y="39.3908" width="29.2304" height="0.958399" rx="0.479199" className={WHITE} strokeWidth="0.958399" />
+        <rect x="35.385" y="39.3908" width="29.2304" height="0.958399" rx="0.479199" className={`${WHITE} stroke`} strokeWidth="0.958399" />
         <path
           d="M37.2124 68.8351V68.2793C40.6134 64.2782 42.6664 59.0926 42.6664 53.4299C42.6664 49.1582 41.498 45.1572 39.4634 41.7316H60.5368C58.5022 45.1572 57.3338 49.1582 57.3338 53.4299C57.3338 59.0926 59.3869 64.2782 62.7878 68.2793V68.8351H37.2124Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="2"
         />
-        <rect x="35.9058" y="41.7316" width="28.1888" height="2.00743" rx="1.00372" className={WHITE} strokeWidth="2" />
-        <rect x="33.2598" y="70.8351" width="33.4804" height="3.34268" className={WHITE} strokeWidth="2" />
-        <rect x="28.6057" y="76.1777" width="42.7885" height="3.60963" className={WHITE} strokeWidth="2" />
-        <rect x="25.6389" y="81.7874" width="48.7222" height="3.60963" className={WHITE} strokeWidth="2" />
+        <rect x="35.9058" y="41.7316" width="28.1888" height="2.00743" rx="1.00372" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="33.2598" y="70.8351" width="33.4804" height="3.34268" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="28.6057" y="76.1777" width="42.7885" height="3.60963" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="25.6389" y="81.7874" width="48.7222" height="3.60963" className={`${WHITE} stroke`} strokeWidth="2" />
         <mask id="path-7-inside-1_2_2193" className={WHITE}>
           <path
             fillRule="evenodd"
@@ -384,7 +384,7 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         />
         <path
           d="M37.5079 39.8701C36.6384 37.479 34.0457 31.9853 30.631 29.1397C27.2162 26.294 30.1172 25.6221 31.9945 25.6419C32.9801 25.849 35.3996 26.5507 37.1937 27.7014C38.3358 28.4339 38.2698 27.3732 38.1898 26.0876C38.1128 24.8488 38.0227 23.4012 38.9877 23.1472C40.9377 22.6341 42.4806 23.9866 45.2309 26.3975L45.3014 26.4593C46.7411 27.7213 47.1088 26.5374 47.5574 25.0929C47.9796 23.7335 48.4735 22.1432 50.0001 22.1432C51.5267 22.1432 52.0206 23.7335 52.4428 25.0929C52.8915 26.5374 53.2592 27.7213 54.6989 26.4593L54.7694 26.3975C57.5197 23.9866 59.0626 22.6341 61.0125 23.1472C61.9775 23.4012 61.8875 24.8488 61.8104 26.0876C61.7304 27.3732 61.6645 28.4339 62.8066 27.7014C64.6006 26.5507 67.0202 25.849 68.0057 25.6419C69.8831 25.6221 72.784 26.294 69.3693 29.1397C65.9545 31.9853 63.3618 37.479 62.4923 39.8701H37.5079Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="2"
         />
       </svg>
@@ -393,20 +393,20 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
       <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M35.8492 36.908C36.3008 37.0977 37.204 37.6193 37.204 38.1885C37.204 38.7576 35.0363 54.835 33.9524 62.8026C33.7717 63.3243 33.2479 64.4104 32.5975 64.5811C31.9472 64.7518 43.8879 64.6522 49.9396 64.5811C55.9912 64.6522 67.9319 64.7518 67.2816 64.5811C66.6313 64.4104 66.1074 63.3243 65.9268 62.8026C64.8429 54.835 62.6751 38.7576 62.6751 38.1885C62.6751 37.6193 63.5784 37.0977 64.03 36.908H49.9396H35.8492Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="2"
         />
-        <rect x="31.2266" y="33.9005" width="37.426" height="2.00743" rx="1.00372" className={WHITE} strokeWidth="2" />
-        <rect x="33.1992" y="63.004" width="33.4804" height="3.34268" className={WHITE} strokeWidth="2" />
-        <rect x="28.5452" y="68.3467" width="42.7885" height="3.60963" className={WHITE} strokeWidth="2" />
-        <rect x="25.5784" y="73.9563" width="48.7222" height="3.60963" className={WHITE} strokeWidth="2" />
+        <rect x="31.2266" y="33.9005" width="37.426" height="2.00743" rx="1.00372" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="33.1992" y="63.004" width="33.4804" height="3.34268" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="28.5452" y="68.3467" width="42.7885" height="3.60963" className={`${WHITE} stroke`} strokeWidth="2" />
+        <rect x="25.5784" y="73.9563" width="48.7222" height="3.60963" className={`${WHITE} stroke`} strokeWidth="2" />
         <path
           d="M69.2632 20.9076L68.3598 33.4343L63.2848 33.0303H31.795L30.0049 20.9877H39.1182L39.6064 30.1282H45.5193V20.9877H54.1986V30.1282H63.2848L63.2006 21.0052L69.2632 20.9076Z"
-          fill="#F1F1F1"
+          className={WHITE}
         />
         <path
           d="M67.4506 28.1325L67.8831 21.0048H69.1991L68.7289 28.1325H68.7382L68.6041 30.0257L68.5411 30.9798H68.5364L68.3602 33.4663H31.5061L29.9482 21.0351H36.8306L37.3898 28.1325H41.4331L40.8309 21.0351H50.2941V28.1325H56.101V21.0351H64.5749V28.1325H67.4506Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="2"
         />
       </svg>
