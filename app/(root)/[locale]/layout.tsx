@@ -17,20 +17,17 @@ const quicksand = Quicksand({
   subsets: ["latin"]
 });
 
-interface IRootLayout {
-  children: ReactNode;
+interface Params {
   params: {
     locale: string;
   };
 }
 
-type Props = {
-  params: {
-    locale: string;
-  };
+type IRootLayout = Params & {
+  children: ReactNode;
 };
 
-export const generateMetadata = async ({ params: { locale } }: Props): Promise<Metadata> => {
+export const generateMetadata = async ({ params: { locale } }: Params): Promise<Metadata> => {
   const { t } = await initTranslations(locale, ["common"]);
 
   return {
@@ -56,6 +53,7 @@ export const generateMetadata = async ({ params: { locale } }: Props): Promise<M
         }
       ]
     },
+    keywords: t("seo.keywords").split(","),
     icons: {
       shortcut: "/favicon.ico"
     }
