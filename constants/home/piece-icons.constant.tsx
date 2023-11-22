@@ -420,7 +420,7 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
           fillRule="evenodd"
           clipRule="evenodd"
           d="M20.5002 81.3333C28.0335 79.1778 42.9668 82.2889 50.5002 76.8889C58.0335 82.2889 72.9668 79.1778 80.5002 81.3333C80.5002 81.3333 84.1668 82.5333 87.1668 85.7778C85.6557 87.9333 83.5002 87.9778 80.5002 86.8889C72.9668 84.7333 58.0335 87.9111 50.5002 84.6667C42.9668 87.9111 28.0335 84.7333 20.5002 86.8889C17.5002 87.9778 15.3446 87.9333 13.8335 85.7778C16.8335 82.5333 20.5002 81.3333 20.5002 81.3333Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
@@ -428,7 +428,7 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
           fillRule="evenodd"
           clipRule="evenodd"
           d="M33.8334 72.4444C39.389 78 61.6112 78 67.1668 72.4444C68.2779 69.1111 67.1668 68 67.1668 68C67.1668 62.4444 61.6112 59.1111 61.6112 59.1111C73.8334 55.7778 74.9445 33.5555 50.5001 24.6667C26.0556 33.5555 27.1668 55.7778 39.389 59.1111C39.389 59.1111 33.8334 62.4444 33.8334 68C33.8334 68 32.7223 69.1111 33.8334 72.4444Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
@@ -436,22 +436,27 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
           fillRule="evenodd"
           clipRule="evenodd"
           d="M56.0557 19.1111C56.0557 20.5845 55.4704 21.9976 54.4285 23.0395C53.3866 24.0813 51.9736 24.6667 50.5001 24.6667C49.0267 24.6667 47.6136 24.0813 46.5718 23.0395C45.5299 21.9976 44.9446 20.5845 44.9446 19.1111C44.9446 17.6377 45.5299 16.2246 46.5718 15.1827C47.6136 14.1409 49.0267 13.5555 50.5001 13.5555C51.9736 13.5555 53.3866 14.1409 54.4285 15.1827C55.4704 16.2246 56.0557 17.6377 56.0557 19.1111Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
-        <path d="M39.3891 59.1111H61.6113M33.8335 68H67.1668M50.5002 35.7778V46.8889M44.9446 41.3333H56.0557" strokeWidth="1.5" strokeLinecap="round" />
+        <path
+          d="M39.3891 59.1111H61.6113M33.8335 68H67.1668M50.5002 35.7778V46.8889M44.9446 41.3333H56.0557"
+          className="stroke"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
       </svg>
     ),
     [PIECE.KING]: (
       <svg width="101" height="100" viewBox="0 0 101 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M50.5 25.8445V13.3333" strokeWidth="1.5" strokeLinecap="round" />
-        <path d="M44.9446 17.7778H56.0557" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M50.5 25.8445V13.3333" className="stroke" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M44.9446 17.7778H56.0557" className="stroke" strokeWidth="1.5" strokeLinecap="round" />
         <path
           fillRule="evenodd"
           clipRule="evenodd"
           d="M50.5 55.5556C50.5 55.5556 60.5 38.8889 57.1667 32.2222C57.1667 32.2222 54.9445 26.6667 50.5 26.6667C46.0556 26.6667 43.8333 32.2222 43.8333 32.2222C40.5 38.8889 50.5 55.5556 50.5 55.5556Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="1.5"
         />
         <path
@@ -465,10 +470,23 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
+          className="stroke"
         />
-        <path d="M28.2778 66.6667C40.5001 60 60.5001 60 72.7223 66.6667" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M28.2778 74.4445C40.5001 67.7778 60.5001 67.7778 72.7223 74.4445" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M28.2778 82.2222C40.5001 75.5556 60.5001 75.5556 72.7223 82.2222" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M28.2778 66.6667C40.5001 60 60.5001 60 72.7223 66.6667" className="stroke" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path
+          d="M28.2778 74.4445C40.5001 67.7778 60.5001 67.7778 72.7223 74.4445"
+          className="stroke"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M28.2778 82.2222C40.5001 75.5556 60.5001 75.5556 72.7223 82.2222"
+          className="stroke"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </svg>
     ),
     [PIECE.KNIGHT]: (
@@ -482,6 +500,7 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         <path
           d="M48.8888 22.8889C72.2221 25.1111 85.5555 40.6667 84.4444 87.3333H33.3333C33.3333 67.3333 55.5555 72.8889 51.111 40.6667"
           strokeWidth="1.5"
+          className="stroke"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
@@ -494,6 +513,7 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         <path
           d="M53.3333 40.6667C54.1777 47.1333 40.9999 57.0444 35.5555 60.6667C28.8888 65.1111 29.2888 70.3111 24.4444 69.5556C22.1288 67.4667 27.5777 62.8 24.4444 62.8889C22.2221 62.8889 24.8666 65.6222 22.2221 67.3333C19.9999 67.3333 13.3266 69.5556 13.3333 58.4444C13.3333 54 26.6666 31.7778 26.6666 31.7778C26.6666 31.7778 30.8666 27.5556 31.111 24C29.4888 21.7911 29.9999 19.5556 29.9999 17.3333C32.2221 15.1111 36.6666 22.8889 36.6666 22.8889H41.111C41.111 22.8889 42.8444 18.4622 46.6666 16.2222C48.8888 16.2222 48.8888 22.8889 48.8888 22.8889"
           strokeWidth="1.5"
+          className="stroke"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
@@ -501,7 +521,7 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
           fillRule="evenodd"
           clipRule="evenodd"
           d="M21.1111 57.3333C21.1111 57.628 20.9941 57.9106 20.7857 58.119C20.5773 58.3274 20.2947 58.4445 20 58.4445C19.7053 58.4445 19.4227 58.3274 19.2144 58.119C19.006 57.9106 18.8889 57.628 18.8889 57.3333C18.8889 57.0387 19.006 56.756 19.2144 56.5477C19.4227 56.3393 19.7053 56.2222 20 56.2222C20.2947 56.2222 20.5773 56.3393 20.7857 56.5477C20.9941 56.756 21.1111 57.0387 21.1111 57.3333Z"
-          fill="black"
+          className={BLACK}
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -510,7 +530,7 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
           fillRule="evenodd"
           clipRule="evenodd"
           d="M33.1843 35.6667C32.7423 36.4323 32.217 37.108 31.724 37.5451C31.2309 37.9823 30.8106 38.1451 30.5554 37.9978C30.3002 37.8504 30.2311 37.405 30.3632 36.7594C30.4953 36.1139 30.8178 35.3211 31.2598 34.5556C31.7019 33.79 32.2272 33.1143 32.7202 32.6771C33.2132 32.2399 33.6335 32.0771 33.8887 32.2244C34.1439 32.3718 34.2131 32.8172 34.081 33.4628C33.9489 34.1083 33.6263 34.9011 33.1843 35.6667Z"
-          fill="black"
+          className={BLACK}
           strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -521,7 +541,7 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
       <svg width="101" height="100" viewBox="0 0 101 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M50.4999 20C45.5888 20 41.611 23.9778 41.611 28.8889C41.611 30.8667 42.2554 32.6889 43.3443 34.1778C39.011 36.6667 36.0554 41.3111 36.0554 46.6667C36.0554 51.1778 38.1443 55.2 41.411 57.8444C34.7443 60.2 24.9443 70.1778 24.9443 87.7778H76.0554C76.0554 70.1778 66.2554 60.2 59.5888 57.8444C62.8554 55.2 64.9443 51.1778 64.9443 46.6667C64.9443 41.3111 61.9888 36.6667 57.6554 34.1778C58.7443 32.6889 59.3888 30.8667 59.3888 28.8889C59.3888 23.9778 55.411 20 50.4999 20Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="1.5"
           strokeLinecap="round"
         />
@@ -531,45 +551,45 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
       <svg width="101" height="100" viewBox="0 0 101 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M20.5001 57.7778C39.389 54.4445 67.1668 54.4445 80.5001 57.7778L86.0557 30L69.389 55.5556L68.7224 24.2222L57.1668 54.4445L50.5001 22.2222L43.8335 54.4445L32.2779 24.2222L31.6112 55.5556L14.9446 30L20.5001 57.7778Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
         <path
           d="M20.5 57.7778C20.5 62.2222 23.8333 62.2222 26.0556 66.6667C28.2778 70 28.2778 68.8889 27.1667 74.4445C23.8333 76.6667 24.9444 80 24.9444 80C21.6111 83.3334 24.9444 85.5556 24.9444 85.5556C39.3889 87.7778 61.6111 87.7778 76.0556 85.5556C76.0556 85.5556 79.3889 83.3334 76.0556 80C76.0556 80 77.1667 76.6667 73.8333 74.4445C72.7222 68.8889 72.7222 70 74.9444 66.6667C77.1667 62.2222 80.5 62.2222 80.5 57.7778C61.6111 54.4445 39.3889 54.4445 20.5 57.7778Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
-        <path d="M26.0557 66.6667C33.8334 64.4444 67.1668 64.4444 74.9446 66.6667" strokeWidth="1.5" strokeLinejoin="round" />
-        <path d="M27.1667 74.4445C40.5001 72.2222 60.5001 72.2222 73.8334 74.4445" strokeWidth="1.5" strokeLinejoin="round" />
+        <path d="M26.0557 66.6667C33.8334 64.4444 67.1668 64.4444 74.9446 66.6667" className="stroke" strokeWidth="1.5" strokeLinejoin="round" />
+        <path d="M27.1667 74.4445C40.5001 72.2222 60.5001 72.2222 73.8334 74.4445" className="stroke" strokeWidth="1.5" strokeLinejoin="round" />
         <path
           d="M13.8334 31.1111C16.288 31.1111 18.2778 29.1213 18.2778 26.6667C18.2778 24.2121 16.288 22.2222 13.8334 22.2222C11.3788 22.2222 9.38892 24.2121 9.38892 26.6667C9.38892 29.1213 11.3788 31.1111 13.8334 31.1111Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
         <path
           d="M31.6112 24.4445C34.0658 24.4445 36.0556 22.4546 36.0556 20C36.0556 17.5454 34.0658 15.5556 31.6112 15.5556C29.1566 15.5556 27.1667 17.5454 27.1667 20C27.1667 22.4546 29.1566 24.4445 31.6112 24.4445Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
         <path
           d="M50.5001 22.2222C52.9547 22.2222 54.9446 20.2324 54.9446 17.7778C54.9446 15.3232 52.9547 13.3333 50.5001 13.3333C48.0455 13.3333 46.0557 15.3232 46.0557 17.7778C46.0557 20.2324 48.0455 22.2222 50.5001 22.2222Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
         <path
           d="M69.389 24.4445C71.8436 24.4445 73.8335 22.4546 73.8335 20C73.8335 17.5454 71.8436 15.5556 69.389 15.5556C66.9344 15.5556 64.9446 17.5454 64.9446 20C64.9446 22.4546 66.9344 24.4445 69.389 24.4445Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
         <path
           d="M87.1666 31.1111C89.6212 31.1111 91.6111 29.1213 91.6111 26.6667C91.6111 24.2121 89.6212 22.2222 87.1666 22.2222C84.712 22.2222 82.7222 24.2121 82.7222 26.6667C82.7222 29.1213 84.712 31.1111 87.1666 31.1111Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
@@ -577,12 +597,19 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
     ),
     [PIECE.ROOK]: (
       <svg width="101" height="100" viewBox="0 0 101 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fillRule="evenodd" clipRule="evenodd" d="M20.5 87.3333H80.5V80.6667H20.5V87.3333Z" className={WHITE} strokeWidth="1.5" strokeLinejoin="round" />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M20.5 87.3333H80.5V80.6667H20.5V87.3333Z"
+          className={`${WHITE} stroke`}
+          strokeWidth="1.5"
+          strokeLinejoin="round"
+        />
         <path
           fillRule="evenodd"
           clipRule="evenodd"
           d="M27.1667 80.6667V71.7778H73.8334V80.6667H27.1667Z"
-          className={WHITE}
+          className={`${WHITE} stroke`}
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
@@ -595,15 +622,16 @@ export const PIECE_ICONS: Record<COLLECTIONS, Record<PIECE, ReactNode>> = {
         <path
           d="M24.9443 31.7778V20.6667H33.8332V25.1111H44.9443V20.6667H56.0554V25.1111H67.1666V20.6667H76.0554V31.7778"
           strokeWidth="1.5"
+          className="stroke"
           strokeLinejoin="round"
         />
         <path fillRule="evenodd" clipRule="evenodd" d="M76.0554 31.7778L69.3888 38.4444H31.611L24.9443 31.7778" className={WHITE} />
-        <path d="M76.0554 31.7778L69.3888 38.4444H31.611L24.9443 31.7778" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M76.0554 31.7778L69.3888 38.4444H31.611L24.9443 31.7778" className="stroke" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         <path fillRule="evenodd" clipRule="evenodd" d="M69.3889 38.4444V66.2222H31.6111V38.4444" className={WHITE} />
-        <path d="M69.3889 38.4444V66.2222H31.6111V38.4444" strokeWidth="1.5" />
+        <path d="M69.3889 38.4444V66.2222H31.6111V38.4444" strokeWidth="1.5" className="stroke" />
         <path fillRule="evenodd" clipRule="evenodd" d="M69.3889 66.2222L72.7223 71.7778H28.2778L31.6112 66.2222" className={WHITE} />
-        <path d="M69.3889 66.2222L72.7223 71.7778H28.2778L31.6112 66.2222" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M24.9443 31.7778H76.0554" strokeWidth="1.5" strokeLinecap="round" />
+        <path d="M69.3889 66.2222L72.7223 71.7778H28.2778L31.6112 66.2222" className="stroke" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M24.9443 31.7778H76.0554" strokeWidth="1.5" className="stroke" strokeLinecap="round" />
       </svg>
     ),
     [PIECE.EMPTY]: <></>
