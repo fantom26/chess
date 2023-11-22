@@ -37,17 +37,17 @@ export const generateMetadata = async ({ params: { locale } }: Props): Promise<M
     title: t("seo.title"),
     description: t("seo.description"),
     alternates: {
-      canonical: "https://chess-fantom26.vercel.app/uk"
+      canonical: "https://chess-fantom26.vercel.app"
     },
     openGraph: {
       type: "website",
-      url: "https://chess-fantom26.vercel.app/uk",
+      url: "https://chess-fantom26.vercel.app",
       title: t("seo.title"),
       description: t("seo.description"),
       images: [
         {
-          url: "/public/images/open-graph.avif",
-          alt: "Open Graph Image"
+          url: "/images/open-graph.avif",
+          alt: t("seo.openGraphAlt")
         }
       ]
     },
