@@ -10,6 +10,7 @@ import { Header } from "@components/shared";
 import { langs } from "@constants/shared/common";
 import i18nConfig from "@i18n.config";
 import initTranslations from "@i18n";
+import { Metadata } from "next";
 
 const quicksand = Quicksand({
   weight: ["400", "500", "600", "700"],
@@ -22,6 +23,39 @@ interface IRootLayout {
     locale: string;
   };
 }
+
+type Props = {
+  params: {
+    locale: string;
+  };
+};
+
+export const generateMetadata = async ({ params: { locale } }: Props): Promise<Metadata> => {
+  const { t } = await initTranslations(locale, ["common"]);
+
+  return {
+    title: t("seo.title"),
+    description: t("seo.description"),
+    alternates: {
+      canonical: "https://chess-fantom26.vercel.app/uk"
+    },
+    openGraph: {
+      type: "website",
+      url: "https://chess-fantom26.vercel.app/uk",
+      title: t("seo.title"),
+      description: t("seo.description"),
+      images: [
+        {
+          url: "/public/images/open-graph.avif",
+          alt: "Open Graph Image"
+        }
+      ]
+    },
+    icons: {
+      shortcut: "/favicon.ico"
+    }
+  };
+};
 
 export const generateStaticParams = () => i18nConfig.locales.map((locale) => ({ locale }));
 
