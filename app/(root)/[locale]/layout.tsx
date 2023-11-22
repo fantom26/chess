@@ -48,11 +48,11 @@ export const generateMetadata = async ({ params: { locale } }: Props): Promise<M
       siteName: "Chess app",
       images: [
         {
-          url: "/images/open-graph.avif",
+          url: "/images/open-graph.jpg",
           alt: t("seo.openGraphAlt"),
-          width: 1200,
-          height: 630,
-          type: "image/avif"
+          width: 640,
+          height: 388,
+          type: "image/jpg"
         }
       ]
     },
