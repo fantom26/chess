@@ -50,8 +50,8 @@ export const generateMetadata = async ({ params: { locale } }: Props): Promise<M
         {
           url: "/images/open-graph.jpg",
           alt: t("seo.openGraphAlt"),
-          width: 640,
-          height: 388,
+          width: 1200,
+          height: 630,
           type: "image/jpg"
         }
       ]
