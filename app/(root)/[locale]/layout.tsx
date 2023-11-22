@@ -44,10 +44,15 @@ export const generateMetadata = async ({ params: { locale } }: Props): Promise<M
       url: "https://chess-fantom26.vercel.app",
       title: t("seo.title"),
       description: t("seo.description"),
+      locale,
+      siteName: "Chess app",
       images: [
         {
           url: "/images/open-graph.avif",
-          alt: t("seo.openGraphAlt")
+          alt: t("seo.openGraphAlt"),
+          width: 1200,
+          height: 630,
+          type: "image/avif"
         }
       ]
     },
