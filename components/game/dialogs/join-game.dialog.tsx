@@ -39,7 +39,7 @@ export const JoinGameModal: FC = () => {
         <Form.Input name={FORM_FIELDS.NAME} placeholder={t("placeholders.playerName")} />
         <Form.Input name={FORM_FIELDS.GAME_ID} placeholder={t("placeholders.gameId")} />
         <div className="modal__actions">
-          <Button type="submit">{t("btn.play")}</Button>
+          <Button type="submit" aria-label="Play button">{t("btn.play")}</Button>
         </div>
       </Form>
     </Modal>

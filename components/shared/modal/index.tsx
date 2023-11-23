@@ -68,7 +68,7 @@ export const Modal: FC<ModalProps> = (props) => {
           <div className="modal-wrapper">
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
               <div className={bodyClassName ? `modal-content__body ${bodyClassName}` : "modal-content__body"}>{children}</div>
-              <button className="modal__close" aria-label="Закрыть модальное окно" onClick={onClose}></button>
+              <button className="modal__close" aria-label="Close modal window" onClick={onClose}></button>
             </div>
           </div>
         </div>

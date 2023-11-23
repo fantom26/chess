@@ -7,7 +7,7 @@ import { ICONS } from "@constants";
 import { ICONS_NAME } from "@utils/enums";
 
 export const Logo: FC = () => (
-  <Link href="/" className="logo">
+  <Link href="/" className="logo" aria-label="Link for returning to the main page">
     {ICONS[ICONS_NAME.LOGO]}
   </Link>
 );

@@ -11,6 +11,7 @@ import io from "socket.io-client";
 import { Button } from "@components/shared";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { IPlayer } from "@utils/types";
+
 const socket = io("localhost:5000");
 
 export const Game = () => {
@@ -38,7 +39,7 @@ export const Game = () => {
         play({ id: SOUNDS_EFFECTS.MOVE_SELF });
         dispatch({ type: ACTIONS.CLEAR_POSSIBLE_MOVES });
         setFen(boardFlipped ? reverseFen(chess.fen()) : chess.fen());
-        socket.emit("move", { gameID: gameID.current, from, to: pos });
+        socket.emit("move", { gameID: "20", from, to: pos });
       }
     } catch (e) {
       play({ id: SOUNDS_EFFECTS.ILLEGAL });
@@ -90,34 +91,55 @@ export const Game = () => {
     gameID.current = searchParams.get(QUERY_PARAMS.GAME_ID);
   }, [searchParams]);
 
-  useEffect(() => {
-    if (gameID.current && playerName.current) {
-      socket.emit("join", { name: playerName.current, gameID: gameID.current }, ({ error }: { error: boolean }) => {
-        if (error) {
-          router.push(`${locale}`);
-        }
-      });
-      socket.on("welcome", ({ message, opponent }: { message: string; opponent: IPlayer }) => {
-        dispatch({ type: ACTIONS.SET_MESSAGE, message });
-        dispatch({ type: ACTIONS.SET_OPPONENT, opponent });
-      });
-      socket.on("opponentJoin", ({ message, opponent }: { message: string; opponent: IPlayer }) => {
-        dispatch({ type: ACTIONS.SET_MESSAGE, message });
-        dispatch({ type: ACTIONS.SET_OPPONENT, opponent });
-      });
+  // useEffect(() => {
+  //   if (gameID.current && playerName.current) {
+  //     socket.emit("join", { name: playerName.current, gameID: gameID.current }, ({ error, color }: { error: boolean; color: string }) => {
+  //       if (error) {
+  //         router.push(`${locale}`);
+  //       }
+  //       console.log("color", color);
+  //     });
+  //     socket.on("welcome", ({ message, opponent }: { message: string; opponent: IPlayer }) => {
+  //       dispatch({ type: ACTIONS.SET_MESSAGE, message });
+  //       dispatch({ type: ACTIONS.SET_OPPONENT, opponent });
+  //     });
+  //     socket.on("opponentJoin", ({ message, opponent }: { message: string; opponent: IPlayer }) => {
+  //       dispatch({ type: ACTIONS.SET_MESSAGE, message });
+  //       dispatch({ type: ACTIONS.SET_OPPONENT, opponent });
+  //     });
 
-      socket.on("opponentMove", ({ from, to }) => {
-        chess.move({ from, to });
-        setFen(chess.fen());
-        dispatch({ type: ACTIONS.SET_MESSAGE, message: "Your turn" });
-        dispatch({ type: ACTIONS.SET_OPPONENT_MOVES, moves: [from, to] });
-      });
-      socket.on("message", ({ message }) => {
-        dispatch({ type: ACTIONS.SET_MESSAGE, message });
-      });
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [chess, router, dispatch]);
+  //     socket.on("opponentMove", ({ from, to }) => {
+  //       chess.move({ from, to });
+  //       setFen(chess.fen());
+  //       dispatch({ type: ACTIONS.SET_MESSAGE, message: "Your turn" });
+  //       dispatch({ type: ACTIONS.SET_OPPONENT_MOVES, moves: [from, to] });
+  //     });
+  //     socket.on("message", ({ message }) => {
+  //       dispatch({ type: ACTIONS.SET_MESSAGE, message });
+  //     });
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [chess, router, dispatch]);
+
+  useEffect(() => {
+    socket.emit("join", { name: "Frank", gameID: "20" }, ({ error, color }) => {
+      console.log({ color });
+    });
+    socket.on("welcome", ({ message, opponent }) => {
+      console.log({ message, opponent });
+    });
+    socket.on("opponentJoin", ({ message, opponent }) => {
+      console.log({ message, opponent });
+    });
+
+    socket.on("opponentMove", ({ from, to }) => {
+      chess.move({ from, to });
+      setFen(chess.fen());
+    });
+    socket.on("message", ({ message }) => {
+      console.log({ message });
+    });
+  }, [chess]);
 
   return (
     <>
@@ -125,10 +147,10 @@ export const Game = () => {
         <div className="game-wrapper">
           <Board flipped={boardFlipped} chess={chess} cells={board} makeMove={makeMove} setFromPos={setFromPos} />
           <div className="game-btns">
-            <Button className="game-icon" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).open}>
+            <Button className="game-icon" aria-label="Settings button" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).open}>
               {ICONS[ICONS_NAME.SETTINGS]}
             </Button>
-            <Button className="game-icon" onClick={flipBoard}>
+            <Button className="game-icon" aria-label="Reverse board button" onClick={flipBoard}>
               {ICONS[ICONS_NAME.REVERSE]}
             </Button>
           </div>

@@ -30,10 +30,18 @@ export const SideBar = () => {
         {t("pages.home.playVS")}
       </Typography>
       <div className="sidebar__btn">
-        <Button onClick={generateModalHandlers(MODALS.JOIN_GAME).open}>{t("btn.play")}</Button>
+        <Button aria-label="Play button" onClick={generateModalHandlers(MODALS.JOIN_GAME).open}>
+          {t("btn.play")}
+        </Button>
       </div>
       <div className="sidebar__btn" onClick={generateGameId}>
-        {gameID ? <ClipboardCopy text={gameID as string} /> : <Button variant={ButtonVariant.outlined}>{t("btn.invite-link")}</Button>}
+        {gameID ? (
+          <ClipboardCopy text={gameID as string} />
+        ) : (
+          <Button aria-label="Generate link for game button" variant={ButtonVariant.outlined}>
+            {t("btn.invite-link")}
+          </Button>
+        )}
       </div>
     </section>
   );

@@ -38,7 +38,7 @@ export const ClipboardCopy: FC<ClipboardCopyProps> = ({ text }) => {
   return (
     <div className="clipboard">
       <Input type="text" name="game-invite-link" value={text} readOnly />
-      <button className="clipboard__btn" onClick={(e) => handleCopyClick(e)}>
+      <button aria-label="Copy button" className="clipboard__btn" onClick={(e) => handleCopyClick(e)}>
         <span className="clipboard__icon">{isCopied ? ICONS[ICONS_NAME.COMPLETE] : ICONS[ICONS_NAME.COPY]}</span>
       </button>
     </div>

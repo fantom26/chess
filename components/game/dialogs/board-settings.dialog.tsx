@@ -55,10 +55,10 @@ export const ChessSettingsModal: FC = () => {
           <Form.Switch name={FORM_FIELDS.HIGHLIGHT_MOVE} />
         </Flex>
         <div className="modal__actions">
-          <Button variant={ButtonVariant.outlined} type="button" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).close}>
+          <Button variant={ButtonVariant.outlined} aria-label="Cancel button" type="button" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).close}>
             {t("btn.cancel")}
           </Button>
-          <Button variant={ButtonVariant.contained} type="submit">
+          <Button variant={ButtonVariant.contained} aria-label="Save button" type="submit">
             {t("btn.save")}
           </Button>
         </div>
