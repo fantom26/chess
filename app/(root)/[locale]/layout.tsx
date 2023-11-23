@@ -77,11 +77,13 @@ export default async function RootLayout({ children, params: { locale } }: IRoot
             <main>{children}</main>
           </div>
           <ToastContainer
-            position="bottom-right"
+            position="top-right"
             autoClose={5000}
+            limit={4}
             hideProgressBar={false}
             newestOnTop
             closeOnClick
+            role="alert"
             rtl={false}
             transition={Slide}
             pauseOnFocusLoss
