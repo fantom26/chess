@@ -6,23 +6,23 @@ interface IToastTypeProps<TData = unknown> {
 }
 
 export class ToastService {
-  static success({ content, options }: IToastTypeProps) {
+  static success({ content, options = {} }: IToastTypeProps) {
     return toast.success(content, options);
   }
 
-  static info({ content, options }: IToastTypeProps) {
+  static info({ content, options = {} }: IToastTypeProps) {
     return toast.info(content, options);
   }
 
-  static error({ content, options }: IToastTypeProps) {
+  static error({ content, options = {} }: IToastTypeProps) {
     return toast.error(content, options);
   }
 
-  static warning({ content, options }: IToastTypeProps) {
+  static warning({ content, options = {} }: IToastTypeProps) {
     return toast.warning(content, options);
   }
 
-  static loading({ content, options }: IToastTypeProps) {
+  static loading({ content, options = {} }: IToastTypeProps) {
     return toast.loading(content, options);
   }
 

@@ -12,9 +12,7 @@ export interface IStore {
   gameOver: boolean;
   status: GAME_STATUS;
   player: IPlayer | null;
-  playerColor: Color;
   opponent: IPlayer | null;
-  message: string;
   opponentMoves: Move[];
 
   dispatch: Dispatch<AppActions>;
@@ -27,9 +25,7 @@ const initialState: IStore = {
   gameOver: false,
   status: GAME_STATUS.CONTINUE,
   player: null,
-  playerColor: "w",
   opponent: null,
-  message: "",
   opponentMoves: [],
 
   dispatch: () => {}

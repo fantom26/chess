@@ -11,6 +11,7 @@ import io from "socket.io-client";
 import { Button } from "@components/shared";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { IPlayer } from "@utils/types";
+import { ToastService } from "@services";
 
 const socket = io("localhost:5000");
 
@@ -39,7 +40,7 @@ export const Game = () => {
         play({ id: SOUNDS_EFFECTS.MOVE_SELF });
         dispatch({ type: ACTIONS.CLEAR_POSSIBLE_MOVES });
         setFen(boardFlipped ? reverseFen(chess.fen()) : chess.fen());
-        socket.emit("move", { gameID: "20", from, to: pos });
+        socket.emit("move", { gameID: gameID.current, from, to: pos });
       }
     } catch (e) {
       play({ id: SOUNDS_EFFECTS.ILLEGAL });
@@ -91,55 +92,35 @@ export const Game = () => {
     gameID.current = searchParams.get(QUERY_PARAMS.GAME_ID);
   }, [searchParams]);
 
-  // useEffect(() => {
-  //   if (gameID.current && playerName.current) {
-  //     socket.emit("join", { name: playerName.current, gameID: gameID.current }, ({ error, color }: { error: boolean; color: string }) => {
-  //       if (error) {
-  //         router.push(`${locale}`);
-  //       }
-  //       console.log("color", color);
-  //     });
-  //     socket.on("welcome", ({ message, opponent }: { message: string; opponent: IPlayer }) => {
-  //       dispatch({ type: ACTIONS.SET_MESSAGE, message });
-  //       dispatch({ type: ACTIONS.SET_OPPONENT, opponent });
-  //     });
-  //     socket.on("opponentJoin", ({ message, opponent }: { message: string; opponent: IPlayer }) => {
-  //       dispatch({ type: ACTIONS.SET_MESSAGE, message });
-  //       dispatch({ type: ACTIONS.SET_OPPONENT, opponent });
-  //     });
-
-  //     socket.on("opponentMove", ({ from, to }) => {
-  //       chess.move({ from, to });
-  //       setFen(chess.fen());
-  //       dispatch({ type: ACTIONS.SET_MESSAGE, message: "Your turn" });
-  //       dispatch({ type: ACTIONS.SET_OPPONENT_MOVES, moves: [from, to] });
-  //     });
-  //     socket.on("message", ({ message }) => {
-  //       dispatch({ type: ACTIONS.SET_MESSAGE, message });
-  //     });
-  //   }
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [chess, router, dispatch]);
-
   useEffect(() => {
-    socket.emit("join", { name: "Frank", gameID: "20" }, ({ error, color }) => {
-      console.log({ color });
-    });
-    socket.on("welcome", ({ message, opponent }) => {
-      console.log({ message, opponent });
-    });
-    socket.on("opponentJoin", ({ message, opponent }) => {
-      console.log({ message, opponent });
-    });
+    if (gameID.current && playerName.current) {
+      socket.emit("join", { name: playerName.current, gameID: gameID.current }, ({ error, player }: { error: boolean; player: IPlayer }) => {
+        if (error) {
+          router.push(`${locale}`);
+        }
+        dispatch({ type: ACTIONS.SET_PLAYER, player });
+      });
+      socket.on("welcome", ({ message, opponent }: { message: string; opponent: IPlayer }) => {
+        ToastService.info({ content: message });
+        dispatch({ type: ACTIONS.SET_OPPONENT, opponent });
+      });
+      socket.on("opponentJoin", ({ message, opponent }: { message: string; opponent: IPlayer }) => {
+        ToastService.info({ content: message });
+        dispatch({ type: ACTIONS.SET_OPPONENT, opponent });
+      });
 
-    socket.on("opponentMove", ({ from, to }) => {
-      chess.move({ from, to });
-      setFen(chess.fen());
-    });
-    socket.on("message", ({ message }) => {
-      console.log({ message });
-    });
-  }, [chess]);
+      socket.on("opponentMove", ({ from, to }) => {
+        chess.move({ from, to });
+        setFen(chess.fen());
+        ToastService.info({ content: "Your turn" });
+        dispatch({ type: ACTIONS.SET_OPPONENT_MOVES, moves: [from, to] });
+      });
+      socket.on("message", ({ message }) => {
+        ToastService.info({ content: message });
+      });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chess, searchParams, dispatch]);
 
   return (
     <>

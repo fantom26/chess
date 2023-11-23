@@ -7,6 +7,10 @@
     border-radius: var(--radius);
     max-width: 4rem;
     background-color: var(--clr-white-100);
+
+    &--b {
+      background-color: var(--clr-black-800);
+    }
   }
 
   &__info {

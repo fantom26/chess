@@ -1,11 +1,18 @@
 @import "./settings/index.scss";
 @import "./mixins/index.scss";
 @import "./helper.scss";
+@import "./libs/index.scss";
 
 $containerWidth: 120rem;
 
 body {
-  @include font-source("'Quicksand', sans-serif", var(--the-smallest-size), var(--clr-black-900), var(--normal-weight), var(--small-line-height));
+  @include font-source(
+    "'Quicksand', sans-serif",
+    var(--the-smallest-size),
+    var(--clr-black-900),
+    var(--normal-weight),
+    var(--small-line-height)
+  );
   background-color: #302e2b;
 }
 
@@ -32,7 +39,6 @@ main {
   max-width: var(--container-width);
 }
 
-@import "./libs/index.scss";
 @import "./components/form/index.scss";
 @import "./components/pages/index.scss";
 @import "./components/ui/index.scss";
