@@ -28,7 +28,7 @@ export const Piece: FC<PieceProps> = ({ cell, setFromPos, figureColor }) => {
 
   const handleDragEnd = () => {
     if (element.current) {
-      element.current.style.display = "block";
+      element.current.style.display = "flex";
     }
   };
 

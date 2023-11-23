@@ -17,11 +17,12 @@ interface TileProps {
 export const Tile: FC<TileProps> = (props) => {
   const { index, cell, flipped, makeMove, setFromPos, chess } = props;
   const squareLight = chess.squareColor(cell.pos);
-  const { possibleMoves, check, turn } = useGameContext();
+  const { possibleMoves, check, turn, opponentMoves, opponent } = useGameContext();
   const { chessStore } = useChessContext();
   const isPossibleMove = possibleMoves.includes(cell.pos);
   const figureColor = cell.piece === cell.piece.toUpperCase() ? BLACK : WHITE;
   const [letter, number] = chessStore.squares[index].split("");
+  const lastOpponentMove = opponentMoves.at(-1);
 
   const handleDrop = () => {
     makeMove(cell.pos);
@@ -45,6 +46,10 @@ export const Tile: FC<TileProps> = (props) => {
       defaultClassName += " possible-move";
     }
 
+    if ((lastOpponentMove?.from === cell.pos || lastOpponentMove?.to === cell.pos) && turn !== opponent?.color) {
+      defaultClassName += " last-move";
+    }
+
     if (inCheck()) {
       defaultClassName += " check";
     }
@@ -59,18 +64,10 @@ export const Tile: FC<TileProps> = (props) => {
     </>
   );
 
-  if (cell.piece) {
-    return (
-      <li className={generateClassNames()} key={cell.pos} onDrop={handleDrop} onDragOver={(e) => e.preventDefault()}>
-        <Details />
-        <Piece figureColor={figureColor} cell={cell} setFromPos={setFromPos} />
-      </li>
-    );
-  }
-
   return (
     <li className={generateClassNames()} key={cell.pos} onDrop={handleDrop} onDragOver={(e) => e.preventDefault()}>
       <Details />
+      {cell.piece && <Piece figureColor={figureColor} cell={cell} setFromPos={setFromPos} />}
     </li>
   );
 };

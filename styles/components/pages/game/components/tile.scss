@@ -30,6 +30,10 @@ $transition-possible-move: 0.15s;
     }
   }
 
+  &.last-move {
+    background-color: yellow;
+  }
+
   &-number,
   &-letter {
     position: absolute;

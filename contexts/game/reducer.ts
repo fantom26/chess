@@ -16,7 +16,7 @@ type GAME_OVER = { type: ACTIONS.GAME_OVER; status: GAME_STATUS; player: Color }
 
 type SET_PLAYER = { type: ACTIONS.SET_PLAYER; player: IPlayer };
 type SET_OPPONENT = { type: ACTIONS.SET_OPPONENT; opponent: IPlayer };
-type SET_OPPONENT_MOVES = { type: ACTIONS.SET_OPPONENT_MOVES; moves: Move[] };
+type SET_OPPONENT_MOVES = { type: ACTIONS.SET_OPPONENT_MOVES; move: Move };
 type CLEAR_OPPONENT_MOVES = { type: ACTIONS.CLEAR_OPPONENT_MOVES };
 
 export type AppActions =
@@ -57,7 +57,7 @@ export const GameReducer = (state: IStore, action: AppActions) => {
     case ACTIONS.SET_OPPONENT:
       return { ...state, opponent: action.opponent };
     case ACTIONS.SET_OPPONENT_MOVES:
-      return { ...state, opponentMoves: action.moves };
+      return { ...state, opponentMoves: [...state.opponentMoves, action.move] };
     case ACTIONS.CLEAR_OPPONENT_MOVES:
       return { ...state, opponentMoves: [] };
     default:

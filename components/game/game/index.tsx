@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { Chess, DEFAULT_POSITION, Square } from "chess.js";
+import { Chess, DEFAULT_POSITION, Move, Square } from "chess.js";
 import { createBoard, getGameOverState, reverseFen } from "../helpers";
 import { Board, SideBar } from "./components";
 import { useChessContext, useChessSounds, useGameContext, useModalContext } from "@hooks";
@@ -30,6 +30,7 @@ export const Game = () => {
   const { setChessStore } = useChessContext();
   const { generateModalHandlers } = useModalContext();
   const searchParams = useSearchParams();
+  const hasGameId = searchParams.has(QUERY_PARAMS.GAME_ID);
 
   const makeMove = (pos: string) => {
     try {
@@ -113,7 +114,7 @@ export const Game = () => {
         chess.move({ from, to });
         setFen(chess.fen());
         ToastService.info({ content: "Your turn" });
-        dispatch({ type: ACTIONS.SET_OPPONENT_MOVES, moves: [from, to] });
+        dispatch({ type: ACTIONS.SET_OPPONENT_MOVES, move: { from, to } as Move });
       });
       socket.on("message", ({ message }) => {
         ToastService.info({ content: message });
@@ -136,7 +137,7 @@ export const Game = () => {
             </Button>
           </div>
         </div>
-        <SideBar />
+        {!hasGameId && <SideBar />}
       </div>
       <GameOverModal />
       <ChessSettingsModal />
