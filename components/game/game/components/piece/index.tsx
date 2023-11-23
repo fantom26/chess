@@ -1,5 +1,5 @@
 import { PIECE_ICONS } from "@constants";
-import { useChessContext } from "@hooks";
+import { useChessContext, useGameContext } from "@hooks";
 import { COLLECTIONS } from "@utils/enums";
 import { ICell, TFIgure } from "@utils/types";
 import { Color, Square } from "chess.js";
@@ -15,6 +15,7 @@ export const Piece: FC<PieceProps> = ({ cell, setFromPos, figureColor }) => {
   const { chessStore } = useChessContext();
   const element = useRef<HTMLDivElement | null>(null);
   const figure = cell.piece.toLowerCase() as TFIgure;
+  const { player } = useGameContext();
 
   const handleDragStart = () => {
     setFromPos(cell.pos);
@@ -36,7 +37,7 @@ export const Piece: FC<PieceProps> = ({ cell, setFromPos, figureColor }) => {
       className="piece"
       data-piece={cell.piece}
       data-color={figureColor}
-      draggable={true}
+      draggable={player?.color !== figureColor}
       ref={element}
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
