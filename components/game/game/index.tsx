@@ -10,7 +10,7 @@ import { ICONS } from "@constants";
 import io from "socket.io-client";
 import { Button } from "@components/shared";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
-import { IPlayer } from "@utils/types";
+import { IPlayer, TFIgure } from "@utils/types";
 import { ToastService } from "@services";
 
 const socket = io("localhost:5000");
@@ -31,9 +31,10 @@ export const Game = () => {
   const { generateModalHandlers } = useModalContext();
   const searchParams = useSearchParams();
 
-  const makeMove = (pos: string) => {
+  const makeMove = (pos: string, piece: TFIgure) => {
     try {
       if (fromPos.current) {
+        console.log("piece", piece);
         const from = fromPos.current;
         const to = pos;
         chess.move({ from, to });

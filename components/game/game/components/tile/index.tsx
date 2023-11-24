@@ -1,31 +1,29 @@
-import { ICell } from "@utils/types";
+import { ICell, TFIgure } from "@utils/types";
 import { FC } from "react";
 import { Piece } from "../piece";
 import { BLACK, KING, Square, WHITE, Chess } from "chess.js";
-import { useChessContext, useGameContext } from "@hooks";
-import { LETTERS } from "@utils/enums";
+import { useGameContext } from "@hooks";
+import { Details } from "./details";
 
-interface TileProps {
+export interface TileProps {
   cell: ICell;
   index: number;
-  chess: Chess;
   flipped: boolean;
-  makeMove: (pos: string) => void;
+  chess: Chess;
+  makeMove: (pos: string, piece: TFIgure) => void;
   setFromPos: (pos: Square) => void;
 }
 
-export const Tile: FC<TileProps> = (props) => {
-  const { index, cell, flipped, makeMove, setFromPos, chess } = props;
+export const Tile: FC<TileProps> = ({ cell, makeMove, setFromPos, chess, ...rest }) => {
   const squareLight = chess.squareColor(cell.pos);
   const { possibleMoves, check, turn, opponentMoves, opponent } = useGameContext();
-  const { chessStore } = useChessContext();
   const isPossibleMove = possibleMoves.includes(cell.pos);
   const figureColor = cell.piece === cell.piece.toUpperCase() ? BLACK : WHITE;
-  const [letter, number] = chessStore.squares[index].split("");
   const lastOpponentMove = opponentMoves.at(-1);
 
-  const handleDrop = () => {
-    makeMove(cell.pos);
+  const handleDrop = (piece: TFIgure) => {
+    console.log("piece", piece);
+    makeMove(cell.pos, piece);
   };
 
   const inCheck = () => {
@@ -57,16 +55,9 @@ export const Tile: FC<TileProps> = (props) => {
     return defaultClassName;
   };
 
-  const Details = () => (
-    <>
-      {+number === (flipped ? 8 : 1) && <span className="tile-letter">{letter}</span>}
-      {letter === (flipped ? LETTERS.H : LETTERS.A) && <span className="tile-number">{number}</span>}
-    </>
-  );
-
   return (
-    <li className={generateClassNames()} key={cell.pos} onDrop={handleDrop} onDragOver={(e) => e.preventDefault()}>
-      <Details />
+    <li className={generateClassNames()} key={cell.pos} onDrop={() => handleDrop(cell.piece)} onDragOver={(e) => e.preventDefault()}>
+      <Details {...rest} />
       {cell.piece && <Piece figureColor={figureColor} cell={cell} setFromPos={setFromPos} />}
     </li>
   );

@@ -1,4 +1,4 @@
-import { ICell } from "@utils/types";
+import { ICell, TFIgure } from "@utils/types";
 import { FC } from "react";
 import { Tile } from "../tile";
 import { useChessContext, useGameContext, useGetPlayerByColor } from "@hooks";
@@ -11,7 +11,7 @@ interface BoardProps {
   cells: ICell[];
   chess: Chess;
   flipped: boolean;
-  makeMove: (pos: string) => void;
+  makeMove: (pos: string, piece: TFIgure) => void;
   setFromPos: (pos: Square) => void;
 }
 
