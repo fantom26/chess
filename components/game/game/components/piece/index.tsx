@@ -37,7 +37,7 @@ export const Piece: FC<PieceProps> = ({ cell, setFromPos, figureColor }) => {
       className="piece"
       data-piece={cell.piece}
       data-color={figureColor}
-      draggable={player?.color !== figureColor}
+      draggable={player?.color === figureColor}
       ref={element}
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}

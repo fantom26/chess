@@ -2,10 +2,14 @@ import { Typography } from "@components/shared";
 import { useGameContext } from "@hooks";
 import { TagVariant } from "@utils/enums";
 import { useTranslation } from "react-i18next";
+import { SideBarProps } from ".";
+import { FC } from "react";
 
-export const GameRun = () => {
+export const GameRun: FC<SideBarProps> = ({ chess }) => {
   const { t } = useTranslation();
   const { turn } = useGameContext();
+
+  console.log("chess", chess);
 
   return (
     <div className={`sidebar-turn ${turn}`}>

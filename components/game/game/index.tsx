@@ -135,7 +135,7 @@ export const Game = () => {
             </Button>
           </div>
         </div>
-        <SideBar />
+        <SideBar chess={chess} />
       </div>
       <GameOverModal />
       <ChessSettingsModal />

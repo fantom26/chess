@@ -1,5 +1,5 @@
 import { BLACK, WHITE } from "chess.js";
-import { useGameContext } from "./use-game-context";
+import { useGameContext } from "./use-contextes";
 
 export const useGetPlayerByColor = () => {
   const { opponent, player } = useGameContext();
