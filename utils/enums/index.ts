@@ -11,3 +11,4 @@ export * from "./btn-variant.enum";
 export * from "./typography-tag.enum";
 export * from "./sound-effects.enum";
 export * from "./query-params.enum";
+export * from "./castling-variant.enum";

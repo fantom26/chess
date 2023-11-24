@@ -7,12 +7,12 @@ import { useSearchParams } from "next/navigation";
 import { QUERY_PARAMS } from "@utils/enums";
 import { Player } from "../player";
 
-interface BoardProps {
+export interface BoardProps {
   cells: ICell[];
   chess: Chess;
   flipped: boolean;
-  makeMove: (pos: string, piece: TFIgure) => void;
-  setFromPos: (pos: Square) => void;
+  makeMove: (pos: string) => void;
+  setFromPos: (pos: Square, piece: TFIgure) => void;
 }
 
 export const Board: FC<BoardProps> = (props) => {

@@ -8,7 +8,7 @@ import { FC, useRef } from "react";
 interface PieceProps {
   figureColor: Color;
   cell: ICell;
-  setFromPos: (pos: Square) => void;
+  setFromPos: (pos: Square, piece: TFIgure) => void;
 }
 
 export const Piece: FC<PieceProps> = ({ cell, setFromPos, figureColor }) => {
@@ -18,7 +18,7 @@ export const Piece: FC<PieceProps> = ({ cell, setFromPos, figureColor }) => {
   const { player } = useGameContext();
 
   const handleDragStart = () => {
-    setFromPos(cell.pos);
+    setFromPos(cell.pos, cell.piece);
     setTimeout(() => {
       if (element.current) {
         element.current.style.display = "none";

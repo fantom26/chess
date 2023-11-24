@@ -1,7 +1,7 @@
 "use client";
 import { Dispatch, ReactNode, createContext, useReducer } from "react";
 import { AppActions, GameReducer } from "./reducer";
-import { Color, Move, WHITE } from "chess.js";
+import { Color, Move, SQUARES, Square, WHITE } from "chess.js";
 import { GAME_STATUS } from "@utils/enums";
 import { IPlayer } from "@utils/types";
 
@@ -14,7 +14,7 @@ export interface IStore {
   player: IPlayer | null;
   opponent: IPlayer | null;
   opponentMoves: Move[];
-
+  squares: Square[];
   dispatch: Dispatch<AppActions>;
 }
 
@@ -27,6 +27,7 @@ const initialState: IStore = {
   player: null,
   opponent: null,
   opponentMoves: [],
+  squares: SQUARES,
 
   dispatch: () => {}
 };

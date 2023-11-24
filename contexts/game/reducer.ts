@@ -3,12 +3,6 @@ import { IStore } from ".";
 import { Color, Move } from "chess.js";
 import { IPlayer } from "@utils/types";
 
-const getPositions = (moves: string[]) =>
-  moves.map((move) => {
-    const n = move.length;
-    return move.substring(n - 2);
-  });
-
 type SET_POSSIBLE_MOVES = { type: ACTIONS.SET_POSSIBLE_MOVES; moves: string[] };
 type CLEAR_POSSIBLE_MOVES = { type: ACTIONS.CLEAR_POSSIBLE_MOVES };
 type SET_TURN = { type: ACTIONS.SET_TURN; check: boolean; player: Color };
@@ -18,6 +12,7 @@ type SET_PLAYER = { type: ACTIONS.SET_PLAYER; player: IPlayer };
 type SET_OPPONENT = { type: ACTIONS.SET_OPPONENT; opponent: IPlayer };
 type SET_OPPONENT_MOVES = { type: ACTIONS.SET_OPPONENT_MOVES; move: Move };
 type CLEAR_OPPONENT_MOVES = { type: ACTIONS.CLEAR_OPPONENT_MOVES };
+type UPDATE_SQUARES_COORDS = { type: ACTIONS.UPDATE_SQUARES_COORDS };
 
 export type AppActions =
   | SET_POSSIBLE_MOVES
@@ -27,7 +22,8 @@ export type AppActions =
   | SET_PLAYER
   | SET_OPPONENT
   | SET_OPPONENT_MOVES
-  | CLEAR_OPPONENT_MOVES;
+  | CLEAR_OPPONENT_MOVES
+  | UPDATE_SQUARES_COORDS;
 
 export const GameReducer = (state: IStore, action: AppActions) => {
   const { type } = action;
@@ -36,7 +32,7 @@ export const GameReducer = (state: IStore, action: AppActions) => {
     case ACTIONS.SET_POSSIBLE_MOVES:
       return {
         ...state,
-        possibleMoves: getPositions(action.moves)
+        possibleMoves: action.moves
       };
     case ACTIONS.CLEAR_POSSIBLE_MOVES:
       return {
@@ -52,6 +48,8 @@ export const GameReducer = (state: IStore, action: AppActions) => {
         status: action.status,
         turn: action.player
       };
+    case ACTIONS.UPDATE_SQUARES_COORDS:
+      return { ...state, squares: state.squares.reverse() };
     case ACTIONS.SET_PLAYER:
       return { ...state, player: action.player };
     case ACTIONS.SET_OPPONENT:

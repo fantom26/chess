@@ -33,7 +33,7 @@ export const createBoard = (fenString: string, boardFlipped: boolean) => {
 
   const cells: Square[] = []; //[a1, b1, c1..., h8]
 
-  if (boardFlipped) {
+  if (!boardFlipped) {
     const reversedColumns = [...columns].reverse();
     for (let i = 0; i < rows.length; i++) {
       const row = rows[i];

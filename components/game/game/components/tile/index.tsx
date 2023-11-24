@@ -1,35 +1,30 @@
-import { ICell, TFIgure } from "@utils/types";
+import { ICell } from "@utils/types";
 import { FC } from "react";
 import { Piece } from "../piece";
-import { BLACK, KING, Square, WHITE, Chess } from "chess.js";
+import { Chess } from "chess.js";
 import { useGameContext } from "@hooks";
 import { Details } from "./details";
+import { BoardProps } from "../board";
+import { getPieceColor, isKing } from "@components/game/helpers";
 
-export interface TileProps {
+export type TileProps = Pick<BoardProps, "flipped" | "makeMove" | "setFromPos"> & {
+  chess: Chess;
   cell: ICell;
   index: number;
-  flipped: boolean;
-  chess: Chess;
-  makeMove: (pos: string, piece: TFIgure) => void;
-  setFromPos: (pos: Square) => void;
-}
+};
 
 export const Tile: FC<TileProps> = ({ cell, makeMove, setFromPos, chess, ...rest }) => {
   const squareLight = chess.squareColor(cell.pos);
   const { possibleMoves, check, turn, opponentMoves, opponent } = useGameContext();
   const isPossibleMove = possibleMoves.includes(cell.pos);
-  const figureColor = cell.piece === cell.piece.toUpperCase() ? BLACK : WHITE;
+  const figureColor = getPieceColor(cell.piece);
   const lastOpponentMove = opponentMoves.at(-1);
 
-  const handleDrop = (piece: TFIgure) => {
-    console.log("piece", piece);
-    makeMove(cell.pos, piece);
+  const handleDrop = () => {
+    makeMove(cell.pos);
   };
 
-  const inCheck = () => {
-    const king = cell.piece.toLowerCase() === KING;
-    return turn !== figureColor && king && check;
-  };
+  const inCheck = () => turn !== figureColor && isKing(cell.piece) && check;
 
   const generateClassNames = () => {
     let defaultClassName = "tile";
@@ -56,7 +51,8 @@ export const Tile: FC<TileProps> = ({ cell, makeMove, setFromPos, chess, ...rest
   };
 
   return (
-    <li className={generateClassNames()} key={cell.pos} onDrop={() => handleDrop(cell.piece)} onDragOver={(e) => e.preventDefault()}>
+    <li className={generateClassNames()} key={cell.pos} onDrop={handleDrop} onDragOver={(e) => e.preventDefault()}>
+      {/* {cell.pos} */}
       <Details {...rest} />
       {cell.piece && <Piece figureColor={figureColor} cell={cell} setFromPos={setFromPos} />}
     </li>

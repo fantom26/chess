@@ -1,9 +1,9 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { Chess, DEFAULT_POSITION, Move, Square } from "chess.js";
-import { createBoard, getGameOverState, reverseFen } from "../helpers";
+import { createBoard, getGameOverState, getPositions, reverseFen } from "../helpers";
 import { Board, SideBar } from "./components";
-import { useChessContext, useChessSounds, useGameContext, useModalContext } from "@hooks";
+import { useChessSounds, useGameContext, useModalContext } from "@hooks";
 import { ACTIONS, GAME_STATUS, ICONS_NAME, MODALS, QUERY_PARAMS, SOUNDS_EFFECTS } from "@utils/enums";
 import { ChessSettingsModal, GameOverModal, JoinGameModal } from "../dialogs";
 import { ICONS } from "@constants";
@@ -19,7 +19,7 @@ export const Game = () => {
   const { play } = useChessSounds();
   const [fen, setFen] = useState(DEFAULT_POSITION);
   const { current: chess } = useRef(new Chess(fen));
-  const [boardFlipped, setBoardFlipped] = useState(false);
+  const [boardFlipped, setBoardFlipped] = useState(true);
   const [board, setBoard] = useState(createBoard(fen, false));
   const playerName = useRef<string | null>(null);
   const gameID = useRef<string | null>(null);
@@ -27,20 +27,18 @@ export const Game = () => {
   const router = useRouter();
   const { locale } = useParams();
   const { dispatch } = useGameContext();
-  const { setChessStore } = useChessContext();
   const { generateModalHandlers } = useModalContext();
   const searchParams = useSearchParams();
 
-  const makeMove = (pos: string, piece: TFIgure) => {
+  const makeMove = (pos: string) => {
     try {
       if (fromPos.current) {
-        console.log("piece", piece);
         const from = fromPos.current;
         const to = pos;
         chess.move({ from, to });
         play({ id: SOUNDS_EFFECTS.MOVE_SELF });
         dispatch({ type: ACTIONS.CLEAR_POSSIBLE_MOVES });
-        setFen(boardFlipped ? reverseFen(chess.fen()) : chess.fen());
+        setFen(boardFlipped ? chess.fen() : reverseFen(chess.fen()));
         socket.emit("move", { gameID: gameID.current, from, to: pos });
       }
     } catch (e) {
@@ -48,18 +46,18 @@ export const Game = () => {
     }
   };
 
-  const setFromPos = (pos: Square) => {
+  const setFromPos = (pos: Square, piece: TFIgure) => {
     fromPos.current = pos;
 
     dispatch({
       type: ACTIONS.SET_POSSIBLE_MOVES,
-      moves: chess.moves({ square: pos })
+      moves: getPositions(chess.moves({ square: pos }), piece)
     });
   };
 
   const flipBoard = () => {
     setFen(reverseFen(fen));
-    setChessStore((prev) => ({ ...prev, squares: prev.squares.reverse() }));
+    dispatch({ type: ACTIONS.UPDATE_SQUARES_COORDS });
     setBoardFlipped((prev) => !prev);
   };
 
@@ -127,7 +125,7 @@ export const Game = () => {
     <>
       <div className="home">
         <div className="game-wrapper">
-          <Board flipped={boardFlipped} chess={chess} cells={board} makeMove={makeMove} setFromPos={setFromPos} />
+          <Board flipped={!boardFlipped} chess={chess} cells={board} makeMove={makeMove} setFromPos={setFromPos} />
           <div className="game-btns">
             <Button className="game-icon" aria-label="Settings button" onClick={generateModalHandlers(MODALS.CHESS_SETTINGS).open}>
               {ICONS[ICONS_NAME.SETTINGS]}

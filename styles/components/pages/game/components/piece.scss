@@ -4,9 +4,9 @@
 
   &[data-color="b"] {
     .w {
-      fill: var(--clr-white-100);
-      stroke: var(--clr-white-100);
-      stop-color: var(--clr-white-100);
+      fill: var(--clr-black-900);
+      stroke: var(--clr-black-900);
+      stop-color: var(--clr-black-900);
     }
 
     .stroke {
@@ -14,17 +14,17 @@
     }
 
     .b {
-      fill: var(--clr-black-900);
-      stroke: var(--clr-black-900);
-      stop-color: var(--clr-black-900);
+      fill: var(--clr-white-100);
+      stroke: var(--clr-white-100);
+      stop-color: var(--clr-white-100);
     }
   }
 
   &[data-color="w"] {
     .w {
-      fill: var(--clr-black-900);
-      stroke: var(--clr-black-900);
-      stop-color: var(--clr-black-900);
+      fill: var(--clr-white-100);
+      stroke: var(--clr-white-100);
+      stop-color: var(--clr-white-100);
     }
 
     .stroke {
@@ -32,9 +32,9 @@
     }
 
     .b {
-      fill: var(--clr-white-100);
-      stroke: var(--clr-white-100);
-      stop-color: var(--clr-white-100);
+      fill: var(--clr-black-900);
+      stroke: var(--clr-black-900);
+      stop-color: var(--clr-black-900);
     }
   }
 }
