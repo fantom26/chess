@@ -52,7 +52,6 @@ export const Tile: FC<TileProps> = ({ cell, makeMove, setFromPos, chess, ...rest
 
   return (
     <li className={generateClassNames()} key={cell.pos} onDrop={handleDrop} onDragOver={(e) => e.preventDefault()}>
-      {/* {cell.pos} */}
       <Details {...rest} />
       {cell.piece && <Piece figureColor={figureColor} cell={cell} setFromPos={setFromPos} />}
     </li>
