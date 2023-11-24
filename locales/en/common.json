@@ -3,6 +3,9 @@
     "turn": {
       "w": "White to Move",
       "b": "Black to Move"
+    },
+    "history": {
+      "title": "Moves History"
     }
   },
   "langs": {

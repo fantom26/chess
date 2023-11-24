@@ -70,7 +70,7 @@ export default async function RootLayout({ children, params: { locale } }: IRoot
   }
   return (
     <html lang={locale} dir={dir(locale)} className={quicksand.className}>
-      <body>
+      <body className="scroll">
         <Providers locale={locale} namespaces={options.ns}>
           <div className="wrapper">
             <Header locale={locale} />

@@ -1,0 +1,26 @@
+// scroll styles
+.scroll {
+  &::-webkit-scrollbar {
+    @include box(0.4rem);
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: var(--radius);
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: var(--radius);
+    background-color: var(--clr-black-300);
+    transition: background-color var(--transition);
+    cursor: pointer;
+
+    @media (hover) {
+      &:hover {
+        background-color: var(--clr-black-900);
+        transition: background-color var(--transition);
+      }
+    }
+  }
+}
