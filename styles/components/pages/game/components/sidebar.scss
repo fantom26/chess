@@ -1,11 +1,42 @@
 .sidebar {
   border-radius: var(--radius);
-  padding: 1.5rem;
   width: 100%;
   max-width: 33rem;
   background-color: var(--clr-black-800);
 
   &__btn {
     margin-top: 2rem;
+  }
+
+  &-start-play {
+    padding: 1.5rem;
+  }
+
+  &-turn {
+    @include flex-all-center;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    padding: 1rem;
+    gap: 1rem;
+
+    &.w {
+      background-color: var(--clr-white-100);
+      .typography {
+        color: var(--clr-black-900);
+      }
+    }
+
+    &.b {
+      background-color: var(--clr-black-900);
+
+      .typography {
+        color: var(--clr-white-100);
+      }
+    }
+
+    &__color {
+      @include box(2rem);
+      border: 0.1rem solid var(--clr-black-800);
+    }
   }
 }

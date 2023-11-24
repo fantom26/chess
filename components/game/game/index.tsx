@@ -30,7 +30,6 @@ export const Game = () => {
   const { setChessStore } = useChessContext();
   const { generateModalHandlers } = useModalContext();
   const searchParams = useSearchParams();
-  const hasGameId = searchParams.has(QUERY_PARAMS.GAME_ID);
 
   const makeMove = (pos: string) => {
     try {
@@ -137,7 +136,7 @@ export const Game = () => {
             </Button>
           </div>
         </div>
-        {!hasGameId && <SideBar />}
+        <SideBar />
       </div>
       <GameOverModal />
       <ChessSettingsModal />

@@ -1,48 +1,12 @@
-import { Button, ClipboardCopy, Typography } from "@components/shared";
-import { useModalContext } from "@hooks";
-import { ButtonVariant, MODALS, TagVariant } from "@utils/enums";
-import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { QUERY_PARAMS } from "@utils/enums";
+import { useSearchParams } from "next/navigation";
+import { StartPlay } from "./start-play";
+import { GameRun } from "./game-run";
 
 export const SideBar = () => {
-  const [gameID, setGameID] = useState<string | null>(null);
-  const { t } = useTranslation();
-  const { generateModalHandlers } = useModalContext();
+  const searchParams = useSearchParams();
 
-  const generateGameId = () => {
-    const id = Math.random().toString().replace("0.", "");
-    setGameID(id);
-  };
+  const hasGameId = searchParams.has(QUERY_PARAMS.GAME_ID);
 
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setGameID(null);
-    }, 10000);
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, [gameID]);
-
-  return (
-    <section className="sidebar">
-      <Typography tag={TagVariant.H1} variant={TagVariant.H1} center>
-        {t("pages.home.playVS")}
-      </Typography>
-      <div className="sidebar__btn">
-        <Button aria-label="Play button" onClick={generateModalHandlers(MODALS.JOIN_GAME).open}>
-          {t("btn.play")}
-        </Button>
-      </div>
-      <div className="sidebar__btn" onClick={generateGameId}>
-        {gameID ? (
-          <ClipboardCopy text={gameID as string} />
-        ) : (
-          <Button aria-label="Generate link for game button" variant={ButtonVariant.outlined}>
-            {t("btn.invite-link")}
-          </Button>
-        )}
-      </div>
-    </section>
-  );
+  return <section className="sidebar">{hasGameId ? <GameRun /> : <StartPlay />}</section>;
 };

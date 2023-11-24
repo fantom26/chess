@@ -1,4 +1,10 @@
 {
+  "game": {
+    "turn": {
+      "w": "White to Move",
+      "b": "Black to Move"
+    }
+  },
   "langs": {
     "uk": "UA",
     "en": "EN"
